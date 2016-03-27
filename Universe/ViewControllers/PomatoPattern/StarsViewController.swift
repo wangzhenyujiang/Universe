@@ -57,6 +57,11 @@ enum StarType: String {
 
 class StarsViewController: UIViewController {
     @IBOutlet var starViews: [StarView]!
+    @IBOutlet weak var goldNumLabel: UILabel!
+    
+    private var customNavigationBar: UINavigationBar!
+    
+    private var customNavigationItem: UINavigationItem = UINavigationItem(title: " ")
     
     
     override func viewWillAppear(animated: Bool) {
@@ -65,6 +70,11 @@ class StarsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         setupStarViews()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
     }
     
     
@@ -118,6 +128,10 @@ class StarsViewController: UIViewController {
     }
 }
 
+extension StarsViewController {
+   
+}
+
 //MARK: IBAction
 
 extension StarsViewController {
@@ -128,4 +142,9 @@ extension StarsViewController {
         }
         navigationController.popViewControllerAnimated(true)
     }
+    
+    @IBAction func menuAction(sender: AnyObject) {
+        
+    }
+    
 }
