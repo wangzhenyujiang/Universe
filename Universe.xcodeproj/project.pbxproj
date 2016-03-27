@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5D7266E6F0DA2798E156852 /* Pods_Universe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */; };
 		F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */; };
-		F02473FE1CA57E7A0049DB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02473FD1CA57E7A0049DB21 /* ViewController.swift */; };
 		F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02473FF1CA57E7A0049DB21 /* Main.storyboard */; };
 		F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02474021CA57E7A0049DB21 /* Assets.xcassets */; };
 		F02474061CA57E7A0049DB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02474041CA57E7A0049DB21 /* LaunchScreen.storyboard */; };
 		F02474111CA57E7A0049DB21 /* UniverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02474101CA57E7A0049DB21 /* UniverseTests.swift */; };
 		F024741C1CA57E7A0049DB21 /* UniverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024741B1CA57E7A0049DB21 /* UniverseUITests.swift */; };
+		F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024742A1CA61A040049DB21 /* MainViewController.swift */; };
+		F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024742E1CA6210E0049DB21 /* StarsViewController.swift */; };
+		F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02474331CA621D10049DB21 /* BaseViewController.swift */; };
+		F02474381CA6222D0049DB21 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02474371CA6222D0049DB21 /* StarView.swift */; };
+		F024743A1CA6224E0049DB21 /* StarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02474391CA6224E0049DB21 /* StarView.xib */; };
+		F02AA71C1CA7784D008ED176 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA71B1CA7784D008ED176 /* Star.swift */; };
+		F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA71E1CA78EBE008ED176 /* StarViewsControllerHelpers.swift */; };
+		F02AA7221CA79361008ED176 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7211CA79361008ED176 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.debug.xcconfig"; sourceTree = "<group>"; };
+		D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.release.xcconfig"; sourceTree = "<group>"; };
 		F02473F81CA57E7A0049DB21 /* Universe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F02473FD1CA57E7A0049DB21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F02474001CA57E7A0049DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F02474021CA57E7A0049DB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F02474051CA57E7A0049DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		F02474171CA57E7A0049DB21 /* UniverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F024741B1CA57E7A0049DB21 /* UniverseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseUITests.swift; sourceTree = "<group>"; };
 		F024741D1CA57E7A0049DB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F024742A1CA61A040049DB21 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		F024742E1CA6210E0049DB21 /* StarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarsViewController.swift; path = ViewControllers/PomatoPattern/StarsViewController.swift; sourceTree = "<group>"; };
+		F02474331CA621D10049DB21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/Base/BaseViewController.swift; sourceTree = "<group>"; };
+		F02474371CA6222D0049DB21 /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarView.swift; path = Views/StarView/StarView.swift; sourceTree = "<group>"; };
+		F02474391CA6224E0049DB21 /* StarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StarView.xib; path = Views/StarView/StarView.xib; sourceTree = "<group>"; };
+		F02AA71B1CA7784D008ED176 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Star.swift; path = Model/Star/Star.swift; sourceTree = "<group>"; };
+		F02AA71E1CA78EBE008ED176 /* StarViewsControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarViewsControllerHelpers.swift; path = Helpers/StarViewsControllerHelpers.swift; sourceTree = "<group>"; };
+		F02AA7211CA79361008ED176 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User/User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D7266E6F0DA2798E156852 /* Pods_Universe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E42BEE995FC21635C2F172F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */,
+				D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		98336502569E2917EBFF7983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F02473EF1CA57E7A0049DB21 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +117,8 @@
 				F024740F1CA57E7A0049DB21 /* UniverseTests */,
 				F024741A1CA57E7A0049DB21 /* UniverseUITests */,
 				F02473F91CA57E7A0049DB21 /* Products */,
+				4E42BEE995FC21635C2F172F /* Pods */,
+				98336502569E2917EBFF7983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +136,12 @@
 			isa = PBXGroup;
 			children = (
 				F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */,
-				F02473FD1CA57E7A0049DB21 /* ViewController.swift */,
+				F02AA71D1CA78DE4008ED176 /* Helpers */,
+				F02AA7191CA77821008ED176 /* Model */,
+				F02474351CA621FC0049DB21 /* Views */,
+				F02474291CA619960049DB21 /* ViewControllers */,
 				F02473FF1CA57E7A0049DB21 /* Main.storyboard */,
-				F02474021CA57E7A0049DB21 /* Assets.xcassets */,
-				F02474041CA57E7A0049DB21 /* LaunchScreen.storyboard */,
-				F02474071CA57E7A0049DB21 /* Info.plist */,
+				F0BA88901CA682B100210DE7 /* Resource */,
 			);
 			path = Universe;
 			sourceTree = "<group>";
@@ -125,6 +164,100 @@
 			path = UniverseUITests;
 			sourceTree = "<group>";
 		};
+		F02474291CA619960049DB21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F024742A1CA61A040049DB21 /* MainViewController.swift */,
+				F024742D1CA6206A0049DB21 /* PomatoPattern */,
+				F02474301CA621780049DB21 /* Base */,
+				F024742C1CA6205F0049DB21 /* FreePattern */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F024742C1CA6205F0049DB21 /* FreePattern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FreePattern;
+			sourceTree = "<group>";
+		};
+		F024742D1CA6206A0049DB21 /* PomatoPattern */ = {
+			isa = PBXGroup;
+			children = (
+				F024742E1CA6210E0049DB21 /* StarsViewController.swift */,
+			);
+			name = PomatoPattern;
+			sourceTree = "<group>";
+		};
+		F02474301CA621780049DB21 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F02474331CA621D10049DB21 /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		F02474351CA621FC0049DB21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F02474361CA622140049DB21 /* StarView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F02474361CA622140049DB21 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				F02474371CA6222D0049DB21 /* StarView.swift */,
+				F02474391CA6224E0049DB21 /* StarView.xib */,
+			);
+			name = StarView;
+			sourceTree = "<group>";
+		};
+		F02AA7191CA77821008ED176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F02AA7201CA79348008ED176 /* User */,
+				F02AA71A1CA7782D008ED176 /* Star */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F02AA71A1CA7782D008ED176 /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				F02AA71B1CA7784D008ED176 /* Star.swift */,
+			);
+			name = Star;
+			sourceTree = "<group>";
+		};
+		F02AA71D1CA78DE4008ED176 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F02AA71E1CA78EBE008ED176 /* StarViewsControllerHelpers.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F02AA7201CA79348008ED176 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F02AA7211CA79361008ED176 /* User.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		F0BA88901CA682B100210DE7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F02474041CA57E7A0049DB21 /* LaunchScreen.storyboard */,
+				F02474021CA57E7A0049DB21 /* Assets.xcassets */,
+				F02474071CA57E7A0049DB21 /* Info.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F02474201CA57E7A0049DB21 /* Build configuration list for PBXNativeTarget "Universe" */;
 			buildPhases = (
+				5E905CCF809D1784B5300A97 /* Check Pods Manifest.lock */,
 				F02473F41CA57E7A0049DB21 /* Sources */,
 				F02473F51CA57E7A0049DB21 /* Frameworks */,
 				F02473F61CA57E7A0049DB21 /* Resources */,
+				786E33AA1C311F748AC46467 /* Embed Pods Frameworks */,
+				B069C22E30CA394BD28711F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +370,7 @@
 			files = (
 				F02474061CA57E7A0049DB21 /* LaunchScreen.storyboard in Resources */,
 				F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */,
+				F024743A1CA6224E0049DB21 /* StarView.xib in Resources */,
 				F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +391,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E905CCF809D1784B5300A97 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		786E33AA1C311F748AC46467 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universe/Pods-Universe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B069C22E30CA394BD28711F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universe/Pods-Universe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F02473F41CA57E7A0049DB21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02473FE1CA57E7A0049DB21 /* ViewController.swift in Sources */,
+				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
+				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
+				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
+				F02AA7221CA79361008ED176 /* User.swift in Sources */,
+				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
+				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
+				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +591,7 @@
 		};
 		F02474211CA57E7A0049DB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Universe/Info.plist;
@@ -411,6 +603,7 @@
 		};
 		F02474221CA57E7A0049DB21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Universe/Info.plist;
@@ -487,6 +680,7 @@
 				F02474221CA57E7A0049DB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F02474231CA57E7A0049DB21 /* Build configuration list for PBXNativeTarget "UniverseTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +689,7 @@
 				F02474251CA57E7A0049DB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F02474261CA57E7A0049DB21 /* Build configuration list for PBXNativeTarget "UniverseUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +698,7 @@
 				F02474281CA57E7A0049DB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
