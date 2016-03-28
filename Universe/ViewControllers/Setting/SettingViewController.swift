@@ -12,6 +12,8 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+//    var height: CGFloat = 44.0
+    
     private let settingAnnotations:[[String: String]] = [
         [
             "name": "统计",
@@ -39,5 +41,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44.0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        if height == 44.0 {
+//            height = 66.0
+//        }else {
+//            height = 44.0
+//        }
+//        UIView.animateWithDuration(1.0) { 
+//            tableView.beginUpdates()
+//            tableView.endUpdates()
+//        }
     }
 }
