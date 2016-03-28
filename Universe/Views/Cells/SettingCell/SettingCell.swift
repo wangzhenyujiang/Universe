@@ -9,5 +9,9 @@
 import UIKit
 
 class SettingCell: UITableViewCell {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var settingSwitch: UISwitch!
+    
+    
 }

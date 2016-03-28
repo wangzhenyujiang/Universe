@@ -11,8 +11,27 @@ import UIKit
 class User: NSObject {
     static let shareInstance: User = User()
     
-    var gold: Int = {
+    struct UserGoldNumKey {
+        static let key = "UserGoldNumKey"
+    }
     
-        return 0
+    var gold: Int = {
+        var goldNum = NSUserDefaults.standardUserDefaults().integerForKey(UserGoldNumKey.key)
+        return goldNum
     }()
+    
+    private func addNum(addNum: Int) {
+        updateGoldNum(gold + addNum)
+    }
+    
+    private func subtractNum(subNum: Int) {
+        updateGoldNum(gold - subNum)
+    }
+    
+    private func updateGoldNum(var goldNum: Int) {
+        if goldNum < 0 {
+            goldNum = 0
+        }
+        NSUserDefaults.standardUserDefaults().setInteger(goldNum, forKey: UserGoldNumKey.key)
+    }
 }

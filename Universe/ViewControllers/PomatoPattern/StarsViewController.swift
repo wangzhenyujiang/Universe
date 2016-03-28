@@ -146,5 +146,4 @@ extension StarsViewController {
     @IBAction func menuAction(sender: AnyObject) {
         
     }
-    
 }
