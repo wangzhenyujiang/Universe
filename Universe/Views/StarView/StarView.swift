@@ -11,6 +11,9 @@ import UIKit
 class StarView: UIView {
 
     private var view: UIView!
+    @IBOutlet weak var lockView: UIView!
+    @IBOutlet weak var lockImageView: UIImageView!
+    
     
     var clickAction: (StarType? -> Void)?
     var star: StarType? {
@@ -34,10 +37,16 @@ class StarView: UIView {
     
     private func commonInit() {
         translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = UIColor.clearColor()
+        
         view =  NSBundle.mainBundle().loadNibNamed(String(StarView), owner: self, options: nil).first as? UIView
         view.frame = bounds
+        view.backgroundColor = UIColor.clearColor()
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
+        
+        lockView.backgroundColor = UIColor.clearColor()
+        
     }
     
     @IBAction private func clickAction(sender: AnyObject) {

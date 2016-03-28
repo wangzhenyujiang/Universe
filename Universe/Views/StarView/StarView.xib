@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarView" customModule="Universe" customModuleProvider="target">
             <connections>
+                <outlet property="lockImageView" destination="F0T-FI-Ilb" id="hpf-yt-LOi"/>
+                <outlet property="lockView" destination="sJV-lH-kwf" id="Dvx-p8-HP3"/>
                 <outlet property="starImage" destination="azc-7K-3cT" id="Rb1-JK-9fa"/>
             </connections>
         </placeholder>
@@ -25,15 +27,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-lH-kwf">
                     <rect key="frame" x="0.0" y="60" width="60" height="20"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-FI-Ilb">
-                            <rect key="frame" x="15" y="-5" width="30" height="30"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet1" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-FI-Ilb">
+                            <rect key="frame" x="4" y="-10" width="52" height="40"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="top" secondItem="sJV-lH-kwf" secondAttribute="top" id="Faf-jE-9Yq"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerX" secondItem="sJV-lH-kwf" secondAttribute="centerX" id="TWb-RX-pl1"/>
+                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="U0h-6v-Zz8"/>
+                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="leading" secondItem="sJV-lH-kwf" secondAttribute="leading" constant="4" id="YUY-rp-8BC"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="aAS-fb-2Yu"/>
+                        <constraint firstAttribute="trailing" secondItem="F0T-FI-Ilb" secondAttribute="trailing" constant="4" id="suq-tk-sU7"/>
+                        <constraint firstAttribute="bottom" secondItem="F0T-FI-Ilb" secondAttribute="bottom" id="zF2-4W-nRL"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Faf-jE-9Yq"/>
+                            <exclude reference="TWb-RX-pl1"/>
+                            <exclude reference="aAS-fb-2Yu"/>
+                            <exclude reference="zF2-4W-nRL"/>
+                        </mask>
+                    </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mi-sQ-DTe">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
@@ -63,6 +78,6 @@
     </objects>
     <resources>
         <image name="clover_star" width="100" height="100"/>
-        <image name="lock" width="30" height="30"/>
+        <image name="planet1" width="140" height="40"/>
     </resources>
 </document>

@@ -33,6 +33,24 @@ enum StarType: String {
         }
     }
     
+    var lockImageName: String {
+        switch self {
+        case .CakeStar:
+            return "planet5"
+        case .CloverStar:
+            return "planet2"
+        case .JupiterStar:
+            return "planet6"
+        case .NormalStar:
+            return "planet1"
+        case .SunStar:
+            return "planet4"
+        case .RoseStar:
+            return "planet3"
+        }
+
+    }
+    
     var chineseName: String {
         switch self {
         case .CakeStar:
@@ -51,7 +69,7 @@ enum StarType: String {
     }
     
     static var values: Array<StarType> {
-        return [StarType.CakeStar, StarType.CloverStar, StarType.JupiterStar, StarType.NormalStar, StarType.RoseStar, StarType.SunStar]
+        return [StarType.NormalStar, StarType.CloverStar, StarType.RoseStar, StarType.SunStar, StarType.CakeStar, StarType.JupiterStar]
     }
 }
 
@@ -81,6 +99,7 @@ class StarsViewController: BaseViewController {
     private func setupStarViews() {
         for(index, starView) in starViews.enumerate() {
             starView.star = StarType.values[index]
+            starView.lockImageView.image = UIImage(named: StarType.values[index].lockImageName)!
             starView.clickAction = { [weak self ] star in
                 guard let strongSelf = self else {
                     return
@@ -106,7 +125,7 @@ class StarsViewController: BaseViewController {
             }
         case .NormalStar:
             if canUnLock(Star(star: star)) {
-                
+                performSegueWithIdentifier("startSegue", sender: nil)
             }
         case .JupiterStar:
             if canUnLock(Star(star: star)) {

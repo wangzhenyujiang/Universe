@@ -20,6 +20,10 @@ class User: NSObject {
         return goldNum
     }()
     
+    override init() {
+        super.init()
+    }
+    
     private func addNum(addNum: Int) {
         updateGoldNum(gold + addNum)
     }

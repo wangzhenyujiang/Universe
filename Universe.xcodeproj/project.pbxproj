@@ -24,6 +24,7 @@
 		F02AA7221CA79361008ED176 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7211CA79361008ED176 /* User.swift */; };
 		F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */; };
 		F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7281CA7ECD5008ED176 /* SettingCell.swift */; };
+		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		F02AA7211CA79361008ED176 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User/User.swift; sourceTree = "<group>"; };
 		F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ViewControllers/Setting/SettingViewController.swift; sourceTree = "<group>"; };
 		F02AA7281CA7ECD5008ED176 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = Views/Cells/SettingCell/SettingCell.swift; sourceTree = "<group>"; };
+		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				F024742A1CA61A040049DB21 /* MainViewController.swift */,
+				F0E4F0471CA9701200DA6A28 /* Start */,
 				F024742D1CA6206A0049DB21 /* PomatoPattern */,
 				F02474301CA621780049DB21 /* Base */,
 				F024742C1CA6205F0049DB21 /* FreePattern */,
@@ -292,6 +295,14 @@
 				F02474071CA57E7A0049DB21 /* Info.plist */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		F0E4F0471CA9701200DA6A28 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */,
+			);
+			name = Start;
 			sourceTree = "<group>";
 		};
 		F86587B11CA8EFB500000063 /* Extensions */ = {
@@ -502,6 +513,7 @@
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
 				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,
+				F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */,
 				F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
@@ -650,6 +662,7 @@
 			baseConfigurationReference = B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Universe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mazingwang.OMG.com.Universe;
@@ -662,6 +675,7 @@
 			baseConfigurationReference = D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Universe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mazingwang.OMG.com.Universe;
