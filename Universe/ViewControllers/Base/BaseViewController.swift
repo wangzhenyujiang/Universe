@@ -11,21 +11,6 @@ import UIKit
 class BaseViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        guard let navigationController = navigationController else {
-            return
-        }
-        
-        navigationController.navigationBar.backgroundColor = nil
-        navigationController.navigationBar.translucent = true
-        navigationController.navigationBar.shadowImage = nil
-        navigationController.navigationBar.barStyle = UIBarStyle.Default
-        navigationController.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        
-        navigationController.navigationBar.tintColor = nil
-        
-        if navigationController.navigationBarHidden {
-            navigationController.setNavigationBarHidden(false, animated: true)
-        }
+        view.layer.contents = UIImage.backgroundImage().CGImage
     }
 }

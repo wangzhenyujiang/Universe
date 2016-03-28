@@ -55,7 +55,7 @@ enum StarType: String {
     }
 }
 
-class StarsViewController: UIViewController {
+class StarsViewController: BaseViewController {
     @IBOutlet var starViews: [StarView]!
     @IBOutlet weak var goldNumLabel: UILabel!
     
