@@ -12,8 +12,8 @@ class StarView: UIView {
 
     private var view: UIView!
     @IBOutlet weak var lockView: UIView!
-    @IBOutlet weak var lockImageView: UIImageView!
     
+    @IBOutlet weak var lockImageView: UIImageView!
     
     var clickAction: (StarType? -> Void)?
     var star: StarType? {

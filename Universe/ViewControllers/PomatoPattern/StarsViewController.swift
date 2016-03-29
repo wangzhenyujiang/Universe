@@ -93,6 +93,7 @@ class StarsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        goldNumLabel.text = "\(User.shareInstance.gold)"
     }
     
     

@@ -8,9 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarView" customModule="Universe" customModuleProvider="target">
             <connections>
-                <outlet property="lockImageView" destination="F0T-FI-Ilb" id="hpf-yt-LOi"/>
-                <outlet property="lockView" destination="sJV-lH-kwf" id="Dvx-p8-HP3"/>
-                <outlet property="starImage" destination="azc-7K-3cT" id="Rb1-JK-9fa"/>
+                <outlet property="lockImageView" destination="F0T-FI-Ilb" id="Una-gN-uiL"/>
+                <outlet property="lockView" destination="sJV-lH-kwf" id="90Q-hF-J4C"/>
+                <outlet property="starImage" destination="azc-7K-3cT" id="iEg-MO-D7Y"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="60" width="60" height="20"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet1" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-FI-Ilb">
-                            <rect key="frame" x="4" y="-10" width="52" height="40"/>
+                            <rect key="frame" x="0.0" y="-10" width="60" height="40"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,9 +36,9 @@
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="top" secondItem="sJV-lH-kwf" secondAttribute="top" id="Faf-jE-9Yq"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerX" secondItem="sJV-lH-kwf" secondAttribute="centerX" id="TWb-RX-pl1"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="U0h-6v-Zz8"/>
-                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="leading" secondItem="sJV-lH-kwf" secondAttribute="leading" constant="4" id="YUY-rp-8BC"/>
+                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="leading" secondItem="sJV-lH-kwf" secondAttribute="leading" id="YUY-rp-8BC"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="aAS-fb-2Yu"/>
-                        <constraint firstAttribute="trailing" secondItem="F0T-FI-Ilb" secondAttribute="trailing" constant="4" id="suq-tk-sU7"/>
+                        <constraint firstAttribute="trailing" secondItem="F0T-FI-Ilb" secondAttribute="trailing" id="suq-tk-sU7"/>
                         <constraint firstAttribute="bottom" secondItem="F0T-FI-Ilb" secondAttribute="bottom" id="zF2-4W-nRL"/>
                     </constraints>
                     <variation key="default">
