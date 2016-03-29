@@ -28,6 +28,7 @@
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
 		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
+		F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89C04961CAA572F00308952 /* UIFont+Universe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universe-Bridging-Header.h"; sourceTree = "<group>"; };
 		F89C04931CAA554100308952 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = Vender/MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
 		F89C04941CAA554100308952 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = Vender/MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
+		F89C04961CAA572F00308952 /* UIFont+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Universe.swift"; path = "Extensions/UIFont+Universe.swift"; sourceTree = "<group>"; };
+		F89C04981CAA581500308952 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */,
-				F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */,
 				F86587BD1CAA4CE700000063 /* Protocol */,
 				F86587B61CA9078600000063 /* Font */,
 				F86587B11CA8EFB500000063 /* Extensions */,
@@ -297,6 +299,7 @@
 		F0BA88901CA682B100210DE7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */,
 				F02474041CA57E7A0049DB21 /* LaunchScreen.storyboard */,
 				F02474021CA57E7A0049DB21 /* Assets.xcassets */,
 				F02474071CA57E7A0049DB21 /* Info.plist */,
@@ -316,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */,
+				F89C04961CAA572F00308952 /* UIFont+Universe.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				F86587B71CA9079500000063 /* OpenSans-Light.ttf */,
+				F89C04981CAA581500308952 /* HelveticaNeue.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
 				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
+				F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
