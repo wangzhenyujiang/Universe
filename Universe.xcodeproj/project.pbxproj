@@ -29,6 +29,7 @@
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
 		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
 		F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89C04961CAA572F00308952 /* UIFont+Universe.swift */; };
+		F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,11 +78,11 @@
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universe-Bridging-Header.h"; sourceTree = "<group>"; };
 		F89C04931CAA554100308952 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = Vender/MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
 		F89C04941CAA554100308952 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = Vender/MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
 		F89C04961CAA572F00308952 /* UIFont+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Universe.swift"; path = "Extensions/UIFont+Universe.swift"; sourceTree = "<group>"; };
-		F89C04981CAA581500308952 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttf; sourceTree = "<group>"; };
+		F89C04991CAA669200308952 /* Universe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Universe-Bridging-Header.h"; sourceTree = "<group>"; };
+		F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeue.ttf; path = Font/HelveticaNeue.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +300,7 @@
 		F0BA88901CA682B100210DE7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */,
+				F89C04991CAA669200308952 /* Universe-Bridging-Header.h */,
 				F02474041CA57E7A0049DB21 /* LaunchScreen.storyboard */,
 				F02474021CA57E7A0049DB21 /* Assets.xcassets */,
 				F02474071CA57E7A0049DB21 /* Info.plist */,
@@ -327,8 +328,8 @@
 		F86587B61CA9078600000063 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */,
 				F86587B71CA9079500000063 /* OpenSans-Light.ttf */,
-				F89C04981CAA581500308952 /* HelveticaNeue.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -470,6 +471,7 @@
 				F02474061CA57E7A0049DB21 /* LaunchScreen.storyboard in Resources */,
 				F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */,
 				F024743A1CA6224E0049DB21 /* StarView.xib in Resources */,
+				F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */,
 				F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */,
 				F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */,
 			);
