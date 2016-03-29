@@ -210,14 +210,14 @@
                                     <constraint firstAttribute="height" constant="300" id="whY-nC-3h7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-Lc-pIO" customClass="MZTimerLabel">
-                                <rect key="frame" x="256" y="458" width="88" height="42"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-Lc-pIO" customClass="MZTimerLabel">
+                                <rect key="frame" x="250" y="450" width="101" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVZ-QM-IaT">
-                                <rect key="frame" x="285" y="502" width="30" height="30"/>
-                                <state key="normal" title="开始"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVZ-QM-IaT">
+                                <rect key="frame" x="240" y="472" width="120" height="60"/>
+                                <state key="normal" image="start_button"/>
                                 <connections>
                                     <action selector="timeButtonAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="5bc-pe-8il"/>
                                 </connections>
@@ -230,7 +230,7 @@
                             <constraint firstItem="NVZ-QM-IaT" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="Hhi-k3-Ztc"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="boI-nd-A8K"/>
                             <constraint firstItem="CaC-wv-6El" firstAttribute="top" secondItem="NVZ-QM-IaT" secondAttribute="bottom" constant="20" id="dJB-1N-B8G"/>
-                            <constraint firstItem="yzb-Lc-pIO" firstAttribute="top" secondItem="pf7-sH-CFb" secondAttribute="bottom" constant="8" id="jaK-F0-ogS"/>
+                            <constraint firstItem="yzb-Lc-pIO" firstAttribute="top" secondItem="pf7-sH-CFb" secondAttribute="bottom" id="jaK-F0-ogS"/>
                             <constraint firstItem="0my-aw-0y5" firstAttribute="top" secondItem="CaC-wv-6El" secondAttribute="bottom" constant="8" id="l44-R3-PCH"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="scg-ae-5mS"/>
                         </constraints>
@@ -397,6 +397,7 @@
         <image name="gold" width="30" height="30"/>
         <image name="hour_three_task" width="300" height="300"/>
         <image name="menu" width="40" height="40"/>
+        <image name="start_button" width="120" height="60"/>
         <image name="tomato_model" width="40" height="40"/>
     </resources>
 </document>

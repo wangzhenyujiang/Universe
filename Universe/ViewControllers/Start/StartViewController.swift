@@ -46,7 +46,7 @@ extension StartViewController: MZTimerLabelDelegate {
     }
     
     private func setupTimerLabel() {
-        timerLabel.timeFormat = "mm:ss"
+        timerLabel.timeFormat = "mm : ss"
         timerLabel.timerType = MZTimerLabelTypeTimer
         timerLabel.setCountDownTime(1800)
         timerLabel.textColor = UIColor.whiteColor()
