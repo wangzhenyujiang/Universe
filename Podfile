@@ -5,5 +5,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Universe' do
+pod 'Masonry'
 pod 'Charts'
 end
