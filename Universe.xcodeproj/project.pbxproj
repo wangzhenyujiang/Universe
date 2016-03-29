@@ -24,6 +24,7 @@
 		F02AA7221CA79361008ED176 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7211CA79361008ED176 /* User.swift */; };
 		F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */; };
 		F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7281CA7ECD5008ED176 /* SettingCell.swift */; };
+		F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0379FB51CAAD2630082584E /* TimmingViewController.swift */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
@@ -75,6 +76,7 @@
 		F02AA7211CA79361008ED176 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User/User.swift; sourceTree = "<group>"; };
 		F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ViewControllers/Setting/SettingViewController.swift; sourceTree = "<group>"; };
 		F02AA7281CA7ECD5008ED176 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = Views/Cells/SettingCell/SettingCell.swift; sourceTree = "<group>"; };
+		F0379FB51CAAD2630082584E /* TimmingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingViewController.swift; path = ViewControllers/Timming/TimmingViewController.swift; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				F024742A1CA61A040049DB21 /* MainViewController.swift */,
+				F0379FB41CAAD2420082584E /* Timming */,
 				F0E4F0471CA9701200DA6A28 /* Start */,
 				F024742D1CA6206A0049DB21 /* PomatoPattern */,
 				F02474301CA621780049DB21 /* Base */,
@@ -295,6 +298,14 @@
 				F02AA7281CA7ECD5008ED176 /* SettingCell.swift */,
 			);
 			name = SettingCell;
+			sourceTree = "<group>";
+		};
+		F0379FB41CAAD2420082584E /* Timming */ = {
+			isa = PBXGroup;
+			children = (
+				F0379FB51CAAD2630082584E /* TimmingViewController.swift */,
+			);
+			name = Timming;
 			sourceTree = "<group>";
 		};
 		F0BA88901CA682B100210DE7 /* Resource */ = {
@@ -546,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
 				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
 				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,

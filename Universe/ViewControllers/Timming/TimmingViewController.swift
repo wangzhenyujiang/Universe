@@ -1,50 +1,39 @@
 //
-//  StartViewController.swift
+//  TimmingViewController.swift
 //  Universe
 //
-//  Created by 王振宇 on 16/3/28.
+//  Created by 王振宇 on 16/3/29.
 //  Copyright © 2016年 王振宇. All rights reserved.
 //
 
 import UIKit
 
-class StartViewController: BaseViewController {
+class TimmingViewController: BaseViewController {
     @IBOutlet weak var timerLabel: MZTimerLabel!
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setupTimerLabel()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }
 
 //MARK: IBAction
 
-extension StartViewController {
-    
+extension TimmingViewController {
     @IBAction func backAction(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    @IBAction func timeButtonAction(sender: AnyObject) {
+    @IBAction func giveupAction(sender: AnyObject) {
         
     }
 }
 
-extension StartViewController: MZTimerLabelDelegate {
-    
-    func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
-        
-    }
-    
-    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        
-    }
-    
+//MARK: Private Method
+
+extension TimmingViewController {
     private func setupTimerLabel() {
         timerLabel.timeFormat = "mm : ss"
         timerLabel.timerType = MZTimerLabelTypeTimer
