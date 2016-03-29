@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarView" customModule="Universe" customModuleProvider="target">
@@ -18,6 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mi-sQ-DTe">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                    <connections>
+                        <action selector="clickAction:" destination="-1" eventType="touchUpInside" id="SKP-m9-IFZ"/>
+                    </connections>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clover_star" translatesAutoresizingMaskIntoConstraints="NO" id="azc-7K-3cT">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                     <constraints>
@@ -25,46 +32,30 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-lH-kwf">
-                    <rect key="frame" x="0.0" y="60" width="60" height="20"/>
+                    <rect key="frame" x="0.0" y="52" width="60" height="24"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet1" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-FI-Ilb">
-                            <rect key="frame" x="0.0" y="-10" width="60" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="top" secondItem="sJV-lH-kwf" secondAttribute="top" id="Faf-jE-9Yq"/>
-                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerX" secondItem="sJV-lH-kwf" secondAttribute="centerX" id="TWb-RX-pl1"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="U0h-6v-Zz8"/>
                         <constraint firstItem="F0T-FI-Ilb" firstAttribute="leading" secondItem="sJV-lH-kwf" secondAttribute="leading" id="YUY-rp-8BC"/>
-                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="centerY" secondItem="sJV-lH-kwf" secondAttribute="centerY" id="aAS-fb-2Yu"/>
+                        <constraint firstItem="F0T-FI-Ilb" firstAttribute="top" secondItem="sJV-lH-kwf" secondAttribute="top" id="nZp-Qp-tdH"/>
+                        <constraint firstAttribute="bottom" secondItem="F0T-FI-Ilb" secondAttribute="bottom" id="rNK-of-lcM"/>
                         <constraint firstAttribute="trailing" secondItem="F0T-FI-Ilb" secondAttribute="trailing" id="suq-tk-sU7"/>
-                        <constraint firstAttribute="bottom" secondItem="F0T-FI-Ilb" secondAttribute="bottom" id="zF2-4W-nRL"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="Faf-jE-9Yq"/>
-                            <exclude reference="TWb-RX-pl1"/>
-                            <exclude reference="aAS-fb-2Yu"/>
-                            <exclude reference="zF2-4W-nRL"/>
-                        </mask>
-                    </variation>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mi-sQ-DTe">
-                    <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
-                    <connections>
-                        <action selector="clickAction:" destination="-1" eventType="touchUpInside" id="SKP-m9-IFZ"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4mi-sQ-DTe" firstAttribute="centerY" secondItem="T0K-nk-QZN" secondAttribute="centerY" id="0yG-hx-rgF"/>
-                <constraint firstAttribute="bottom" secondItem="sJV-lH-kwf" secondAttribute="bottom" id="5JK-Ji-cEj"/>
                 <constraint firstItem="4mi-sQ-DTe" firstAttribute="width" secondItem="T0K-nk-QZN" secondAttribute="width" id="6kj-g8-T3Z"/>
                 <constraint firstItem="azc-7K-3cT" firstAttribute="top" secondItem="T0K-nk-QZN" secondAttribute="top" id="FLz-7c-vNi"/>
                 <constraint firstItem="4mi-sQ-DTe" firstAttribute="height" secondItem="T0K-nk-QZN" secondAttribute="height" id="JeO-Np-ax0"/>
-                <constraint firstItem="sJV-lH-kwf" firstAttribute="top" secondItem="azc-7K-3cT" secondAttribute="bottom" id="Omv-co-t6n"/>
+                <constraint firstItem="sJV-lH-kwf" firstAttribute="top" secondItem="azc-7K-3cT" secondAttribute="bottom" constant="-8" id="Omv-co-t6n"/>
+                <constraint firstItem="sJV-lH-kwf" firstAttribute="height" secondItem="azc-7K-3cT" secondAttribute="height" multiplier="0.4" id="Phf-0O-soP"/>
                 <constraint firstAttribute="trailing" secondItem="azc-7K-3cT" secondAttribute="trailing" id="Sfr-0x-msh"/>
                 <constraint firstItem="sJV-lH-kwf" firstAttribute="leading" secondItem="T0K-nk-QZN" secondAttribute="leading" id="UPR-HF-1uG"/>
                 <constraint firstItem="azc-7K-3cT" firstAttribute="leading" secondItem="T0K-nk-QZN" secondAttribute="leading" id="i8l-rL-lLT"/>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5D7266E6F0DA2798E156852 /* Pods_Universe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */; };
+		05F9EDFF21C38A7DEF57F72B /* Pods_Universe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867DAF176B51F13A86489E39 /* Pods_Universe.framework */; };
 		F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */; };
 		F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02473FF1CA57E7A0049DB21 /* Main.storyboard */; };
 		F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02474021CA57E7A0049DB21 /* Assets.xcassets */; };
@@ -27,6 +27,7 @@
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
+		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.debug.xcconfig"; sourceTree = "<group>"; };
-		D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.release.xcconfig"; sourceTree = "<group>"; };
+		40B2BF5294BBC71723D0FF00 /* Pods-Universe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.debug.xcconfig"; sourceTree = "<group>"; };
+		867DAF176B51F13A86489E39 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E240178F68B2EB6BBB98D297 /* Pods-Universe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.release.xcconfig"; sourceTree = "<group>"; };
 		F02473F81CA57E7A0049DB21 /* Universe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02474001CA57E7A0049DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +76,9 @@
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universe-Bridging-Header.h"; sourceTree = "<group>"; };
+		F89C04931CAA554100308952 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = Vender/MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
+		F89C04941CAA554100308952 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = Vender/MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D7266E6F0DA2798E156852 /* Pods_Universe.framework in Frameworks */,
+				05F9EDFF21C38A7DEF57F72B /* Pods_Universe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,19 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E42BEE995FC21635C2F172F /* Pods */ = {
+		4124676EBA07810750F55E6B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */,
-				D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */,
+				40B2BF5294BBC71723D0FF00 /* Pods-Universe.debug.xcconfig */,
+				E240178F68B2EB6BBB98D297 /* Pods-Universe.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		98336502569E2917EBFF7983 /* Frameworks */ = {
+		9D00F6E21F1D282DF91F1806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7500225FFB9C0CE2CC227626 /* Pods_Universe.framework */,
+				867DAF176B51F13A86489E39 /* Pods_Universe.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,8 +131,8 @@
 				F024740F1CA57E7A0049DB21 /* UniverseTests */,
 				F024741A1CA57E7A0049DB21 /* UniverseUITests */,
 				F02473F91CA57E7A0049DB21 /* Products */,
-				4E42BEE995FC21635C2F172F /* Pods */,
-				98336502569E2917EBFF7983 /* Frameworks */,
+				4124676EBA07810750F55E6B /* Pods */,
+				9D00F6E21F1D282DF91F1806 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,12 +150,15 @@
 			isa = PBXGroup;
 			children = (
 				F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */,
+				F86587BE1CAA535200000063 /* Universe-Bridging-Header.h */,
+				F86587BD1CAA4CE700000063 /* Protocol */,
 				F86587B61CA9078600000063 /* Font */,
 				F86587B11CA8EFB500000063 /* Extensions */,
 				F02AA71D1CA78DE4008ED176 /* Helpers */,
 				F02AA7191CA77821008ED176 /* Model */,
 				F02474351CA621FC0049DB21 /* Views */,
 				F02474291CA619960049DB21 /* ViewControllers */,
+				F89C04911CAA54E700308952 /* Vender */,
 				F02473FF1CA57E7A0049DB21 /* Main.storyboard */,
 				F0BA88901CA682B100210DE7 /* Resource */,
 			);
@@ -321,6 +328,30 @@
 			name = Font;
 			sourceTree = "<group>";
 		};
+		F86587BD1CAA4CE700000063 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		F89C04911CAA54E700308952 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				F89C04921CAA552F00308952 /* MZTimerLabel */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
+		F89C04921CAA552F00308952 /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F89C04931CAA554100308952 /* MZTimerLabel.h */,
+				F89C04941CAA554100308952 /* MZTimerLabel.m */,
+			);
+			name = MZTimerLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,12 +359,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F02474201CA57E7A0049DB21 /* Build configuration list for PBXNativeTarget "Universe" */;
 			buildPhases = (
-				5E905CCF809D1784B5300A97 /* Check Pods Manifest.lock */,
+				389BDEB700BDD1205B35AC8F /* Check Pods Manifest.lock */,
 				F02473F41CA57E7A0049DB21 /* Sources */,
 				F02473F51CA57E7A0049DB21 /* Frameworks */,
 				F02473F61CA57E7A0049DB21 /* Resources */,
-				786E33AA1C311F748AC46467 /* Embed Pods Frameworks */,
-				B069C22E30CA394BD28711F5 /* Copy Pods Resources */,
+				31F0372D5B5584AA2544D2F6 /* Embed Pods Frameworks */,
+				74B30044AC8FC7AA662CAE31 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,7 +417,7 @@
 		F02473F01CA57E7A0049DB21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "王振宇";
 				TargetAttributes = {
@@ -456,22 +487,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5E905CCF809D1784B5300A97 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		786E33AA1C311F748AC46467 /* Embed Pods Frameworks */ = {
+		31F0372D5B5584AA2544D2F6 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,7 +502,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universe/Pods-Universe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B069C22E30CA394BD28711F5 /* Copy Pods Resources */ = {
+		389BDEB700BDD1205B35AC8F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74B30044AC8FC7AA662CAE31 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,6 +546,7 @@
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,
 				F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */,
 				F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */,
+				F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
@@ -659,27 +691,32 @@
 		};
 		F02474211CA57E7A0049DB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1A377150946567EBF7519AF /* Pods-Universe.debug.xcconfig */;
+			baseConfigurationReference = 40B2BF5294BBC71723D0FF00 /* Pods-Universe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Universe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mazingwang.OMG.com.Universe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Universe/Universe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F02474221CA57E7A0049DB21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D80BB718BE8206997801C9F1 /* Pods-Universe.release.xcconfig */;
+			baseConfigurationReference = E240178F68B2EB6BBB98D297 /* Pods-Universe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Universe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mazingwang.OMG.com.Universe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Universe/Universe-Bridging-Header.h";
 			};
 			name = Release;
 		};

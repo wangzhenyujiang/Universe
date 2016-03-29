@@ -114,32 +114,25 @@ class StarsViewController: BaseViewController {
         guard let star = star else {
             return
         }
+        if !canUnLock(Star(star: star)) {
+            
+            return
+        }
         
         switch star {
         case .SunStar:
-            if canUnLock(Star(star: star)) {
-                
-            }
+            print("\(star.chineseName)")
         case .RoseStar:
-            if canUnLock(Star(star: star)) {
-                
-            }
+            print("\(star.chineseName)")
         case .NormalStar:
-            if canUnLock(Star(star: star)) {
-                performSegueWithIdentifier("startSegue", sender: nil)
-            }
+            print("\(star.chineseName)")
+            performSegueWithIdentifier("startSegue", sender: nil)
         case .JupiterStar:
-            if canUnLock(Star(star: star)) {
-                
-            }
+            print("\(star.chineseName)")
         case .CloverStar:
-            if canUnLock(Star(star: star)) {
-                
-            }
+            print("\(star.chineseName)")
         case .CakeStar:
-            if canUnLock(Star(star: star)) {
-                
-            }
+            print("\(star.chineseName)")
         }
     }
     
