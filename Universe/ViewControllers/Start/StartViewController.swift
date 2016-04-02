@@ -10,6 +10,7 @@ import UIKit
 
 class StartViewController: BaseViewController {
     @IBOutlet weak var timerLabel: MZTimerLabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
