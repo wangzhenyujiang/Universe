@@ -2,14 +2,17 @@ PODS:
   - Charts (2.2.3):
     - Charts/Core (= 2.2.3)
   - Charts/Core (2.2.3)
+  - LxThroughPointsBezier (1.0.0)
   - Masonry (0.6.4)
 
 DEPENDENCIES:
   - Charts
+  - LxThroughPointsBezier (~> 1.0.0)
   - Masonry
 
 SPEC CHECKSUMS:
   Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
+  LxThroughPointsBezier: fdebe18dd4ddab9406d9827db77a078b4738b00f
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
 
 COCOAPODS: 0.39.0

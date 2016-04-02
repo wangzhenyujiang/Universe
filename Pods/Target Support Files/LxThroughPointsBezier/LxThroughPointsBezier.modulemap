@@ -1,0 +1,6 @@
+framework module LxThroughPointsBezier {
+  umbrella header "LxThroughPointsBezier-umbrella.h"
+
+  export *
+  module * { export * }
+}

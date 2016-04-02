@@ -6,5 +6,6 @@ use_frameworks!
 
 target 'Universe' do
 pod 'Masonry'
+pod 'LxThroughPointsBezier', '~> 1.0.0'
 pod 'Charts'
 end
