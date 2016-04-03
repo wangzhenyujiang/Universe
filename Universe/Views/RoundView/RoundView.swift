@@ -24,7 +24,7 @@ class RoundView: UIView {
         control.backgroundColor = aInstance.backgroundColor
         control.layer.cornerRadius = Radius
         control.layer.masksToBounds = true
-        control.addTarget(aInstance, action: Selector("touchDragInside:event:"), forControlEvents: UIControlEvents.TouchDragInside)
+        control.addTarget(aInstance, action: "touchDragInside:event:", forControlEvents: UIControlEvents.TouchDragInside)
         
         aInstance.addSubview(control)
         

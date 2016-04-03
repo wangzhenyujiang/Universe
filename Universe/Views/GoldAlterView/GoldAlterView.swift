@@ -13,7 +13,7 @@ import UIKit
 
 class GoldAlterView: UIView {
     
-    static let shareInstance: GoldAlterView = GoldAlterView()
+    private static let shareInstance: GoldAlterView = GoldAlterView()
 
     var alphaProcess: CGFloat = 0.8 {
         didSet {
@@ -47,7 +47,8 @@ class GoldAlterView: UIView {
         
         alphaView = UIView(frame: alterFrame)
         alphaView.backgroundColor = UIColor.whiteColor()
-        alphaView.alpha = 0.8
+        alphaView.alpha = alphaProcess
+        alphaView.layer.cornerRadius = 5.0
         addSubview(alphaView)
         
         view =  NSBundle.mainBundle().loadNibNamed(String(GoldAlterView), owner: self, options: nil).first as? UIView
@@ -63,6 +64,9 @@ class GoldAlterView: UIView {
 
 extension GoldAlterView {
     static func show(glod: Int = 0) {
+        if shareInstance.showing {
+            return
+        }
         shareInstance.glodNumLabel.text = "\(glod)"
         
         UIApplication.sharedApplication().windows.first?.addSubview(shareInstance)
@@ -71,9 +75,11 @@ extension GoldAlterView {
     }
     
     static func hide() {
-        if (shareInstance.showing) {
-            shareInstance.removeFromSuperview()
+        if !shareInstance.showing {
+            return
         }
+        
+        shareInstance.removeFromSuperview()
         shareInstance.showing = false
     }
 }
@@ -85,3 +91,4 @@ extension GoldAlterView {
         GoldAlterView.hide()
     }
 }
+

@@ -12,14 +12,18 @@ class StartViewController: BaseViewController {
     @IBOutlet weak var timerLabel: MZTimerLabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        setupTimerLabel()
-    }
+    var time: NSTimeInterval?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTimerLabel()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "startToTimingSegue" {
+            let controller: TimmingViewController = segue.destinationViewController as! TimmingViewController
+            controller.time = 10
+        }
     }
 }
 
@@ -36,16 +40,9 @@ extension StartViewController {
     }
 }
 
-extension StartViewController: MZTimerLabelDelegate {
-    
-    func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
-        
-    }
-    
-    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        
-    }
-    
+//MARK: Private 
+
+extension StartViewController {
     private func setupTimerLabel() {
         timerLabel.timeFormat = "mm : ss"
         timerLabel.timerType = MZTimerLabelTypeTimer
