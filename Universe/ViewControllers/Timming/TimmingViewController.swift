@@ -27,7 +27,7 @@ extension TimmingViewController {
     }
     
     @IBAction func giveupAction(sender: AnyObject) {
-        
+        GoldAlterView.show(11)
     }
 }
 
