@@ -13,12 +13,19 @@ import UIKit
 
 class GoldAlterView: UIView {
     
-    private var view: UIView!
     static let shareInstance: GoldAlterView = GoldAlterView()
+
+    var alphaProcess: CGFloat = 0.8 {
+        didSet {
+            alphaView.alpha = alphaProcess
+        }
+    }
     
-    var showing: Bool = false
+    private var view: UIView!
+    private var alphaView: UIView!
+    private var showing: Bool = false
     
-    @IBOutlet weak var glodNumLabel: UILabel!
+    @IBOutlet weak private var glodNumLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight))
@@ -35,9 +42,17 @@ class GoldAlterView: UIView {
     }
     
     private func commonInit() {
+        
+        let alterFrame = CGRectMake(ScreenWidth / 2 - alterWidth / 2, ScreenHeight / 2 - alterHeight / 2, alterWidth, alterHeight)
+        
+        alphaView = UIView(frame: alterFrame)
+        alphaView.backgroundColor = UIColor.whiteColor()
+        alphaView.alpha = 0.8
+        addSubview(alphaView)
+        
         view =  NSBundle.mainBundle().loadNibNamed(String(GoldAlterView), owner: self, options: nil).first as? UIView
-        view.frame = CGRectMake(ScreenWidth / 2 - alterWidth / 2, ScreenHeight / 2 - alterHeight / 2, alterWidth, alterHeight)
-        view.backgroundColor = UIColor.whiteColor()
+        view.frame = alterFrame
+        view.backgroundColor = UIColor.clearColor()
         addSubview(view)
         
         backgroundColor = UIColor.clearColor()
