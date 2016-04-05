@@ -12,6 +12,8 @@ struct Star: Hashable {
     let starType: StarType
     let gold: Int
     
+    var index: Int = 0
+    
     var chineseNmae: String {
         return starType.chineseName
     }

@@ -31,6 +31,7 @@
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
+		F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
 		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
@@ -88,6 +89,7 @@
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
+		F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationView.swift; path = Views/ConstellationView/ConstellationView.swift; sourceTree = "<group>"; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		F89C04931CAA554100308952 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = Vender/MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		F02474351CA621FC0049DB21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0E8B0EA1CB3FC99001C702F /* ConstellationView */,
 				F064366F1CB0D52B005720AB /* GoldAlterView */,
 				F0B1B65B1CAF8CDA00286EE7 /* RoundView */,
 				F02AA7261CA7ECA5008ED176 /* Cells */,
@@ -356,6 +359,14 @@
 				F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */,
 			);
 			name = Start;
+			sourceTree = "<group>";
+		};
+		F0E8B0EA1CB3FC99001C702F /* ConstellationView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */,
+			);
+			name = ConstellationView;
 			sourceTree = "<group>";
 		};
 		F86587B11CA8EFB500000063 /* Extensions */ = {
@@ -597,6 +608,7 @@
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
 				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,
+				F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */,
 				F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */,
 				F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */,
 				F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */,

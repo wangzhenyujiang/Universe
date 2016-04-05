@@ -17,6 +17,10 @@ class StartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTimerLabel()
+        
+        let xingzuoView = ConstellationView()
+        xingzuoView.pointArray = hour_two_arr
+        view.addSubview(xingzuoView)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
