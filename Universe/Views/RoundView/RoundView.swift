@@ -17,25 +17,23 @@ class RoundView: UIView {
     static func instance() -> RoundView {
         let aInstance = RoundView(frame: CGRectMake(0, 0, Radius * 2, Radius * 2));
         aInstance.layer .cornerRadius = Radius
-        aInstance.backgroundColor = UIColor.whiteColor()
+        aInstance.backgroundColor = UIColor.magentaColor()
         
         let control = UIControl()
         control.frame = aInstance.bounds
         control.backgroundColor = aInstance.backgroundColor
         control.layer.cornerRadius = Radius
         control.layer.masksToBounds = true
-        control.addTarget(aInstance, action: "touchDragInside:event:", forControlEvents: UIControlEvents.TouchDragInside)
+        control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchDragInside)
         
         aInstance.addSubview(control)
         
         return aInstance
     }
     
-    @objc private func touchDragInside(roundView: RoundView, event: UIEvent) {
-        roundView.center = (event.allTouches()?.first?.locationInView(roundView.superview))!
-        guard let callback = dragCallback else {
-            return
-        }
-        callback(roundView)
+    @objc private func roundViewClick() {
+        guard let callBack = dragCallback else { return }
+        callBack(self)
     }
+    
 }
