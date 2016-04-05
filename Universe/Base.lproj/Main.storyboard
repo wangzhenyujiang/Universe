@@ -194,14 +194,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-rA-y6h" userLabel="StarView" customClass="TouchDebugView" customModule="Universe" customModuleProvider="target">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <color key="backgroundColor" red="0.59332591909999999" green="0.87288079900000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PZq-rA-y6h" secondAttribute="height" multiplier="1:1" id="4pA-ka-dgE"/>
-                                    <constraint firstAttribute="width" constant="300" id="fg2-ZQ-Ld4"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-wv-6El">
                                 <rect key="frame" x="540" y="552" width="40" height="40"/>
                                 <state key="normal" image="back"/>
@@ -210,7 +202,7 @@
                                     <action selector="backAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="cAB-P5-ySA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_half_task" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
+                            <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_two_task" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -235,10 +227,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CaC-wv-6El" secondAttribute="trailing" constant="20" id="5Ek-CM-1aX"/>
-                            <constraint firstItem="PZq-rA-y6h" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="AHU-Yp-7fc"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" id="Gjo-LN-AAE"/>
                             <constraint firstItem="NVZ-QM-IaT" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="Hhi-k3-Ztc"/>
-                            <constraint firstItem="PZq-rA-y6h" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" id="IkV-44-p3x"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="boI-nd-A8K"/>
                             <constraint firstItem="CaC-wv-6El" firstAttribute="top" secondItem="NVZ-QM-IaT" secondAttribute="bottom" constant="20" id="dJB-1N-B8G"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="top" secondItem="pf7-sH-CFb" secondAttribute="bottom" id="jaK-F0-ogS"/>
@@ -479,8 +469,8 @@
         <image name="free_model" width="40" height="40"/>
         <image name="giveup_button" width="120" height="60"/>
         <image name="gold" width="30" height="30"/>
-        <image name="hour_half_task" width="300" height="300"/>
         <image name="hour_one_task" width="300" height="300"/>
+        <image name="hour_two_task" width="300" height="300"/>
         <image name="menu" width="40" height="40"/>
         <image name="start_button" width="120" height="60"/>
         <image name="tomato_model" width="40" height="40"/>

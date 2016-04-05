@@ -17,14 +17,19 @@ class RoundView: UIView {
     static func instance() -> RoundView {
         let aInstance = RoundView(frame: CGRectMake(0, 0, Radius * 2, Radius * 2));
         aInstance.layer .cornerRadius = Radius
-        aInstance.backgroundColor = UIColor.magentaColor()
+        aInstance.backgroundColor = UIColor.clearColor()
+        
+        aInstance.layer.shadowRadius = 5.0
+        aInstance.layer.shadowOpacity = 10.0
+        aInstance.layer.shadowOffset = CGSizeMake(5, 5)
+        aInstance.layer.shadowColor = UIColor.blackColor().CGColor
         
         let control = UIControl()
         control.frame = aInstance.bounds
-        control.backgroundColor = aInstance.backgroundColor
+        control.backgroundColor = UIColor.constellationColor()
         control.layer.cornerRadius = Radius
         control.layer.masksToBounds = true
-        control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchDragInside)
+        control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchUpInside)
         
         aInstance.addSubview(control)
         

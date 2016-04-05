@@ -22,14 +22,21 @@ class ConstellationView: UIView {
         }
     }
     
+    var starIndex: Int = 0{
+        didSet {
+            print("\(starIndex)")
+        }
+    }
+    
     private var roundViewArr: [RoundView] = []
 
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, Height, Height))
+        backgroundColor = UIColor.clearColor()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
     convenience init() {
@@ -38,24 +45,19 @@ class ConstellationView: UIView {
 
 }
 
-//MARK: Public 
-
-extension ConstellationView {
-    
-}
-
 //MARK: Private
 
 extension ConstellationView {
     private func addStars() {
-        roundViewArr =  pointArray.map() { (x, y) in
+        for (index, (x, y)) in pointArray.enumerate() {
             let roundView = RoundView.instance()
             roundView.center = CGPointMake(x, y)
-            roundView.dragCallback = { view in
-            
+            roundView.dragCallback = {[weak self] view in
+                guard let strongSelf = self else { return }
+                strongSelf.starIndex = index
             }
+            roundViewArr.append(roundView)
             addSubview(roundView)
-            return roundView
         }
     }
     
@@ -70,9 +72,9 @@ extension ConstellationView {
         curve.addBezierThroughPoints(pointArr)
         
         shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.magentaColor().CGColor
+        shapeLayer.strokeColor = UIColor.constellationColor().CGColor
         shapeLayer.fillColor = nil
-        shapeLayer.lineWidth = 3.0
+        shapeLayer.lineWidth = 5.0
         shapeLayer.path = curve.CGPath
         shapeLayer.lineCap = kCALineCapRound
         
