@@ -7,6 +7,7 @@
 //
 
 let Height: CGFloat = 300.0
+let LineWidth: CGFloat = 3.0
 
 import UIKit
 
@@ -74,7 +75,7 @@ extension ConstellationView {
         shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = UIColor.constellationColor().CGColor
         shapeLayer.fillColor = nil
-        shapeLayer.lineWidth = 5.0
+        shapeLayer.lineWidth = LineWidth
         shapeLayer.path = curve.CGPath
         shapeLayer.lineCap = kCALineCapRound
         

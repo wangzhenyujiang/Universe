@@ -8,7 +8,7 @@
 
 import UIKit
 
-let Radius: CGFloat = 10
+let Radius: CGFloat = 7
 
 class RoundView: UIView {
     
