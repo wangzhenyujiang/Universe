@@ -8,25 +8,37 @@
 
 import UIKit
 
+let Half_Hour: NSTimeInterval = 1800
+
 class StartViewController: BaseViewController {
     @IBOutlet weak var timerLabel: MZTimerLabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
     
-    var time: NSTimeInterval?
+    let timeSelectedView = ConstellationView()
+    var time: NSTimeInterval!
+
+    var starIndex: Int = 0 {
+        didSet {
+            if starIndex == 0 {
+                startButton.enabled = false
+                return
+            }
+            startButton.enabled = true
+            time = Double(starIndex) * Half_Hour
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTimerLabel()
         
-        let xingzuoView = ConstellationView()
-        xingzuoView.pointArray = hour_two_arr
-        view.addSubview(xingzuoView)
+        commonSetup()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startToTimingSegue" {
             let controller: TimmingViewController = segue.destinationViewController as! TimmingViewController
-            controller.time = 10
+            controller.time = time
         }
     }
 }
@@ -47,6 +59,23 @@ extension StartViewController {
 //MARK: Private 
 
 extension StartViewController {
+    
+    private func commonSetup() {
+        setupTimerLabel()
+        setupTimeSelectedView()
+        startButton.enabled = false
+        
+    }
+    
+    private func setupTimeSelectedView() {
+        timeSelectedView.pointArray = time_selected_arr
+        timeSelectedView.constellationCallBack = {[weak self] view, index in
+            guard let strongSelf = self else { return }
+            strongSelf.starIndex = index
+        }
+        view.addSubview(timeSelectedView)
+    }
+    
     private func setupTimerLabel() {
         timerLabel.timeFormat = "mm : ss"
         timerLabel.timerType = MZTimerLabelTypeTimer

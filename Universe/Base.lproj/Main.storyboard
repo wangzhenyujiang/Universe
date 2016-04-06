@@ -202,7 +202,7 @@
                                     <action selector="backAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="cAB-P5-ySA"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_half_fill_back" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time_selecte_back" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -238,6 +238,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pf7-sH-CFb" id="0XU-9q-NAs"/>
+                        <outlet property="startButton" destination="NVZ-QM-IaT" id="1vc-L9-yEH"/>
                         <outlet property="timerLabel" destination="yzb-Lc-pIO" id="zAr-iY-wO9"/>
                     </connections>
                 </viewController>
@@ -469,10 +470,10 @@
         <image name="free_model" width="40" height="40"/>
         <image name="giveup_button" width="120" height="60"/>
         <image name="gold" width="30" height="30"/>
-        <image name="hour_half_fill_back" width="300" height="300"/>
         <image name="hour_one_task" width="300" height="300"/>
         <image name="menu" width="40" height="40"/>
         <image name="start_button" width="120" height="60"/>
+        <image name="time_selecte_back" width="300" height="300"/>
         <image name="tomato_model" width="40" height="40"/>
     </resources>
 </document>

@@ -14,6 +14,8 @@ class RoundView: UIView {
     
     var dragCallback: ((RoundView -> Void))?
     
+    private var control: UIControl!
+    
     static func instance() -> RoundView {
         let aInstance = RoundView(frame: CGRectMake(0, 0, Radius * 2, Radius * 2));
         aInstance.layer .cornerRadius = Radius
@@ -24,16 +26,24 @@ class RoundView: UIView {
         aInstance.layer.shadowOffset = CGSizeMake(5, 5)
         aInstance.layer.shadowColor = UIColor.blackColor().CGColor
         
-        let control = UIControl()
-        control.frame = aInstance.bounds
-        control.backgroundColor = UIColor.constellationColor()
-        control.layer.cornerRadius = Radius
-        control.layer.masksToBounds = true
-        control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchUpInside)
+        aInstance.control = UIControl()
+        aInstance.control.frame = aInstance.bounds
+        aInstance.control.backgroundColor = UIColor.constellationColor()
+        aInstance.control.layer.cornerRadius = Radius
+        aInstance.control.layer.masksToBounds = true
+        aInstance.control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchUpInside)
         
-        aInstance.addSubview(control)
+        aInstance.addSubview(aInstance.control)
         
         return aInstance
+    }
+    
+    func changeToStarColor(change: Bool) {
+        if change {
+            control.backgroundColor = UIColor.starColor()
+        }else {
+            control.backgroundColor = UIColor.constellationColor()
+        }
     }
     
     @objc private func roundViewClick() {

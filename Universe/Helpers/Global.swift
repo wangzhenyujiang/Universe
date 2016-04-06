@@ -11,6 +11,8 @@ import UIKit
 let ScreenWidth = UIScreen.mainScreen().bounds.width
 let ScreenHeight = UIScreen.mainScreen().bounds.height
 
+let time_selected_arr: [(CGFloat, CGFloat)] = [(123.5, 58.0), (70.5, 109.5), (64.0, 177.0), (101.5, 224.0), (165.0, 244.5), (233.5, 222.5), (265.5, 145.0)]
+
 let hour_half_arr: [(CGFloat, CGFloat)] = [(161.0, 28.0), (147.0, 75.0), (139.0, 134.5), (168.5, 190.5), (213.0, 227.5), (160.0, 253.0)]
 let hour_one_arr: [(CGFloat, CGFloat)] = [(147.0, 29.5), (133.0, 75.5), (123.0, 134.5), (153.0, 190.0), (198.5, 228.0), (146.5, 253.0),(108.5, 220.5)]
 let hour_oneAndHalf_arr: [(CGFloat, CGFloat)] = [(143.0, 29.5), (63.0, 71.5), (199.5, 117.0), (85.5, 174.5), (176.5, 184.5), (213.0, 247.5)]

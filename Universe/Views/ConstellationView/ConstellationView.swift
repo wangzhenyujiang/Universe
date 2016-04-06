@@ -16,6 +16,8 @@ class ConstellationView: UIView {
     private var curve: UIBezierPath!
     private var shapeLayer: CAShapeLayer!
     
+    var constellationCallBack: ((RoundView, Int) -> Void)?
+    
     var pointArray: [(CGFloat, CGFloat)] = [] {
         didSet {
             addStars()
@@ -25,7 +27,8 @@ class ConstellationView: UIView {
     
     var starIndex: Int = 0{
         didSet {
-            print("\(starIndex)")
+            guard let callback = constellationCallBack else { return }
+            callback(roundViewArr[starIndex], starIndex)
         }
     }
     
@@ -53,9 +56,10 @@ extension ConstellationView {
         for (index, (x, y)) in pointArray.enumerate() {
             let roundView = RoundView.instance()
             roundView.center = CGPointMake(x, y)
-            roundView.dragCallback = {[weak self] view in
+            roundView.dragCallback = {[weak self] (view: RoundView) in
                 guard let strongSelf = self else { return }
                 strongSelf.starIndex = index
+                view.changeToStarColor(true)
             }
             roundViewArr.append(roundView)
             addSubview(roundView)
@@ -73,7 +77,7 @@ extension ConstellationView {
         curve.addBezierThroughPoints(pointArr)
         
         shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.constellationColor().CGColor
+        shapeLayer.strokeColor = UIColor.starColor().CGColor
         shapeLayer.fillColor = nil
         shapeLayer.lineWidth = LineWidth
         shapeLayer.path = curve.CGPath

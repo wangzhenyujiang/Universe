@@ -13,4 +13,8 @@ extension UIColor {
     static func constellationColor() -> UIColor {
         return UIColor.whiteColor()
     }
+    
+    static func starColor() -> UIColor {
+        return UIColor(red: 0.99, green: 0.81, blue: 0.09, alpha: 1)
+    }
 }
