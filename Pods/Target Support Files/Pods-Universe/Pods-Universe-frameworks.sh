@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Universe/Cache.framework"
   install_framework "Pods-Universe/Charts.framework"
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Universe/Cache.framework"
   install_framework "Pods-Universe/Charts.framework"
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
