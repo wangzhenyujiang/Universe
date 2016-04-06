@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol Cachable {
-  associatedtype CacheType
+  typealias CacheType
 
   static func decode(data: NSData) -> CacheType?
   func encode() -> NSData?

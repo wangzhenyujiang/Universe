@@ -7,14 +7,14 @@ public class HybridCache: BasicHybridCache {
   public override init(name: String, config: Config = Config.defaultConfig) {
     super.init(name: name, config: config)
 
-    let notificationCenter = NSNotificationCenter.defaultCenter()
+//    let notificationCenter = NSNotificationCenter.defaultCenter()
 
-    notificationCenter.addObserver(self, selector: #selector(HybridCache.applicationDidReceiveMemoryWarning),
-      name: UIApplicationDidReceiveMemoryWarningNotification, object: nil)
-    notificationCenter.addObserver(self, selector: #selector(HybridCache.applicationWillTerminate),
-      name: UIApplicationWillTerminateNotification, object: nil)
-    notificationCenter.addObserver(self, selector: #selector(HybridCache.applicationDidEnterBackground),
-      name: UIApplicationDidEnterBackgroundNotification, object: nil)
+//    notificationCenter.addObserver(self, selector: Selector(HybridCache.applicationDidReceiveMemoryWarning),
+//      name: UIApplicationDidReceiveMemoryWarningNotification, object: nil)
+//    notificationCenter.addObserver(self, selector: Selector(HybridCache.applicationWillTerminate),
+//      name: UIApplicationWillTerminateNotification, object: nil)
+//    notificationCenter.addObserver(self, selector: Selector(HybridCache.applicationDidEnterBackground),
+//      name: UIApplicationDidEnterBackgroundNotification, object: nil)
   }
 
   deinit {
