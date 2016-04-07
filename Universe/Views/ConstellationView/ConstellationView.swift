@@ -67,7 +67,9 @@ extension ConstellationView {
     }
     
     private func addLine() {
-        let pointArr: [NSValue] = pointArray.map() { viewPoint in
+        let pointArr: [NSValue] = pointArray.filter(){viewPoint in
+                return true
+            }.map() { viewPoint in
             return NSValue(CGPoint: CGPointMake(viewPoint.point.0, viewPoint.point.1))
         }
         

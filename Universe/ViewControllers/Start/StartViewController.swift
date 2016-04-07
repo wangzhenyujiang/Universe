@@ -65,10 +65,19 @@ extension StartViewController {
         setupTimeSelectedView()
         startButton.enabled = false
         
+        
+        let maskView = LCStarView()
+        maskView.frame = CGRectMake(0, 0, 300, 300)
+        maskView.center = view.center
+        maskView.fillColor = UIColor.starColor()
+        maskView.maskImage = UIImage(named: "hour_half_fill")
+        
+        view.addSubview(maskView)
+        
     }
     
     private func setupTimeSelectedView() {
-        timeSelectedView.pointArray = time_selected_point_arr
+        timeSelectedView.pointArray = hour_two_point_arr
         timeSelectedView.constellationCallBack = {[weak self] view, index in
             guard let strongSelf = self else { return }
             strongSelf.starIndex = index

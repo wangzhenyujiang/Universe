@@ -40,6 +40,7 @@
 		F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */; };
 		F8F0B95B1CB625EF001EFC59 /* ViewPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */; };
 		F8F0B95D1CB62DB6001EFC59 /* ViewPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */; };
+		F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F0B9611CB64CB1001EFC59 /* LCStarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeue.ttf; path = Font/HelveticaNeue.ttf; sourceTree = "<group>"; };
 		F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPoint.swift; path = Model/ViewPoint/ViewPoint.swift; sourceTree = "<group>"; };
 		F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPointType.swift; path = Protocol/ViewPointType.swift; sourceTree = "<group>"; };
+		F8F0B9601CB64CB1001EFC59 /* LCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCStarView.h; path = Vender/LCStarView/LCStarView.h; sourceTree = "<group>"; };
+		F8F0B9611CB64CB1001EFC59 /* LCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCStarView.m; path = Vender/LCStarView/LCStarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +409,7 @@
 		F89C04911CAA54E700308952 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				F8F0B95F1CB64CA6001EFC59 /* LCStarView */,
 				F89C04921CAA552F00308952 /* MZTimerLabel */,
 			);
 			name = Vender;
@@ -426,6 +430,15 @@
 				F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		F8F0B95F1CB64CA6001EFC59 /* LCStarView */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0B9601CB64CB1001EFC59 /* LCStarView.h */,
+				F8F0B9611CB64CB1001EFC59 /* LCStarView.m */,
+			);
+			name = LCStarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -636,6 +649,7 @@
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
+				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
 				F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */,
 				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
