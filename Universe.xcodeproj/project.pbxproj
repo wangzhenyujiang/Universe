@@ -33,6 +33,8 @@
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */; };
 		F0E8B0EE1CB4097F001C702F /* UIColor+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */; };
+		F0F57E121CB6936B00A10DC3 /* ConstellationTimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F57E111CB6936B00A10DC3 /* ConstellationTimmingView.swift */; };
+		F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F57E151CB6945D00A10DC3 /* TimeType.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
 		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
@@ -94,6 +96,8 @@
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationView.swift; path = Views/ConstellationView/ConstellationView.swift; sourceTree = "<group>"; };
 		F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Universe.swift"; path = "Extensions/UIColor+Universe.swift"; sourceTree = "<group>"; };
+		F0F57E111CB6936B00A10DC3 /* ConstellationTimmingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationTimmingView.swift; path = Views/ConstellationView/ConstellationTimmingView.swift; sourceTree = "<group>"; };
+		F0F57E151CB6945D00A10DC3 /* TimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeType.swift; path = Model/Enum/TimeType/TimeType.swift; sourceTree = "<group>"; };
 		F84E7FE123ED8EEBCAEB0E06 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -270,7 +274,8 @@
 		F02AA7191CA77821008ED176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F8F0B9591CB625E0001EFC59 /* New Group */,
+				F0F57E131CB6943600A10DC3 /* Enum */,
+				F8F0B9591CB625E0001EFC59 /* ViewPoint */,
 				F02AA7201CA79348008ED176 /* User */,
 				F02AA71A1CA7782D008ED176 /* Star */,
 			);
@@ -375,8 +380,25 @@
 			isa = PBXGroup;
 			children = (
 				F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */,
+				F0F57E111CB6936B00A10DC3 /* ConstellationTimmingView.swift */,
 			);
 			name = ConstellationView;
+			sourceTree = "<group>";
+		};
+		F0F57E131CB6943600A10DC3 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				F0F57E141CB6944E00A10DC3 /* TimeType */,
+			);
+			name = Enum;
+			sourceTree = "<group>";
+		};
+		F0F57E141CB6944E00A10DC3 /* TimeType */ = {
+			isa = PBXGroup;
+			children = (
+				F0F57E151CB6945D00A10DC3 /* TimeType.swift */,
+			);
+			name = TimeType;
 			sourceTree = "<group>";
 		};
 		F86587B11CA8EFB500000063 /* Extensions */ = {
@@ -424,12 +446,12 @@
 			name = MZTimerLabel;
 			sourceTree = "<group>";
 		};
-		F8F0B9591CB625E0001EFC59 /* New Group */ = {
+		F8F0B9591CB625E0001EFC59 /* ViewPoint */ = {
 			isa = PBXGroup;
 			children = (
 				F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */,
 			);
-			name = "New Group";
+			name = ViewPoint;
 			sourceTree = "<group>";
 		};
 		F8F0B95F1CB64CA6001EFC59 /* LCStarView */ = {
@@ -634,6 +656,7 @@
 				F8F0B95B1CB625EF001EFC59 /* ViewPoint.swift in Sources */,
 				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
 				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
+				F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */,
 				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
@@ -652,6 +675,7 @@
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
 				F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */,
+				F0F57E121CB6936B00A10DC3 /* ConstellationTimmingView.swift in Sources */,
 				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
 				F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */,
 			);

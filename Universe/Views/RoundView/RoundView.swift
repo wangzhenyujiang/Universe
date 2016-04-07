@@ -32,7 +32,7 @@ class RoundView: UIView {
         aInstance.control.backgroundColor = UIColor.constellationColor()
         aInstance.control.layer.cornerRadius = point.sizeType.Radius
         aInstance.control.layer.masksToBounds = true
-        aInstance.control.addTarget(aInstance, action: #selector(RoundView.roundViewClick), forControlEvents: UIControlEvents.TouchUpInside)
+        aInstance.control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchUpInside)
         
         aInstance.addSubview(aInstance.control)
         

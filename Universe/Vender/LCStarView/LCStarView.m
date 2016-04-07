@@ -21,6 +21,7 @@
     if (!_maskLayer) {
         self.maskLayer = [CAShapeLayer layer];
         self.maskLayer.frame = CGRectMake(0,0, _maskImage.size.width, _maskImage.size.height);
+        self.backgroundColor = [UIColor whiteColor];
         self.layer.mask = _maskLayer;
     }
     self.maskLayer.contents = (id)[_maskImage CGImage];
@@ -32,7 +33,7 @@
         self.fillView = [[UIView alloc] initWithFrame:self.bounds];
         [self addSubview:_fillView];
     }
-    self.fillView.backgroundColor = _fillColor;
+    self.fillView.backgroundColor = [UIColor clearColor];
 }
 
 
