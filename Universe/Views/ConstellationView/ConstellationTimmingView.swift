@@ -10,25 +10,19 @@ import UIKit
 
 class ConstellationTimmingView: UIView {
     
-    private var maskLayer: CAShapeLayer!
-    
-    var constellationBackView: ConstellationView!
-    var timmingType: TimeType = TimeType.Half
-    
-    var maskImage: UIImage! {
+    var timmingType: TimeType = TimeType.Half {
         didSet {
-            maskLayer = CAShapeLayer()
-            maskLayer.contents = maskImage.CGImage
-            maskLayer.frame = CGRectMake(0, 0, maskImage.size.width, maskImage.size.height)
-            layer.mask = maskLayer
+            
         }
     }
     
+    private var maskLayer: CAShapeLayer!
+    private var constellationBackView: ConstellationView!
+    private var maskImage: UIImage!
+    
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, 300, 300))
-        
         constellationBackView = ConstellationView()
-        constellationBackView.pointArray = timmingType.viewPointArr
         addSubview(constellationBackView)
     }
 
@@ -43,6 +37,14 @@ class ConstellationTimmingView: UIView {
     convenience init(timmingType: TimeType) {
         self.init(frame: CGRectZero)
         self.timmingType = timmingType
+        
+        constellationBackView.pointArray = timmingType.viewPointArr
+        
+        maskImage = UIImage(named: timmingType.maskImageName)
+        maskLayer = CAShapeLayer()
+        maskLayer.contents = maskImage.CGImage
+        maskLayer.frame = CGRectMake(0, 0, maskImage.size.width, maskImage.size.height)
+        layer.mask = maskLayer
     }
     
     override func willMoveToSuperview(newSuperview: UIView?) {

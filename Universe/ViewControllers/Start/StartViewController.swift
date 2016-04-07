@@ -65,18 +65,8 @@ extension StartViewController {
 //        setupTimeSelectedView()
         startButton.enabled = false
         
-//        let maskView = LCStarView()
-//        maskView.frame = CGRectMake(0, 0, 300, 300)
-//        maskView.center = view.center
-//        maskView.fillColor = UIColor.starColor()
-//        maskView.maskImage = UIImage(named: "hour_half_fill")
-//        
-//        view.addSubview(maskView)
-        
-        let timmingView = ConstellationTimmingView(timmingType: .Half)
-        timmingView.maskImage = UIImage(named: "hour_half_fill")
+        let timmingView = ConstellationTimmingView(timmingType: .Two)
         view.addSubview(timmingView)
-        
         
     }
     

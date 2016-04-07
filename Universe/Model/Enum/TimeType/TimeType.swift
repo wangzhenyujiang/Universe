@@ -34,4 +34,38 @@ enum TimeType {
         }
     }
     
+    var backImageName: String {
+        switch self {
+        case .Half:
+            return "hour_half_fill_back"
+        case .One:
+            return "hour_one_fill_back"
+        case .OneHalf:
+            return "hour_oneandhalf_fill_back"
+        case .Two:
+            return "hour_two_fill_back"
+        case .TwoHalf:
+            return "hour_twoandhalf_fill_back"
+        case .Three:
+            return "hour_three_fill_back"
+        }
+    }
+    
+    var maskImageName: String {
+        switch self {
+        case .Half:
+            return "hour_half_fill"
+        case .One:
+            return "hour_one_fill"
+        case .OneHalf:
+            return "hour_oneandhalf_fill"
+        case .Two:
+            return "hour_two_fill"
+        case .TwoHalf:
+            return "hour_twoandhalf_fill"
+        case .Three:
+            return "hour_three_fill"
+        }
+    }
+    
 }
