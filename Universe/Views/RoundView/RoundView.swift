@@ -8,7 +8,8 @@
 
 import UIKit
 
-let Radius: CGFloat = 7
+let Factor: CGFloat = 0.5
+
 
 class RoundView: UIView {
     
@@ -16,22 +17,22 @@ class RoundView: UIView {
     
     private var control: UIControl!
     
-    static func instance() -> RoundView {
-        let aInstance = RoundView(frame: CGRectMake(0, 0, Radius * 2, Radius * 2));
-        aInstance.layer .cornerRadius = Radius
+    static func instance(point: ViewPoint) -> RoundView {
+        let aInstance = RoundView(frame: CGRectMake(0, 0, point.sizeType.Radius * 2, point.sizeType.Radius * 2));
+        aInstance.layer .cornerRadius = point.sizeType.Radius
         aInstance.backgroundColor = UIColor.clearColor()
         
         aInstance.layer.shadowRadius = 5.0
         aInstance.layer.shadowOpacity = 10.0
-        aInstance.layer.shadowOffset = CGSizeMake(5, 5)
+        aInstance.layer.shadowOffset = CGSizeMake(Factor * point.sizeType.Radius, Factor * point.sizeType.Radius)
         aInstance.layer.shadowColor = UIColor.blackColor().CGColor
         
         aInstance.control = UIControl()
         aInstance.control.frame = aInstance.bounds
         aInstance.control.backgroundColor = UIColor.constellationColor()
-        aInstance.control.layer.cornerRadius = Radius
+        aInstance.control.layer.cornerRadius = point.sizeType.Radius
         aInstance.control.layer.masksToBounds = true
-        aInstance.control.addTarget(aInstance, action: "roundViewClick", forControlEvents: UIControlEvents.TouchUpInside)
+        aInstance.control.addTarget(aInstance, action: #selector(RoundView.roundViewClick), forControlEvents: UIControlEvents.TouchUpInside)
         
         aInstance.addSubview(aInstance.control)
         

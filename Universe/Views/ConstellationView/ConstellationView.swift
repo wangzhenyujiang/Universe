@@ -18,7 +18,7 @@ class ConstellationView: UIView {
     
     var constellationCallBack: ((RoundView, Int) -> Void)?
     
-    var pointArray: [(CGFloat, CGFloat)] = [] {
+    var pointArray: [ViewPoint] = [] {
         didSet {
             addStars()
             addLine()
@@ -53,13 +53,13 @@ class ConstellationView: UIView {
 
 extension ConstellationView {
     private func addStars() {
-        for (index, (x, y)) in pointArray.enumerate() {
-            let roundView = RoundView.instance()
-            roundView.center = CGPointMake(x, y)
+        for (index, viewPoint) in pointArray.enumerate() {
+            let roundView = RoundView.instance(viewPoint)
+            roundView.center = CGPointMake(viewPoint.point.0, viewPoint.point.1)
             roundView.dragCallback = {[weak self] (view: RoundView) in
                 guard let strongSelf = self else { return }
                 strongSelf.starIndex = index
-                view.changeToStarColor(true)
+                
             }
             roundViewArr.append(roundView)
             addSubview(roundView)
@@ -67,8 +67,8 @@ extension ConstellationView {
     }
     
     private func addLine() {
-        let pointArr: [NSValue] = pointArray.map() { (x, y) in
-            return NSValue(CGPoint: CGPointMake(x, y))
+        let pointArr: [NSValue] = pointArray.map() { viewPoint in
+            return NSValue(CGPoint: CGPointMake(viewPoint.point.0, viewPoint.point.1))
         }
         
         curve = UIBezierPath()

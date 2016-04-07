@@ -68,7 +68,7 @@ extension StartViewController {
     }
     
     private func setupTimeSelectedView() {
-        timeSelectedView.pointArray = time_selected_arr
+        timeSelectedView.pointArray = time_selected_point_arr
         timeSelectedView.constellationCallBack = {[weak self] view, index in
             guard let strongSelf = self else { return }
             strongSelf.starIndex = index
