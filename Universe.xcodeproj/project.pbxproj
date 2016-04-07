@@ -39,6 +39,7 @@
 		F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89C04961CAA572F00308952 /* UIFont+Universe.swift */; };
 		F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */; };
 		F8F0B95B1CB625EF001EFC59 /* ViewPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */; };
+		F8F0B95D1CB62DB6001EFC59 /* ViewPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F89C04991CAA669200308952 /* Universe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Universe-Bridging-Header.h"; sourceTree = "<group>"; };
 		F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelveticaNeue.ttf; path = Font/HelveticaNeue.ttf; sourceTree = "<group>"; };
 		F8F0B95A1CB625EF001EFC59 /* ViewPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPoint.swift; path = Model/ViewPoint/ViewPoint.swift; sourceTree = "<group>"; };
+		F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewPointType.swift; path = Protocol/ViewPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +398,7 @@
 		F86587BD1CAA4CE700000063 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */,
 				F0E8B0EE1CB4097F001C702F /* UIColor+Universe.swift in Sources */,
 				F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */,
+				F8F0B95D1CB62DB6001EFC59 /* ViewPointType.swift in Sources */,
 				F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,

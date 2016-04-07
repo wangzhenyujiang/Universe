@@ -17,12 +17,12 @@ enum  PointSizeType {
         case .Big:
             return 7.0
         default:
-            return 2.0
+            return 4.0
         }
     }
 }
 
-struct ViewPoint {
+struct ViewPoint: ViewPointType {
     var sizeType: PointSizeType
     var point: (CGFloat, CGFloat)
 }
