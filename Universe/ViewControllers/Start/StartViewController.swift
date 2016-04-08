@@ -20,26 +20,45 @@ class StartViewController: BaseViewController {
 
     var starIndex: Int = 0 {
         didSet {
-            if starIndex == 0 {
-                startButton.enabled = false
+            switch starIndex {
+            case 0:
+                self.startButton.enabled = false
                 return
+            case 1:
+                timmingType = .Half
+            case 2:
+                timmingType = .One
+            case 3:
+                timmingType = .OneHalf
+            case 4:
+                timmingType = .Two
+            case 5:
+                timmingType = .TwoHalf
+            case 6:
+                timmingType = .Three
+            default:
+                timmingType = .Half
             }
-            startButton.enabled = true
-            time = Double(starIndex) * Half_Hour
-            print(starIndex)
+            self.startButton.enabled = true
         }
+    }
+    
+    private var timmingType: TimeType!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        resetUI()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         commonSetup()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startToTimingSegue" {
             let controller: TimmingViewController = segue.destinationViewController as! TimmingViewController
-            controller.time = time
+            controller.timmingType = timmingType
         }
     }
 }
@@ -79,9 +98,11 @@ extension StartViewController {
     }
     
     private func setupTimerLabel() {
-        timerLabel.timeFormat = "mm : ss"
         timerLabel.timerType = MZTimerLabelTypeTimer
-        timerLabel.setCountDownTime(1800)
         timerLabel.textColor = UIColor.whiteColor()
+    }
+    
+    private func resetUI() {
+        timerLabel.setCountDownTime(0)
     }
 }

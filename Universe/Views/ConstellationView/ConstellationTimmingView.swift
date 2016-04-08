@@ -54,3 +54,15 @@ class ConstellationTimmingView: TouchDebugView {
     }
         
 }
+
+//MARK: Public 
+
+extension ConstellationTimmingView {
+    func startAnimated() {
+        constellationBackView.startTimeAnimated()
+    }
+    
+    func pause() {
+        constellationBackView.pause()
+    }
+}

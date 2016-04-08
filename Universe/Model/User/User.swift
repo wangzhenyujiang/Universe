@@ -24,11 +24,11 @@ class User: NSObject {
         super.init()
     }
     
-    private func addNum(addNum: Int) {
+    func addNum(addNum: Int) {
         updateGoldNum(gold + addNum)
     }
     
-    private func subtractNum(subNum: Int) {
+    func subtractNum(subNum: Int) {
         updateGoldNum(gold - subNum)
     }
     

@@ -265,8 +265,8 @@
                                     <constraint firstAttribute="width" constant="300" id="SxJ-Rg-mM4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUn-kG-pVF" customClass="MZTimerLabel">
-                                <rect key="frame" x="250" y="450" width="101" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUn-kG-pVF" customClass="MZTimerLabel">
+                                <rect key="frame" x="222.5" y="450" width="156" height="47.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -301,7 +301,7 @@
                     </view>
                     <connections>
                         <outlet property="backImageView" destination="hCw-sq-PzT" id="Pvm-Qr-s1k"/>
-                        <outlet property="timerLabel" destination="sUn-kG-pVF" id="udb-nB-VPl"/>
+                        <outlet property="timerLabel" destination="sUn-kG-pVF" id="Z4m-fc-ZRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epc-kS-lXh" userLabel="First Responder" sceneMemberID="firstResponder"/>

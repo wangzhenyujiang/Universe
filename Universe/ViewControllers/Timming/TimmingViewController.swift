@@ -9,24 +9,22 @@
 import UIKit
 
 class TimmingViewController: BaseViewController {
-    @IBOutlet weak var timerLabel: MZTimerLabel!
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var backImageView: UIImageView!
     
-    var time: NSTimeInterval!
+    var timmingType: TimeType!
     
-    private var timmingView: ConstellationTimmingView!
-    private var timmingType: TimeType {
-        
-        return .TwoHalf
+    private var time: NSTimeInterval {
+        return timmingType.time
     }
+    
+    private var timerCountLabel: MZTimerLabel!
+    private var timmingView: ConstellationTimmingView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setupTimerLabel()
         startTiming()
-        
-        timmingView = ConstellationTimmingView(timmingType: timmingType)
-        view.addSubview(timmingView)
         
         backImageView.image = UIImage(named: timmingType.backImageName)
     }
@@ -49,15 +47,18 @@ extension TimmingViewController {
 
 extension TimmingViewController {
     private func setupTimerLabel() {
-        timerLabel.timeFormat = "mm : ss"
-        timerLabel.timerType = MZTimerLabelTypeTimer
-        timerLabel.setCountDownTime(time)
-        timerLabel.delegate = self
+        timerCountLabel = MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeTimer)
+        timerCountLabel.setCountDownTime(time)
+        timerCountLabel.delegate = self
         timerLabel.textColor = UIColor.whiteColor()
     }
     
     private func startTiming() {
-        timerLabel.start()
+        timerCountLabel.start()
+        timmingView = ConstellationTimmingView(timmingType: timmingType)
+        view.addSubview(timmingView)
+
+        timmingView.startAnimated()
     }
 }
 
@@ -67,9 +68,14 @@ extension TimmingViewController: MZTimerLabelDelegate {
     
     func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
         GoldAlterView.show(11)
+        User.shareInstance.addNum(11)
     }
     
     func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        
+        if timerLabel.isEqual(self.timerLabel) {
+            if (time / 300) % 6 == 0 {
+                timerLabel.textColor = UIColor.redColor()
+            }
+        }
     }
 }

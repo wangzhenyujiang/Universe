@@ -17,6 +17,23 @@ enum TimeType {
     case TwoHalf
     case Three
     
+    var time: Double {
+        switch self {
+        case .Half:
+            return Half_Hour
+        case .One:
+            return 2 * Half_Hour
+        case .OneHalf:
+            return 3 * Half_Hour
+        case .Two:
+            return 4 * Half_Hour
+        case .TwoHalf:
+            return 5 * Half_Hour
+        case .Three:
+            return 6 * Half_Hour
+        }
+    }
+    
     var viewPointArr: [ViewPoint] {
         switch self {
         case .Half:

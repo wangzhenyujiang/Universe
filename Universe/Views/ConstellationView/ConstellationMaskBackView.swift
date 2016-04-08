@@ -17,19 +17,9 @@ class ConstellationMaskBackView: UIView {
         }
     }
     
-    var process: CGFloat = 0.6 {
-        didSet {
-            if process < 0 {
-                process = 0
-            }else if process > 1 {
-                process = 1
-            }
-            maskLayer.strokeEnd = process
-        }
-    }
-    
     private var cruve: UIBezierPath!
     private var maskLayer: CAShapeLayer!
+    private var animation: CABasicAnimation!
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, Height, Height))
@@ -43,6 +33,26 @@ class ConstellationMaskBackView: UIView {
     convenience init() {
         self.init(frame: CGRectZero)
     }
+}
+
+//MARK: Public
+
+extension ConstellationMaskBackView {
+    func startTimeAnimated() {
+        animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = timmingType.time
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.fillMode = kCAFillModeBoth
+        animation.removedOnCompletion = false
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        maskLayer.addAnimation(animation, forKey: "")
+    }
+    
+    func pause() {
+        animation.speed = 0
+    }
+    
 }
 
 //MARK: Private
@@ -67,7 +77,7 @@ extension ConstellationMaskBackView {
         maskLayer.lineWidth = LineWidth
         maskLayer.path = cruve.CGPath
         maskLayer.lineCap = kCALineCapRound
-        maskLayer.strokeEnd = process
+        maskLayer.strokeEnd = 0
         
         layer.mask = maskLayer
     }
