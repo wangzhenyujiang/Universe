@@ -258,15 +258,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhu-DP-uEA" userLabel="SatrView">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <color key="backgroundColor" red="0.59332591909999999" green="0.87288079900000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rhu-DP-uEA" secondAttribute="height" multiplier="1:1" id="8vM-Cb-fki"/>
-                                    <constraint firstAttribute="width" constant="300" id="b9K-ki-0pC"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_one_task" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-sq-PzT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_half_fill_back" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-sq-PzT">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hCw-sq-PzT" secondAttribute="height" multiplier="1:1" id="SqO-hZ-U6t"/>
@@ -299,17 +291,16 @@
                         <constraints>
                             <constraint firstItem="JUC-QC-rEM" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="1Vy-yt-xly"/>
                             <constraint firstItem="sUn-kG-pVF" firstAttribute="top" secondItem="hCw-sq-PzT" secondAttribute="bottom" id="36a-ID-COV"/>
-                            <constraint firstItem="rhu-DP-uEA" firstAttribute="centerY" secondItem="ig1-9e-dO1" secondAttribute="centerY" id="5mW-9Y-NNy"/>
                             <constraint firstItem="hCw-sq-PzT" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="5sa-Dw-BHh"/>
                             <constraint firstAttribute="trailing" secondItem="OZF-cI-eQf" secondAttribute="trailing" constant="20" id="9nr-pg-ht3"/>
                             <constraint firstItem="qgP-1Y-w9p" firstAttribute="top" secondItem="OZF-cI-eQf" secondAttribute="bottom" constant="8" id="Dhw-fH-4RA"/>
-                            <constraint firstItem="rhu-DP-uEA" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="T8U-te-MQq"/>
                             <constraint firstItem="OZF-cI-eQf" firstAttribute="top" secondItem="JUC-QC-rEM" secondAttribute="bottom" constant="14" id="e2d-eH-hKo"/>
                             <constraint firstItem="sUn-kG-pVF" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="h6o-uw-EpS"/>
                             <constraint firstItem="hCw-sq-PzT" firstAttribute="centerY" secondItem="ig1-9e-dO1" secondAttribute="centerY" id="rKp-pq-T2L"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backImageView" destination="hCw-sq-PzT" id="Pvm-Qr-s1k"/>
                         <outlet property="timerLabel" destination="sUn-kG-pVF" id="udb-nB-VPl"/>
                     </connections>
                 </viewController>
@@ -471,7 +462,6 @@
         <image name="giveup_button" width="120" height="60"/>
         <image name="gold" width="30" height="30"/>
         <image name="hour_half_fill_back" width="300" height="300"/>
-        <image name="hour_one_task" width="300" height="300"/>
         <image name="menu" width="40" height="40"/>
         <image name="start_button" width="120" height="60"/>
         <image name="tomato_model" width="40" height="40"/>

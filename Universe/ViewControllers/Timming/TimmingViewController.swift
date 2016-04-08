@@ -10,13 +10,25 @@ import UIKit
 
 class TimmingViewController: BaseViewController {
     @IBOutlet weak var timerLabel: MZTimerLabel!
+    @IBOutlet weak var backImageView: UIImageView!
     
     var time: NSTimeInterval!
+    
+    private var timmingView: ConstellationTimmingView!
+    private var timmingType: TimeType {
+        
+        return .TwoHalf
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setupTimerLabel()
         startTiming()
+        
+        timmingView = ConstellationTimmingView(timmingType: timmingType)
+        view.addSubview(timmingView)
+        
+        backImageView.image = UIImage(named: timmingType.backImageName)
     }
     
 }

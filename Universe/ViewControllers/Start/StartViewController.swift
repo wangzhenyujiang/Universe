@@ -26,6 +26,7 @@ class StartViewController: BaseViewController {
             }
             startButton.enabled = true
             time = Double(starIndex) * Half_Hour
+            print(starIndex)
         }
     }
     
@@ -62,19 +63,17 @@ extension StartViewController {
     
     private func commonSetup() {
         setupTimerLabel()
-//        setupTimeSelectedView()
+        setupTimeSelectedView()
         startButton.enabled = false
-        
-        let timmingView = ConstellationTimmingView(timmingType: .TwoHalf)
-        view.addSubview(timmingView)
         
     }
     
     private func setupTimeSelectedView() {
-        timeSelectedView.pointArray = hour_two_point_arr
+        timeSelectedView.pointArray = time_selected_point_arr
         timeSelectedView.constellationCallBack = {[weak self] view, index in
             guard let strongSelf = self else { return }
             strongSelf.starIndex = index
+            
         }
         view.addSubview(timeSelectedView)
     }

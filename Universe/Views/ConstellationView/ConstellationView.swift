@@ -83,7 +83,7 @@ extension ConstellationView {
         curve.addBezierThroughPoints(pointArr)
         
         shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.starColor().CGColor
+        shapeLayer.strokeColor = UIColor.constellationColor().CGColor
         shapeLayer.fillColor = nil
         shapeLayer.lineWidth = LineWidth
         shapeLayer.path = curve.CGPath
