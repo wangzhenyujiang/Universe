@@ -72,9 +72,11 @@ extension TimmingViewController: MZTimerLabelDelegate {
     }
     
     func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        if timerLabel.isEqual(self.timerLabel) {
-            if (time / 300) % 6 == 0 {
-                timerLabel.textColor = UIColor.redColor()
+        if timerLabel.isEqual(self.timerCountLabel) {
+            if Int(Int(time) / 300 ) % 6 == 0 {
+                self.timerLabel.textColor = UIColor.redColor()
+            }else {
+                self.timerLabel.textColor = UIColor.whiteColor()
             }
         }
     }
