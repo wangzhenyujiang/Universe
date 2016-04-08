@@ -65,7 +65,7 @@ extension StartViewController {
 //        setupTimeSelectedView()
         startButton.enabled = false
         
-        let timmingView = ConstellationTimmingView(timmingType: .Two)
+        let timmingView = ConstellationTimmingView(timmingType: .TwoHalf)
         view.addSubview(timmingView)
         
     }

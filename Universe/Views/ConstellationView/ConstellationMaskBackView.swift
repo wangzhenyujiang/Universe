@@ -8,14 +8,28 @@
 
 import UIKit
 
+private let LineWidth: CGFloat = 18.0
+
 class ConstellationMaskBackView: UIView {
-    var maskLayer: CAShapeLayer!
     var timmingType: TimeType! {
         didSet {
             setupMaskLayer()
         }
     }
-    var cruve: UIBezierPath!
+    
+    var process: CGFloat = 0.6 {
+        didSet {
+            if process < 0 {
+                process = 0
+            }else if process > 1 {
+                process = 1
+            }
+            maskLayer.strokeEnd = process
+        }
+    }
+    
+    private var cruve: UIBezierPath!
+    private var maskLayer: CAShapeLayer!
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, Height, Height))
@@ -53,7 +67,7 @@ extension ConstellationMaskBackView {
         maskLayer.lineWidth = LineWidth
         maskLayer.path = cruve.CGPath
         maskLayer.lineCap = kCALineCapRound
-        maskLayer.strokeEnd = 0.4
+        maskLayer.strokeEnd = process
         
         layer.mask = maskLayer
     }

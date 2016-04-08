@@ -7,7 +7,7 @@
 //
 
 let Height: CGFloat = 300.0
-let LineWidth: CGFloat = 20.0
+private let LineWidth: CGFloat = 5.0
 
 import UIKit
 

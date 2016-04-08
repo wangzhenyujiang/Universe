@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConstellationTimmingView: UIView {
+class ConstellationTimmingView: TouchDebugView {
     
     var timmingType: TimeType = TimeType.Half {
         didSet {
