@@ -34,6 +34,23 @@ enum TimeType {
         }
     }
     
+    var corner_arr: [(CGFloat, CGFloat)] {
+        switch self {
+        case .Half:
+            return hour_half_arr
+        case .One:
+            return hour_one_arr
+        case .OneHalf:
+            return hour_oneAndHalf_arr
+        case .Two:
+            return hour_two_arr
+        case .TwoHalf:
+            return hour_twoAndHalf_arr
+        case .Three:
+            return hour_three_arr
+        }
+    }
+    
     var backImageName: String {
         switch self {
         case .Half:

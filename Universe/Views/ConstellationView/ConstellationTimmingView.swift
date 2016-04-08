@@ -17,12 +17,13 @@ class ConstellationTimmingView: UIView {
     }
     
     private var maskLayer: CAShapeLayer!
-    private var constellationBackView: ConstellationView!
+    private var constellationBackView: ConstellationMaskBackView!
     private var maskImage: UIImage!
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, 300, 300))
-        constellationBackView = ConstellationView()
+        backgroundColor = UIColor.constellationColor()
+        constellationBackView = ConstellationMaskBackView()
         addSubview(constellationBackView)
     }
 
@@ -38,7 +39,7 @@ class ConstellationTimmingView: UIView {
         self.init(frame: CGRectZero)
         self.timmingType = timmingType
         
-        constellationBackView.pointArray = timmingType.viewPointArr
+        constellationBackView.timmingType = timmingType
         
         maskImage = UIImage(named: timmingType.maskImageName)
         maskLayer = CAShapeLayer()

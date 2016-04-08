@@ -7,7 +7,7 @@
 //
 
 let Height: CGFloat = 300.0
-let LineWidth: CGFloat = 3.0
+let LineWidth: CGFloat = 20.0
 
 import UIKit
 
@@ -68,7 +68,11 @@ extension ConstellationView {
     
     private func addLine() {
         let pointArr: [NSValue] = pointArray.filter(){viewPoint in
+            if viewPoint.sizeType == .Big {
                 return true
+            }else {
+               return false
+            }
             }.map() { viewPoint in
             return NSValue(CGPoint: CGPointMake(viewPoint.point.0, viewPoint.point.1))
         }

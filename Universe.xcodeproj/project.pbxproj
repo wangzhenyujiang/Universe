@@ -28,6 +28,7 @@
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
 		F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06436721CB0D574005720AB /* GoldAlterView.xib */; };
 		F06436751CB0DB3C005720AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436741CB0DB3C005720AB /* Global.swift */; };
+		F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08093111CB77691004958BB /* ConstellationMaskBackView.swift */; };
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
@@ -91,6 +92,7 @@
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
 		F06436721CB0D574005720AB /* GoldAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoldAlterView.xib; path = Views/GoldAlterView/GoldAlterView.xib; sourceTree = "<group>"; };
 		F06436741CB0DB3C005720AB /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Helpers/Global.swift; sourceTree = "<group>"; };
+		F08093111CB77691004958BB /* ConstellationMaskBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationMaskBackView.swift; path = Views/ConstellationView/ConstellationMaskBackView.swift; sourceTree = "<group>"; };
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			children = (
 				F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */,
 				F0F57E111CB6936B00A10DC3 /* ConstellationTimmingView.swift */,
+				F08093111CB77691004958BB /* ConstellationMaskBackView.swift */,
 			);
 			name = ConstellationView;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
 				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
 				F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */,
+				F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */,
 				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
