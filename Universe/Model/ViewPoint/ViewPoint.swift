@@ -15,7 +15,7 @@ enum  PointSizeType {
     var Radius: CGFloat {
         switch self {
         case .Big:
-            return 7.0
+            return 12.0
         default:
             return 4.0
         }

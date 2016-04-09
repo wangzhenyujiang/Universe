@@ -54,11 +54,14 @@ extension TimmingViewController {
     }
     
     private func startTiming() {
-        timerCountLabel.start()
         timmingView = ConstellationTimmingView(timmingType: timmingType)
         view.addSubview(timmingView)
-
-        timmingView.startAnimated()
+        
+        dispatch_after(1, dispatch_get_main_queue()) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.timerCountLabel.start()
+            strongSelf.timmingView.startAnimated()
+        }
     }
 }
 

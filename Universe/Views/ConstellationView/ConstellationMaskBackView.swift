@@ -20,6 +20,7 @@ class ConstellationMaskBackView: UIView {
     private var cruve: UIBezierPath!
     private var maskLayer: CAShapeLayer!
     private var animation: CABasicAnimation!
+    private var animating: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: CGRectMake(0, 0, Height, Height))
@@ -50,7 +51,11 @@ extension ConstellationMaskBackView {
     }
     
     func pause() {
-        animation.speed = 0
+        if animating {
+            animation.speed = 0
+        }else {
+            animation.speed = 1
+        }
     }
     
 }

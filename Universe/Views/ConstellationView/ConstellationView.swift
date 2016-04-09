@@ -29,6 +29,7 @@ class ConstellationView: UIView {
         didSet {
             guard let callback = constellationCallBack else { return }
             callback(roundViewArr[starIndex], starIndex)
+            click()
         }
     }
     
@@ -47,6 +48,12 @@ class ConstellationView: UIView {
         self.init(frame: CGRectZero)
     }
 
+}
+
+//AMRK: Public 
+
+extension ConstellationView {
+    
 }
 
 //MARK: Private
@@ -89,7 +96,18 @@ extension ConstellationView {
         shapeLayer.path = curve.CGPath
         shapeLayer.lineCap = kCALineCapRound
         
-        layer.addSublayer(shapeLayer)
+//        layer.addSublayer(shapeLayer)
+        layer.insertSublayer(shapeLayer, atIndex: 0)
+    }
+    
+    private func click() {
+        for (index, view) in roundViewArr.enumerate() where index <= starIndex {
+            view.changeToStarColor(true)
+        }
+        
+        for (index, view) in roundViewArr.enumerate() where index > starIndex {
+            view.changeToStarColor(false)
+        }
     }
 }
 

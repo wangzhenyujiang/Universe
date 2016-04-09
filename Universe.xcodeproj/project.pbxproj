@@ -28,6 +28,8 @@
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
 		F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06436721CB0D574005720AB /* GoldAlterView.xib */; };
 		F06436751CB0DB3C005720AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436741CB0DB3C005720AB /* Global.swift */; };
+		F07A4FFA1CB8ED3B00EB8563 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */; };
+		F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */; };
 		F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08093111CB77691004958BB /* ConstellationMaskBackView.swift */; };
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
@@ -92,6 +94,8 @@
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
 		F06436721CB0D574005720AB /* GoldAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoldAlterView.xib; path = Views/GoldAlterView/GoldAlterView.xib; sourceTree = "<group>"; };
 		F06436741CB0DB3C005720AB /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Helpers/Global.swift; sourceTree = "<group>"; };
+		F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopMenuView.swift; path = Views/TopMenuView/TopMenuView.swift; sourceTree = "<group>"; };
+		F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopMenuView.xib; path = Views/TopMenuView/TopMenuView.xib; sourceTree = "<group>"; };
 		F08093111CB77691004958BB /* ConstellationMaskBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationMaskBackView.swift; path = Views/ConstellationView/ConstellationMaskBackView.swift; sourceTree = "<group>"; };
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 		F02474351CA621FC0049DB21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F07A4FF81CB8ED2B00EB8563 /* TopMenuView */,
 				F0E8B0EA1CB3FC99001C702F /* ConstellationView */,
 				F064366F1CB0D52B005720AB /* GoldAlterView */,
 				F0B1B65B1CAF8CDA00286EE7 /* RoundView */,
@@ -349,6 +354,15 @@
 				F06436721CB0D574005720AB /* GoldAlterView.xib */,
 			);
 			name = GoldAlterView;
+			sourceTree = "<group>";
+		};
+		F07A4FF81CB8ED2B00EB8563 /* TopMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */,
+				F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */,
+			);
+			name = TopMenuView;
 			sourceTree = "<group>";
 		};
 		F0B1B65B1CAF8CDA00286EE7 /* RoundView */ = {
@@ -579,6 +593,7 @@
 				F02474061CA57E7A0049DB21 /* LaunchScreen.storyboard in Resources */,
 				F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */,
 				F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */,
+				F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */,
 				F024743A1CA6224E0049DB21 /* StarView.xib in Resources */,
 				F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */,
 				F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */,
@@ -682,6 +697,7 @@
 				F0F57E121CB6936B00A10DC3 /* ConstellationTimmingView.swift in Sources */,
 				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
 				F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */,
+				F07A4FFA1CB8ED3B00EB8563 /* TopMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

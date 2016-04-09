@@ -16,7 +16,6 @@ class StartViewController: BaseViewController {
     @IBOutlet weak var startButton: UIButton!
     
     let timeSelectedView = ConstellationView()
-    var time: NSTimeInterval!
 
     var starIndex: Int = 0 {
         didSet {
@@ -40,7 +39,10 @@ class StartViewController: BaseViewController {
                 timmingType = .Half
             }
             self.startButton.enabled = true
+            timerLabel.setCountDownTime(timmingType.time)
         }
+        
+        
     }
     
     private var timmingType: TimeType!
@@ -92,7 +94,6 @@ extension StartViewController {
         timeSelectedView.constellationCallBack = {[weak self] view, index in
             guard let strongSelf = self else { return }
             strongSelf.starIndex = index
-            
         }
         view.addSubview(timeSelectedView)
     }
