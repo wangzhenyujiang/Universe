@@ -9,5 +9,23 @@
 import UIKit
 
 class TopMenuView: UIView {
-
+    private var view: UIView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        view =  NSBundle.mainBundle().loadNibNamed(String(TopMenuView), owner: self, options: nil).first as? UIView
+        view.frame = CGRectMake(0, 0, ScreenWidth, 60)
+        view.backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clearColor()
+        addSubview(view)
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let LineWidth: CGFloat = 18.0
+private let LineWidth: CGFloat = 20.0
 
 class ConstellationMaskBackView: UIView {
     var timmingType: TimeType! {

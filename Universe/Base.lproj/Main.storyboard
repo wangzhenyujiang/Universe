@@ -223,17 +223,27 @@
                                     <segue destination="vMD-GF-fPd" kind="show" identifier="startToTimingSegue" id="iDC-21-6L2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad7-uE-4WA" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Dg1-UF-pqQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CaC-wv-6El" secondAttribute="trailing" constant="20" id="5Ek-CM-1aX"/>
+                            <constraint firstItem="Ad7-uE-4WA" firstAttribute="top" secondItem="Hdw-SP-7a9" secondAttribute="bottom" id="Eek-i3-Imv"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" id="Gjo-LN-AAE"/>
                             <constraint firstItem="NVZ-QM-IaT" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="Hhi-k3-Ztc"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="boI-nd-A8K"/>
                             <constraint firstItem="CaC-wv-6El" firstAttribute="top" secondItem="NVZ-QM-IaT" secondAttribute="bottom" constant="20" id="dJB-1N-B8G"/>
+                            <constraint firstItem="Ad7-uE-4WA" firstAttribute="leading" secondItem="ShN-FZ-FGn" secondAttribute="leading" id="f4Y-da-5q9"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="top" secondItem="pf7-sH-CFb" secondAttribute="bottom" id="jaK-F0-ogS"/>
                             <constraint firstItem="0my-aw-0y5" firstAttribute="top" secondItem="CaC-wv-6El" secondAttribute="bottom" constant="8" id="l44-R3-PCH"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="scg-ae-5mS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ad7-uE-4WA" secondAttribute="trailing" id="ymD-3L-Za3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -286,6 +296,13 @@
                                     <action selector="giveupActixon:" destination="vMD-GF-fPd" eventType="touchUpInside" id="P57-7k-Shs"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFw-mk-Kat" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Jis-d0-7s6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -294,9 +311,12 @@
                             <constraint firstItem="hCw-sq-PzT" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="5sa-Dw-BHh"/>
                             <constraint firstAttribute="trailing" secondItem="OZF-cI-eQf" secondAttribute="trailing" constant="20" id="9nr-pg-ht3"/>
                             <constraint firstItem="qgP-1Y-w9p" firstAttribute="top" secondItem="OZF-cI-eQf" secondAttribute="bottom" constant="8" id="Dhw-fH-4RA"/>
+                            <constraint firstItem="mFw-mk-Kat" firstAttribute="leading" secondItem="ig1-9e-dO1" secondAttribute="leading" id="HUt-5P-d2g"/>
+                            <constraint firstItem="mFw-mk-Kat" firstAttribute="top" secondItem="ciA-lA-NKE" secondAttribute="bottom" id="bHP-yb-ASZ"/>
                             <constraint firstItem="OZF-cI-eQf" firstAttribute="top" secondItem="JUC-QC-rEM" secondAttribute="bottom" constant="14" id="e2d-eH-hKo"/>
                             <constraint firstItem="sUn-kG-pVF" firstAttribute="centerX" secondItem="ig1-9e-dO1" secondAttribute="centerX" id="h6o-uw-EpS"/>
                             <constraint firstItem="hCw-sq-PzT" firstAttribute="centerY" secondItem="ig1-9e-dO1" secondAttribute="centerY" id="rKp-pq-T2L"/>
+                            <constraint firstAttribute="trailing" secondItem="mFw-mk-Kat" secondAttribute="trailing" id="rln-DL-din"/>
                         </constraints>
                     </view>
                     <connections>
@@ -437,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="1660" y="-443"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Universe Navigation Controller-->
         <scene sceneID="6dO-95-c9K">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tf2-UP-Htg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tf2-UP-Htg" customClass="UniverseNavigationController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LOu-dt-Fi7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
