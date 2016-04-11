@@ -9,15 +9,19 @@
 import UIKit
 
 class MainViewController: BaseViewController {
+    
+    struct Static {
+        static var onceToken: dispatch_once_t = 0
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        showLaunchFrameWithAnimation()
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .Default
+        
+        dispatch_once(&Static.onceToken) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.showLaunchFrameWithAnimation()
+        }
     }
     
     func showLaunchFrameWithAnimation() {

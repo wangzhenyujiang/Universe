@@ -13,4 +13,8 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         view.layer.contents = UIImage.backgroundImage().CGImage
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 }

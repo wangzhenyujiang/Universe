@@ -354,13 +354,6 @@
                                     <action selector="backAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="uIZ-De-gIs"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGE-6V-7ge" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="9Bu-rn-Pxc"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1O-Fu-Gmv">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -377,6 +370,13 @@
                                 <rect key="frame" x="330" y="473" width="120" height="60"/>
                                 <state key="normal" image="share_button"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGE-6V-7ge" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9Bu-rn-Pxc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -388,11 +388,18 @@
                             <constraint firstItem="tGE-6V-7ge" firstAttribute="leading" secondItem="K1N-4A-ypB" secondAttribute="leading" id="Pxd-cp-l6b"/>
                             <constraint firstItem="3xK-Q1-F41" firstAttribute="top" secondItem="U1O-Fu-Gmv" secondAttribute="bottom" constant="23" id="U27-g1-b5G"/>
                             <constraint firstItem="dDC-u9-DmC" firstAttribute="top" secondItem="U1O-Fu-Gmv" secondAttribute="bottom" constant="23" id="dYp-Og-BuI"/>
+                            <constraint firstItem="tGE-6V-7ge" firstAttribute="top" secondItem="xjh-N6-s8P" secondAttribute="bottom" id="jKr-Iq-JRc"/>
                             <constraint firstItem="3xK-Q1-F41" firstAttribute="trailing" secondItem="U1O-Fu-Gmv" secondAttribute="trailing" id="nHq-hh-VU6"/>
                             <constraint firstAttribute="trailing" secondItem="rEi-QA-ocC" secondAttribute="trailing" constant="20" id="rsQ-F3-csX"/>
                             <constraint firstItem="U1O-Fu-Gmv" firstAttribute="centerY" secondItem="K1N-4A-ypB" secondAttribute="centerY" id="wHV-cI-nBQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Qe-xG-OeN"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-qP-LFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
