@@ -122,17 +122,22 @@ class StarsViewController: BaseViewController {
         switch star {
         case .SunStar:
             print("\(star.chineseName)")
+            LockAlterView.show(star.imageName)
         case .RoseStar:
             print("\(star.chineseName)")
+            LockAlterView.show(star.imageName)
         case .NormalStar:
             print("\(star.chineseName)")
             performSegueWithIdentifier("startSegue", sender: nil)
         case .JupiterStar:
             print("\(star.chineseName)")
+            LockAlterView.show(star.imageName)
         case .CloverStar:
             print("\(star.chineseName)")
+            LockAlterView.show(star.imageName)
         case .CakeStar:
             print("\(star.chineseName)")
+            LockAlterView.show(star.imageName)
         }
     }
     

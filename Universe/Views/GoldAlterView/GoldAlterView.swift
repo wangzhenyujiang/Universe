@@ -6,8 +6,8 @@
 //  Copyright © 2016年 王振宇. All rights reserved.
 //
 
-let alterWidth: CGFloat = 200
-let alterHeight: CGFloat = 180
+private let alterWidth: CGFloat = 200
+private let alterHeight: CGFloat = 180
 
 import UIKit
 
