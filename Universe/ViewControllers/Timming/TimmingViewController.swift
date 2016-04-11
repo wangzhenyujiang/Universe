@@ -39,7 +39,9 @@ extension TimmingViewController {
     }
     
     @IBAction func giveupActixon(sender: AnyObject) {
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

@@ -328,6 +328,76 @@
             </objects>
             <point key="canvasLocation" x="2312" y="242"/>
         </scene>
+        <!--Give Up View Controller-->
+        <scene sceneID="rgk-ML-1VI">
+            <objects>
+                <viewController storyboardIdentifier="GiveUpViewController" id="yxC-dx-ufX" customClass="GiveUpViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xjh-N6-s8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="X4e-sT-HUR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K1N-4A-ypB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEi-QA-ocC">
+                                <rect key="frame" x="540" y="552" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="93T-YH-lTj"/>
+                                    <constraint firstAttribute="height" constant="40" id="ohk-1c-2Iz"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="vMD-GF-fPd" eventType="touchUpInside" id="14f-vf-Wib"/>
+                                    <action selector="backAction:" destination="yxC-dx-ufX" eventType="touchUpInside" id="Yya-z5-hOA"/>
+                                    <action selector="backAction:" destination="eog-eZ-wgg" eventType="touchUpInside" id="lXB-iI-mL0"/>
+                                    <action selector="backAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="uIZ-De-gIs"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGE-6V-7ge" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9Bu-rn-Pxc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1O-Fu-Gmv">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7NT-ek-AFf"/>
+                                    <constraint firstAttribute="width" constant="300" id="Rf9-RF-Bi4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-u9-DmC">
+                                <rect key="frame" x="150" y="473" width="120" height="60"/>
+                                <state key="normal" image="note_button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xK-Q1-F41">
+                                <rect key="frame" x="330" y="473" width="120" height="60"/>
+                                <state key="normal" image="share_button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dDC-u9-DmC" firstAttribute="leading" secondItem="U1O-Fu-Gmv" secondAttribute="leading" id="2f7-P4-f5E"/>
+                            <constraint firstItem="tGE-6V-7ge" firstAttribute="top" secondItem="K1N-4A-ypB" secondAttribute="top" id="9Qe-xG-OeN"/>
+                            <constraint firstAttribute="trailing" secondItem="tGE-6V-7ge" secondAttribute="trailing" id="Dyd-Fq-XyH"/>
+                            <constraint firstItem="X4e-sT-HUR" firstAttribute="top" secondItem="rEi-QA-ocC" secondAttribute="bottom" constant="8" id="KVD-CK-gNp"/>
+                            <constraint firstItem="U1O-Fu-Gmv" firstAttribute="centerX" secondItem="K1N-4A-ypB" secondAttribute="centerX" id="LAO-cI-dgz"/>
+                            <constraint firstItem="tGE-6V-7ge" firstAttribute="leading" secondItem="K1N-4A-ypB" secondAttribute="leading" id="Pxd-cp-l6b"/>
+                            <constraint firstItem="3xK-Q1-F41" firstAttribute="top" secondItem="U1O-Fu-Gmv" secondAttribute="bottom" constant="23" id="U27-g1-b5G"/>
+                            <constraint firstItem="dDC-u9-DmC" firstAttribute="top" secondItem="U1O-Fu-Gmv" secondAttribute="bottom" constant="23" id="dYp-Og-BuI"/>
+                            <constraint firstItem="3xK-Q1-F41" firstAttribute="trailing" secondItem="U1O-Fu-Gmv" secondAttribute="trailing" id="nHq-hh-VU6"/>
+                            <constraint firstAttribute="trailing" secondItem="rEi-QA-ocC" secondAttribute="trailing" constant="20" id="rsQ-F3-csX"/>
+                            <constraint firstItem="U1O-Fu-Gmv" firstAttribute="centerY" secondItem="K1N-4A-ypB" secondAttribute="centerY" id="wHV-cI-nBQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-qP-LFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974" y="242"/>
+        </scene>
         <!--星球选择界面-->
         <scene sceneID="uKm-Ax-7kz">
             <objects>
@@ -483,6 +553,8 @@
         <image name="gold" width="30" height="30"/>
         <image name="hour_half_fill_back" width="300" height="300"/>
         <image name="menu" width="40" height="40"/>
+        <image name="note_button" width="120" height="60"/>
+        <image name="share_button" width="120" height="60"/>
         <image name="start_button" width="120" height="60"/>
         <image name="tomato_model" width="40" height="40"/>
     </resources>
