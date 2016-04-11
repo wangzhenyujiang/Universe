@@ -31,10 +31,13 @@
 		F07A4FFA1CB8ED3B00EB8563 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */; };
 		F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */; };
 		F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08093111CB77691004958BB /* ConstellationMaskBackView.swift */; };
+		F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */; };
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
 		F0CE5AB91CBB5FB4000E5A64 /* UniverseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5AB81CBB5FB4000E5A64 /* UniverseNavigationController.swift */; };
 		F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5ABB1CBB630B000E5A64 /* GiveUpViewController.swift */; };
+		F0CE5ABF1CBB6F14000E5A64 /* LockAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5ABE1CBB6F14000E5A64 /* LockAlterView.swift */; };
+		F0CE5AC11CBB6F31000E5A64 /* LockAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE5AC01CBB6F31000E5A64 /* LockAlterView.xib */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */; };
 		F0E8B0EE1CB4097F001C702F /* UIColor+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */; };
@@ -99,10 +102,13 @@
 		F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopMenuView.swift; path = Views/TopMenuView/TopMenuView.swift; sourceTree = "<group>"; };
 		F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopMenuView.xib; path = Views/TopMenuView/TopMenuView.xib; sourceTree = "<group>"; };
 		F08093111CB77691004958BB /* ConstellationMaskBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationMaskBackView.swift; path = Views/ConstellationView/ConstellationMaskBackView.swift; sourceTree = "<group>"; };
+		F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = ViewControllers/Statistics/StatisticsViewController.swift; sourceTree = "<group>"; };
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
 		F0CE5AB81CBB5FB4000E5A64 /* UniverseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniverseNavigationController.swift; path = ViewControllers/Base/UniverseNavigationController.swift; sourceTree = "<group>"; };
 		F0CE5ABB1CBB630B000E5A64 /* GiveUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GiveUpViewController.swift; path = ViewControllers/GiveUp/GiveUpViewController.swift; sourceTree = "<group>"; };
+		F0CE5ABE1CBB6F14000E5A64 /* LockAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockAlterView.swift; path = Views/LockAlterView/LockAlterView.swift; sourceTree = "<group>"; };
+		F0CE5AC01CBB6F31000E5A64 /* LockAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LockAlterView.xib; path = Views/LockAlterView/LockAlterView.xib; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationView.swift; path = Views/ConstellationView/ConstellationView.swift; sourceTree = "<group>"; };
 		F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Universe.swift"; path = "Extensions/UIColor+Universe.swift"; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				F024742A1CA61A040049DB21 /* MainViewController.swift */,
+				F0A342C51CBBAD1900F9091C /* Statistics */,
 				F0CE5ABA1CBB62F2000E5A64 /* GiveUp */,
 				F0379FB41CAAD2420082584E /* Timming */,
 				F0E4F0471CA9701200DA6A28 /* Start */,
@@ -265,6 +272,7 @@
 		F02474351CA621FC0049DB21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0CE5ABD1CBB6F02000E5A64 /* LockAlterView */,
 				F07A4FF81CB8ED2B00EB8563 /* TopMenuView */,
 				F0E8B0EA1CB3FC99001C702F /* ConstellationView */,
 				F064366F1CB0D52B005720AB /* GoldAlterView */,
@@ -371,6 +379,14 @@
 			name = TopMenuView;
 			sourceTree = "<group>";
 		};
+		F0A342C51CBBAD1900F9091C /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		F0B1B65B1CAF8CDA00286EE7 /* RoundView */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +412,15 @@
 				F0CE5ABB1CBB630B000E5A64 /* GiveUpViewController.swift */,
 			);
 			name = GiveUp;
+			sourceTree = "<group>";
+		};
+		F0CE5ABD1CBB6F02000E5A64 /* LockAlterView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE5ABE1CBB6F14000E5A64 /* LockAlterView.swift */,
+				F0CE5AC01CBB6F31000E5A64 /* LockAlterView.xib */,
+			);
+			name = LockAlterView;
 			sourceTree = "<group>";
 		};
 		F0E4F0471CA9701200DA6A28 /* Start */ = {
@@ -607,6 +632,7 @@
 				F02474061CA57E7A0049DB21 /* LaunchScreen.storyboard in Resources */,
 				F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */,
 				F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */,
+				F0CE5AC11CBB6F31000E5A64 /* LockAlterView.xib in Resources */,
 				F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */,
 				F024743A1CA6224E0049DB21 /* StarView.xib in Resources */,
 				F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */,
@@ -687,6 +713,7 @@
 				F0CE5AB91CBB5FB4000E5A64 /* UniverseNavigationController.swift in Sources */,
 				F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */,
 				F8F0B95B1CB625EF001EFC59 /* ViewPoint.swift in Sources */,
+				F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */,
 				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
 				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
 				F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */,
@@ -697,6 +724,7 @@
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
 				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,
+				F0CE5ABF1CBB6F14000E5A64 /* LockAlterView.swift in Sources */,
 				F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */,
 				F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */,
 				F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */,

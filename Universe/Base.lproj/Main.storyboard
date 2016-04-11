@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tf2-UP-Htg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBq-dg-A8o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,10 +14,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Main View Controller-->
+        <!--主界面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="主界面" customClass="MainViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -256,6 +256,39 @@
             </objects>
             <point key="canvasLocation" x="2312" y="-443"/>
         </scene>
+        <!--统计界面-->
+        <scene sceneID="WMi-SC-2Mm">
+            <objects>
+                <viewController storyboardIdentifier="StatisticsViewController" id="IBq-dg-A8o" userLabel="统计界面" customClass="StatisticsViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v1b-vn-ESf"/>
+                        <viewControllerLayoutGuide type="bottom" id="MHy-Yx-8L0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yRY-HU-HGD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHX-J4-hVv" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="600" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MHy-Yx-8L0" firstAttribute="top" secondItem="sHX-J4-hVv" secondAttribute="bottom" constant="60" id="Pb8-7T-Bej"/>
+                            <constraint firstItem="sHX-J4-hVv" firstAttribute="leading" secondItem="yRY-HU-HGD" secondAttribute="leading" id="e8Z-Si-k44"/>
+                            <constraint firstItem="sHX-J4-hVv" firstAttribute="top" secondItem="v1b-vn-ESf" secondAttribute="bottom" id="i9a-Gv-5Jb"/>
+                            <constraint firstAttribute="trailing" secondItem="sHX-J4-hVv" secondAttribute="trailing" id="kd4-3d-3Hx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="sHX-J4-hVv" id="o1Q-ps-4bJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="znF-ml-AZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="278"/>
+        </scene>
         <!--计时界面-->
         <scene sceneID="Mv0-cq-hNr">
             <objects>
@@ -328,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="2312" y="242"/>
         </scene>
-        <!--Give Up View Controller-->
+        <!--放弃界面-->
         <scene sceneID="rgk-ML-1VI">
             <objects>
-                <viewController storyboardIdentifier="GiveUpViewController" id="yxC-dx-ufX" customClass="GiveUpViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GiveUpViewController" id="yxC-dx-ufX" userLabel="放弃界面" customClass="GiveUpViewController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xjh-N6-s8P"/>
                         <viewControllerLayoutGuide type="bottom" id="X4e-sT-HUR"/>
