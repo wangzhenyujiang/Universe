@@ -8,9 +8,11 @@
 
 import UIKit
 
-class TimmingViewController: BaseViewController {
+class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var backImageView: UIImageView!
+    
+    @IBOutlet weak var topMenuView: TopMenuView!
     
     var timmingType: TimeType!
     
@@ -25,7 +27,7 @@ class TimmingViewController: BaseViewController {
         super.viewWillAppear(animated)
         setupTimerLabel()
         startTiming()
-        
+        setupTopMenuView()
         backImageView.image = UIImage(named: timmingType.backImageName)
     }
     

@@ -11,6 +11,10 @@ import UIKit
 class TopMenuView: UIView {
     private var view: UIView!
     
+    var menuAction:(() -> ())?
+    
+    @IBOutlet private weak var goldLabel: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -28,4 +32,22 @@ class TopMenuView: UIView {
         backgroundColor = UIColor.clearColor()
         addSubview(view)
     }
+}
+
+//MARK: Public
+
+extension TopMenuView {
+    func update() {
+        goldLabel.text = "\(User.shareInstance.gold)"
+    }
+}
+
+//MARK: Private
+
+extension TopMenuView {
+    @IBAction private func menuAction(sender: AnyObject) {
+        guard let action = menuAction else { return }
+        action()
+    }
+    
 }

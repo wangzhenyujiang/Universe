@@ -8,15 +8,15 @@
 
 import UIKit
 
-class GiveUpViewController: BaseViewController {
+class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
     var timming: TimeType?
-
+    
+    @IBOutlet weak var topMenuView: TopMenuView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTopMenuView()
     }
-    
-    
 }
 
 //MARK: IBAction
@@ -27,3 +27,5 @@ extension GiveUpViewController {
         navigationController?.popViewControllerAnimated(true)
     }
 }
+
+

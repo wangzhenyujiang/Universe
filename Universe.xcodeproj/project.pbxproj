@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EBA1498474E73C8B3DA2E61C /* Pods_Universe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84E7FE123ED8EEBCAEB0E06 /* Pods_Universe.framework */; };
+		F00FB89A1CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00FB8991CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift */; };
 		F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */; };
 		F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02473FF1CA57E7A0049DB21 /* Main.storyboard */; };
 		F02474031CA57E7A0049DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02474021CA57E7A0049DB21 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		9E23C2195779FAA656A31D7F /* Pods-Universe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.release.xcconfig"; sourceTree = "<group>"; };
 		ECE2A5F482C85339E0C06553 /* Pods-Universe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universe/Pods-Universe.debug.xcconfig"; sourceTree = "<group>"; };
+		F00FB8991CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OwnsTopMenuViewType.swift; path = Protocol/OwnsTopMenuViewType.swift; sourceTree = "<group>"; };
 		F02473F81CA57E7A0049DB21 /* Universe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02473FB1CA57E7A0049DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02474001CA57E7A0049DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */,
+				F00FB8991CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
 				F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */,
+				F00FB89A1CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift in Sources */,
 				F0F57E121CB6936B00A10DC3 /* ConstellationTimmingView.swift in Sources */,
 				F024742F1CA6210E0049DB21 /* StarsViewController.swift in Sources */,
 				F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */,

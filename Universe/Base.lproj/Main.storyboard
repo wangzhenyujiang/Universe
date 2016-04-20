@@ -250,6 +250,7 @@
                         <outlet property="imageView" destination="pf7-sH-CFb" id="0XU-9q-NAs"/>
                         <outlet property="startButton" destination="NVZ-QM-IaT" id="1vc-L9-yEH"/>
                         <outlet property="timerLabel" destination="yzb-Lc-pIO" id="zAr-iY-wO9"/>
+                        <outlet property="topMenuView" destination="Ad7-uE-4WA" id="jxZ-bP-4O4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp9-Pb-UMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,6 +356,7 @@
                     <connections>
                         <outlet property="backImageView" destination="hCw-sq-PzT" id="Pvm-Qr-s1k"/>
                         <outlet property="timerLabel" destination="sUn-kG-pVF" id="Z4m-fc-ZRF"/>
+                        <outlet property="topMenuView" destination="mFw-mk-Kat" id="eaR-qC-NRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epc-kS-lXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,6 +435,9 @@
                         </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="topMenuView" destination="tGE-6V-7ge" id="VuN-IN-yAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvF-qP-LFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

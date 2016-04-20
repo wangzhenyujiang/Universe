@@ -10,10 +10,12 @@ import UIKit
 
 let Half_Hour: NSTimeInterval = 1800
 
-class StartViewController: BaseViewController {
+class StartViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var timerLabel: MZTimerLabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var topMenuView: TopMenuView!
     
     let timeSelectedView = ConstellationView()
 
@@ -50,6 +52,7 @@ class StartViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         resetUI()
+        setupTopMenuView()
     }
     
     override func viewDidLoad() {

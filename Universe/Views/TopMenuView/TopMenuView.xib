@@ -10,7 +10,11 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopMenuView" customModule="Universe" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+            <connections>
+                <outlet property="goldLabel" destination="7Jl-I0-k9z" id="4qt-eg-Bys"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="FjM-Zs-KZ5">
             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -19,6 +23,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ9-Aa-vpi">
                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                     <state key="normal" image="menu"/>
+                    <connections>
+                        <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="GKT-Qr-AnX"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jl-I0-k9z">
                     <rect key="frame" x="571" y="19" width="19" height="22"/>

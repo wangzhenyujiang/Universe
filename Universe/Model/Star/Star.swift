@@ -16,15 +16,15 @@ protocol StarTypeProtocol {
     
 }
 
-//extension StarTypeProtocol where Self: Hashable {
-//    var hashValue: Int {
-//        return imageName.hashValue
-//    }
-//}
+extension StarTypeProtocol where Self: Hashable {
+    
+}
 
-//func == (lhs:StarTypeProtocol where Self: HashValue, rhs: <> ) -> Bool {
-//    return true
-//}
+func == (lhs: StarTypeProtocol, rhs: StarTypeProtocol) -> Bool {
+    return lhs.imageName.hashValue == rhs.imageName.hashValue
+}
+
+
 
 struct CloverStar: StarTypeProtocol {
     var imageName: String {
