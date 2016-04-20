@@ -8,6 +8,14 @@
 
 import Foundation
 
+protocol TimeCountType {
+    var time: Double { get }
+    var viewPointArr: [ViewPoint] { get }
+    var corner_arr: [(CGFloat, CGFloat)] { get }
+    var backImageName: String { get }
+    var maskImageName: String { get }
+}
+
 
 enum TimeType {
     case Half

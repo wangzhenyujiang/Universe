@@ -65,4 +65,8 @@ extension ConstellationTimmingView {
     func pause() {
         constellationBackView.pause()
     }
+    
+    func reset() {
+        constellationBackView.reset()
+    }
 }

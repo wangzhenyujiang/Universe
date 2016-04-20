@@ -39,9 +39,7 @@ extension TimmingViewController {
     }
     
     @IBAction func giveupActixon(sender: AnyObject) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
-        navigationController?.pushViewController(controller, animated: true)
+        showAlter()
     }
 }
 
@@ -64,6 +62,18 @@ extension TimmingViewController {
             strongSelf.timerCountLabel.start()
             strongSelf.timmingView.startAnimated()
         }
+    }
+    
+    private func showAlter() {
+        let alter = UIAlertController.self.init(title: "Tips Message", message: "Sure Give Up ?", preferredStyle: UIAlertControllerStyle.Alert)
+        alter.addAction(UIAlertAction.self.init(title: "Cancle", style: UIAlertActionStyle.Cancel, handler: nil))
+        alter.addAction(UIAlertAction.self.init(title: "Sure", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
+            guard let strongSelf = self else { return }
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
+            strongSelf.navigationController?.pushViewController(controller, animated: true)
+        }))
+        presentViewController(alter, animated: true, completion: nil)
     }
 }
 

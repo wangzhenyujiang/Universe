@@ -58,6 +58,10 @@ extension ConstellationMaskBackView {
         }
     }
     
+    func reset() {
+        maskLayer.removeAllAnimations()
+    }
+    
 }
 
 //MARK: Private
