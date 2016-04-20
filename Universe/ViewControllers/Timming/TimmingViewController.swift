@@ -67,9 +67,9 @@ extension TimmingViewController {
     }
     
     private func showAlter() {
-        let alter = UIAlertController.self.init(title: "Tips Message", message: "Sure Give Up ?", preferredStyle: UIAlertControllerStyle.Alert)
-        alter.addAction(UIAlertAction.self.init(title: "Cancle", style: UIAlertActionStyle.Cancel, handler: nil))
-        alter.addAction(UIAlertAction.self.init(title: "Sure", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
+        let alter = UIAlertController.self.init(title: nil, message: "Are You Sure To Give Up ?", preferredStyle: UIAlertControllerStyle.Alert)
+        alter.addAction(UIAlertAction.self.init(title: "No", style: UIAlertActionStyle.Cancel, handler: nil))
+        alter.addAction(UIAlertAction.self.init(title: "Yes", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
             guard let strongSelf = self else { return }
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController

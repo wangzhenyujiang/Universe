@@ -24,7 +24,8 @@ class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
 extension GiveUpViewController {
     
     @IBAction func backAction(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        let controllers = navigationController?.viewControllers.filter { controller in return controller is StartViewController}
+        navigationController?.popToViewController(controllers!.first!, animated: true)
     }
 }
 

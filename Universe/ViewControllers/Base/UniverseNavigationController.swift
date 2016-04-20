@@ -9,6 +9,10 @@
 import UIKit
 
 class UniverseNavigationController: UINavigationController {
+    
+    override func pushViewController(viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: animated)
+    }
 
     override func childViewControllerForStatusBarStyle() -> UIViewController? {
         return topViewController!

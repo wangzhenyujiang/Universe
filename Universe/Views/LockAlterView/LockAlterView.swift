@@ -66,7 +66,6 @@ extension LockAlterView {
         alphaView = UIView(frame: bounds)
         alphaView.backgroundColor = UIColor.blackColor()
         alphaView.alpha = 0.6
-//        alphaView.layer.cornerRadius = 5.0
         addSubview(alphaView)
         
         view = NSBundle.mainBundle().loadNibNamed(String(LockAlterView), owner: self, options: nil).first as! UIView

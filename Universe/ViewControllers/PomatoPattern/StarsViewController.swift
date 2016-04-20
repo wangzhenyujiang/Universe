@@ -8,10 +8,10 @@
 
 import UIKit
 
-class StarsViewController: BaseViewController {
+class StarsViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet var starViews: [StarView]!
-    @IBOutlet weak var goldNumLabel: UILabel!
     
+    @IBOutlet weak var topMenuView: TopMenuView!
     private var customNavigationBar: UINavigationBar!
     
     private var customNavigationItem: UINavigationItem = UINavigationItem(title: " ")
@@ -23,12 +23,12 @@ class StarsViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         setupStarViews()
+        setupTopMenuView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        goldNumLabel.text = "\(User.shareInstance.gold)"
     }
     
     
@@ -94,9 +94,5 @@ extension StarsViewController {
             return
         }
         navigationController.popViewControllerAnimated(true)
-    }
-    
-    @IBAction func menuAction(sender: AnyObject) {
-        
     }
 }
