@@ -96,17 +96,34 @@ enum TimeType {
     var maskImageName: String {
         switch self {
         case .Half:
-            return "hour_half_fill"
+            return "hour_half_hard_fill"
         case .One:
-            return "hour_one_fill"
+            return "hour_one_hard_fill"
         case .OneHalf:
-            return "hour_oneandhalf_fill"
+            return "hour_oneandhalf_hard_fill"
         case .Two:
-            return "hour_two_fill"
+            return "hour_two_hard_fill"
         case .TwoHalf:
-            return "hour_twoandhalf_fill"
+            return "hour_twoandhalf_hard_fill"
         case .Three:
-            return "hour_three_fill"
+            return "hour_three_hard_fill"
+        }
+    }
+    
+    var failImageName: String {
+        switch self {
+        case .Half:
+            return "hour_half_fail"
+        case .One:
+            return "hour_one_fail"
+        case .OneHalf:
+            return "hour_oneandhalf_fail"
+        case .Two:
+            return "hour_two_fail"
+        case .TwoHalf:
+            return "hour_twoandhalf_fail"
+        case .Three:
+            return "hour_three_fail"
         }
     }
     
