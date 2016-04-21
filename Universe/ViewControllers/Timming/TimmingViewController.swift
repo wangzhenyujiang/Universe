@@ -12,6 +12,8 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var backImageView: UIImageView!
     
+    @IBOutlet weak var tipsLabel: UILabel!
+    @IBOutlet weak var giveUpButton: UIButton!
     @IBOutlet weak var topMenuView: TopMenuView!
     
     var timmingType: TimeType!
@@ -29,6 +31,8 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
         startTiming()
         setupTopMenuView()
         backImageView.image = UIImage(named: timmingType.backImageName)
+        
+        tipsLabel.hidden = true
     }
     
 }
@@ -71,6 +75,8 @@ extension TimmingViewController {
         alter.addAction(UIAlertAction.self.init(title: "No", style: UIAlertActionStyle.Cancel, handler: nil))
         alter.addAction(UIAlertAction.self.init(title: "Yes", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
             guard let strongSelf = self else { return }
+            strongSelf.timerCountLabel.pause()
+
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
             controller.timming = strongSelf.timmingType
@@ -85,17 +91,21 @@ extension TimmingViewController {
 extension TimmingViewController: MZTimerLabelDelegate {
     
     func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
-        GoldAlterView.show(11)
-        User.shareInstance.addNum(11)
+        let goldNum: Int = Int(timmingType.time) / Int(Half_Hour) * perHalfHourGold
+        GoldAlterView.show(goldNum)
+        User.shareInstance.addNum(goldNum)
         topMenuView.update()
+        giveUpButton.enabled = false
     }
     
     func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
         if timerLabel.isEqual(self.timerCountLabel) {
             if Int(Int(time) / 300 ) % 6 == 0 {
                 self.timerLabel.textColor = UIColor.redColor()
+                tipsLabel.hidden = false
             }else {
                 self.timerLabel.textColor = UIColor.whiteColor()
+                tipsLabel.hidden = true
             }
         }
     }

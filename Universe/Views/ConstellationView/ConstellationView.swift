@@ -53,7 +53,11 @@ class ConstellationView: UIView {
 //AMRK: Public 
 
 extension ConstellationView {
-    
+    func reset() {
+        for (index, view) in roundViewArr.enumerate() where index > 0 {
+            view.changeToStarColor(false)
+        }
+    }
 }
 
 //MARK: Private

@@ -108,5 +108,7 @@ extension StartViewController {
     
     private func resetUI() {
         timerLabel.setCountDownTime(0)
+        starIndex = 0
+        timeSelectedView.reset()
     }
 }
