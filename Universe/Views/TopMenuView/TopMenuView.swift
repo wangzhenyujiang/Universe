@@ -38,7 +38,7 @@ class TopMenuView: UIView {
 
 extension TopMenuView {
     func update() {
-        goldLabel.text = "\(User.shareInstance.gold)"
+        goldLabel.text = "\(GoldNumMemoryManager.shareInstance.gold)"
     }
 }
 

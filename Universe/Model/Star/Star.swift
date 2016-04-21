@@ -13,6 +13,7 @@ protocol StarTypeProtocol {
     var imageName: String { get }
     var lockImageName: String { get }
     var chineseName: String { get }
+    var starType: StarType { get }
     
 }
 
@@ -27,6 +28,9 @@ func == (lhs: StarTypeProtocol, rhs: StarTypeProtocol) -> Bool {
 
 
 struct CloverStar: StarTypeProtocol {
+    
+    let starType: StarType = StarType.CloverStar
+    
     var imageName: String {
         return "cake_star"
     }
@@ -39,6 +43,9 @@ struct CloverStar: StarTypeProtocol {
 }
 
 struct SunStar: StarTypeProtocol {
+    
+    let starType: StarType = StarType.CloverStar
+    
     var imageName: String {
         return "cake_star"
     }
@@ -51,6 +58,9 @@ struct SunStar: StarTypeProtocol {
 }
 
 struct RoseStar: StarTypeProtocol {
+    
+    let starType: StarType = StarType.CloverStar
+    
     var imageName: String {
         return "cake_star"
     }
@@ -63,6 +73,9 @@ struct RoseStar: StarTypeProtocol {
 }
 
 struct NormalStar: StarTypeProtocol {
+    
+    let starType: StarType = StarType.CloverStar
+    
     var imageName: String {
         return "cake_star"
     }
@@ -75,6 +88,9 @@ struct NormalStar: StarTypeProtocol {
 }
 
 struct JupiterStar: StarTypeProtocol {
+    
+    let starType: StarType = StarType.CloverStar
+    
     var imageName: String {
         return "cake_star"
     }

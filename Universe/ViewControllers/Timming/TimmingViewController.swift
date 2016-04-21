@@ -86,6 +86,7 @@ extension TimmingViewController: MZTimerLabelDelegate {
     func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
         GoldAlterView.show(11)
         User.shareInstance.addNum(11)
+        topMenuView.update()
     }
     
     func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
