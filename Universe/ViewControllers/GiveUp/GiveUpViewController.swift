@@ -12,10 +12,14 @@ class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
     var timming: TimeType?
     
     @IBOutlet weak var topMenuView: TopMenuView!
+    @IBOutlet weak var failImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTopMenuView()
+        
+        guard let time = timming else { return }
+        failImageView.image = UIImage(named: time.failImageName)
     }
 }
 

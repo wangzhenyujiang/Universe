@@ -73,6 +73,7 @@ extension TimmingViewController {
             guard let strongSelf = self else { return }
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
+            controller.timming = strongSelf.timmingType
             strongSelf.navigationController?.pushViewController(controller, animated: true)
         }))
         presentViewController(alter, animated: true, completion: nil)
