@@ -18,7 +18,7 @@ extension OwnsTopMenuViewType  where Self: UIViewController {
         topMenuView.menuAction = { [weak self] in
             guard let strongSelf = self else { return }
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let navigation: UINavigationController = sb.instantiateViewControllerWithIdentifier("SettingNavigationController") as! UINavigationController
+            let navigation: UniverseNavigationController = sb.instantiateViewControllerWithIdentifier("SettingNavigationController") as! UniverseNavigationController
             strongSelf.presentViewController(navigation, animated: true, completion: nil)
         }
     }

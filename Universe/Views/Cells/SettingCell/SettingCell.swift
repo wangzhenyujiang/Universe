@@ -17,6 +17,18 @@ class SettingCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = UIColor.clearColor()
         contentView.backgroundColor = UIColor.clearColor()
+        selectionStyle = UITableViewCellSelectionStyle.None
     }
-    
+}
+
+//MARK: Public
+
+extension SettingCell {
+    func setData<T: protocol <SettingCellModelType, SettingCellType>>(data: T) {
+        titleLabel.text = data.title
+        settingSwitch.on = data.switchOn
+        
+        titleLabel.textColor = data.titleLabelTextColor()
+        settingSwitch.onTintColor = data.switchColor()
+    }
 }

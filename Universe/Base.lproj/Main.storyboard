@@ -137,7 +137,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="232-5j-25j">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                                 <constraint firstItem="aqY-Q6-Ukx" firstAttribute="centerY" secondItem="87G-fz-3zk" secondAttribute="centerY" id="5MJ-vi-94b"/>
                                                 <constraint firstAttribute="trailing" secondItem="aqY-Q6-Ukx" secondAttribute="trailing" constant="8" id="OH0-V1-3dL"/>
                                                 <constraint firstItem="232-5j-25j" firstAttribute="centerY" secondItem="87G-fz-3zk" secondAttribute="centerY" id="SAl-xl-Myi"/>
-                                                <constraint firstItem="232-5j-25j" firstAttribute="leading" secondItem="87G-fz-3zk" secondAttribute="leading" constant="8" id="VtN-1I-Hhg"/>
+                                                <constraint firstItem="232-5j-25j" firstAttribute="leading" secondItem="87G-fz-3zk" secondAttribute="leading" constant="16" id="VtN-1I-Hhg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -620,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="206" y="-427"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Universe Navigation Controller-->
         <scene sceneID="s5f-gz-rdX">
             <objects>
-                <navigationController storyboardIdentifier="SettingNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="eC7-rb-PE8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="eC7-rb-PE8" customClass="UniverseNavigationController" customModule="Universe" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zcY-1d-lU9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -641,7 +641,7 @@
     </scenes>
     <resources>
         <image name="back" width="40" height="40"/>
-        <image name="back_button_image" width="20" height="20"/>
+        <image name="back_button_image" width="25" height="25"/>
         <image name="free_model" width="40" height="40"/>
         <image name="giveup_button" width="120" height="60"/>
         <image name="hour_half_fill_back" width="300" height="300"/>

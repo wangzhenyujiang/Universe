@@ -25,7 +25,9 @@
 		F02AA7221CA79361008ED176 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7211CA79361008ED176 /* User.swift */; };
 		F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */; };
 		F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AA7281CA7ECD5008ED176 /* SettingCell.swift */; };
+		F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */; };
 		F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0379FB51CAAD2630082584E /* TimmingViewController.swift */; };
+		F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05930231CCB4FBB007DE66A /* SettingCellType.swift */; };
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
 		F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06436721CB0D574005720AB /* GoldAlterView.xib */; };
 		F06436751CB0DB3C005720AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436741CB0DB3C005720AB /* Global.swift */; };
@@ -98,7 +100,9 @@
 		F02AA7211CA79361008ED176 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User/User.swift; sourceTree = "<group>"; };
 		F02AA7241CA7EBE6008ED176 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ViewControllers/Setting/SettingViewController.swift; sourceTree = "<group>"; };
 		F02AA7281CA7ECD5008ED176 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = Views/Cells/SettingCell/SettingCell.swift; sourceTree = "<group>"; };
+		F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellModel.swift; path = Model/ViewModel/SettingCellModel/SettingCellModel.swift; sourceTree = "<group>"; };
 		F0379FB51CAAD2630082584E /* TimmingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingViewController.swift; path = ViewControllers/Timming/TimmingViewController.swift; sourceTree = "<group>"; };
+		F05930231CCB4FBB007DE66A /* SettingCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellType.swift; path = Protocol/SettingCellType.swift; sourceTree = "<group>"; };
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
 		F06436721CB0D574005720AB /* GoldAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoldAlterView.xib; path = Views/GoldAlterView/GoldAlterView.xib; sourceTree = "<group>"; };
 		F06436741CB0DB3C005720AB /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Helpers/Global.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 		F02AA7191CA77821008ED176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F02B50931CCB843400C51CF2 /* ViewModel */,
 				F0F57E131CB6943600A10DC3 /* Enum */,
 				F8F0B9591CB625E0001EFC59 /* ViewPoint */,
 				F02AA7201CA79348008ED176 /* User */,
@@ -356,6 +361,22 @@
 				F02AA7281CA7ECD5008ED176 /* SettingCell.swift */,
 			);
 			name = SettingCell;
+			sourceTree = "<group>";
+		};
+		F02B50931CCB843400C51CF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F02B50941CCB846E00C51CF2 /* SettingCellModel */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		F02B50941CCB846E00C51CF2 /* SettingCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */,
+			);
+			name = SettingCellModel;
 			sourceTree = "<group>";
 		};
 		F0379FB41CAAD2420082584E /* Timming */ = {
@@ -486,6 +507,7 @@
 			children = (
 				F8F0B95C1CB62DB6001EFC59 /* ViewPointType.swift */,
 				F00FB8991CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift */,
+				F05930231CCB4FBB007DE66A /* SettingCellType.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -726,6 +748,7 @@
 				F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */,
 				F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */,
 				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
+				F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */,
 				F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
@@ -739,6 +762,7 @@
 				F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */,
 				F8F0B95D1CB62DB6001EFC59 /* ViewPointType.swift in Sources */,
 				F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */,
+				F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
@@ -903,6 +927,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universe/Universe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -922,6 +947,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universe/Universe-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;

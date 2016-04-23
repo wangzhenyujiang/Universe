@@ -12,25 +12,16 @@ class SettingViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var height: CGFloat = 44.0
-//    CGColorCreateGenericRGB(0, 0.02, 0.03, 1)
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         commonSetup()
         
     }
     
-    private let settingAnnotations:[[String: String]] = [
-        [
-            "name": "统计",
-            "segue": "showStatistics"
-        ],
-        [
-            "name": "工具设置",
-            "segue": "configTool"
-        ]
-    ]
+    private let settingModelArr: [SettingCellModel] = [
+                                SettingCellModel(title: "统计", switchOn: true),
+                                SettingCellModel(title: "工具设置", switchOn: true)
+                                ]
 }
 
 //MARK: IBAction
@@ -64,14 +55,12 @@ extension SettingViewController {
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingAnnotations.count
+        return settingModelArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(SettingCell)) as! SettingCell
-        let annotation = settingAnnotations[indexPath.row]
-        cell.titleLabel.text = annotation["name"]
-        
+        let cell: SettingCell = tableView.dequeueReusableCellWithIdentifier(String(SettingCell)) as! SettingCell
+        cell.setData(settingModelArr[indexPath.row])
         return cell
     }
     
@@ -80,14 +69,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if height == 44.0 {
-//            height = 66.0
-//        }else {
-//            height = 44.0
-//        }
-//        UIView.animateWithDuration(1.0) { 
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//        }
+
     }
 }
+
