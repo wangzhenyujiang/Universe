@@ -201,6 +201,14 @@
                                     <action selector="backAction:" destination="TMi-Fr-TjE" eventType="touchUpInside" id="cAB-P5-ySA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time_selecte_back" translatesAutoresizingMaskIntoConstraints="NO" id="him-Ee-tJb">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="him-Ee-tJb" secondAttribute="height" multiplier="1:1" id="aNu-W5-IcL"/>
+                                    <constraint firstAttribute="width" constant="300" id="lgJ-y0-Vje"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_half_fill_back" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -236,12 +244,15 @@
                             <constraint firstItem="Ad7-uE-4WA" firstAttribute="top" secondItem="Hdw-SP-7a9" secondAttribute="bottom" id="Eek-i3-Imv"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" id="Gjo-LN-AAE"/>
                             <constraint firstItem="NVZ-QM-IaT" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="Hhi-k3-Ztc"/>
+                            <constraint firstItem="him-Ee-tJb" firstAttribute="centerX" secondItem="pf7-sH-CFb" secondAttribute="centerX" id="VJb-eT-K5f"/>
+                            <constraint firstItem="him-Ee-tJb" firstAttribute="width" secondItem="him-Ee-tJb" secondAttribute="height" multiplier="1:1" id="XHo-qP-rpb"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="boI-nd-A8K"/>
                             <constraint firstItem="CaC-wv-6El" firstAttribute="top" secondItem="NVZ-QM-IaT" secondAttribute="bottom" constant="20" id="dJB-1N-B8G"/>
                             <constraint firstItem="Ad7-uE-4WA" firstAttribute="leading" secondItem="ShN-FZ-FGn" secondAttribute="leading" id="f4Y-da-5q9"/>
                             <constraint firstItem="yzb-Lc-pIO" firstAttribute="top" secondItem="pf7-sH-CFb" secondAttribute="bottom" id="jaK-F0-ogS"/>
                             <constraint firstItem="0my-aw-0y5" firstAttribute="top" secondItem="CaC-wv-6El" secondAttribute="bottom" constant="8" id="l44-R3-PCH"/>
                             <constraint firstItem="pf7-sH-CFb" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="scg-ae-5mS"/>
+                            <constraint firstItem="him-Ee-tJb" firstAttribute="centerY" secondItem="pf7-sH-CFb" secondAttribute="centerY" id="svI-LL-AuK"/>
                             <constraint firstAttribute="trailing" secondItem="Ad7-uE-4WA" secondAttribute="trailing" id="ymD-3L-Za3"/>
                         </constraints>
                     </view>
@@ -610,6 +621,7 @@
         <image name="note_button" width="120" height="60"/>
         <image name="share_button" width="120" height="60"/>
         <image name="start_button" width="120" height="60"/>
+        <image name="time_selecte_back" width="300" height="300"/>
         <image name="tomato_model" width="40" height="40"/>
     </resources>
 </document>
