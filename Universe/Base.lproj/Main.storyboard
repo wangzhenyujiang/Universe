@@ -173,8 +173,9 @@
                             <constraint firstItem="sNz-IA-kdh" firstAttribute="top" secondItem="G7u-DL-mdl" secondAttribute="bottom" id="pOH-Ki-az6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FMg-Ds-bOx">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="WV1-GL-Bhi">
+                    <navigationItem key="navigationItem" title="Settings" id="FMg-Ds-bOx">
+                        <barButtonItem key="leftBarButtonItem" image="back_button_image" id="WV1-GL-Bhi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="disAction:" destination="WDQ-da-y5i" id="Jwr-iE-mgb"/>
                             </connections>
@@ -640,6 +641,7 @@
     </scenes>
     <resources>
         <image name="back" width="40" height="40"/>
+        <image name="back_button_image" width="20" height="20"/>
         <image name="free_model" width="40" height="40"/>
         <image name="giveup_button" width="120" height="60"/>
         <image name="hour_half_fill_back" width="300" height="300"/>

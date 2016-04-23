@@ -48,6 +48,14 @@ extension SettingViewController {
     private func commonSetup() {
         tableView.backgroundColor = UIColor.clearColor()
         tableView.tableFooterView = UIView()
+        
+        let label = UILabel(frame: navigationItem.titleView!.bounds)
+        label.textColor = UIColor.whiteColor()
+        label.text = "Settings"
+        label.font = UIFont(name:"HelveticaNeue", size: 17)!
+        label.textAlignment = NSTextAlignment.Center
+        navigationItem.titleView!.addSubview(label)
+        
         navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0.02, blue: 0.03, alpha: 1)
     }
 }
