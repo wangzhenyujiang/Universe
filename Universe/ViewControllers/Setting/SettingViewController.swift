@@ -8,6 +8,9 @@
 
 import UIKit
 
+private let CellHeight: CGFloat = 44.0
+private let SectionHeight: CGFloat = 46.0
+
 class SettingViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,9 +22,17 @@ class SettingViewController: BaseViewController {
     }
     
     private let settingModelArr: [SettingCellModel] = [
-                                SettingCellModel(title: "统计", switchOn: true),
-                                SettingCellModel(title: "工具设置", switchOn: true)
+                                SettingCellModel(title: "Notification", switchOn: true),
+                                SettingCellModel(title: "Connet only on Wi-Fi", switchOn: false),
+                                SettingCellModel(title: "Keep the screen on", switchOn: false),
+                                SettingCellModel(title: "Work with phone", switchOn: true),
+                                SettingCellModel(title: "Sound Effect", switchOn: false),
+                                SettingCellModel(title: "Week start on Monday", switchOn: true)
                                 ]
+    
+    private let accountTitleArr: [String] = ["Log in", "Sigin in", "Forgot password"]
+    
+    private let sectionTitles: [String] = ["ACCOUNT", "SETTINGS"]
 }
 
 //MARK: IBAction
@@ -55,21 +66,61 @@ extension SettingViewController {
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingModelArr.count
+        
+        switch section {
+        case 0:
+            return accountTitleArr.count
+        case 1:
+            return settingModelArr.count
+        default:
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: SettingCell = tableView.dequeueReusableCellWithIdentifier(String(SettingCell)) as! SettingCell
-        cell.setData(settingModelArr[indexPath.row])
-        return cell
+        
+        switch indexPath.section {
+        case 0:
+            let cell: LabelCell = tableView.dequeueReusableCellWithIdentifier(String(LabelCell)) as! LabelCell
+            cell.setData(accountTitleArr[indexPath.row])
+            return cell
+        case 1:
+            let cell: SettingCell = tableView.dequeueReusableCellWithIdentifier(String(SettingCell)) as! SettingCell
+            cell.setData(settingModelArr[indexPath.row])
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 44.0
+        return CellHeight
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sectionTitles.count
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return SectionHeight
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let sectionHeader: UIView = UIView(frame: CGRectMake(0, 0, ScreenWidth, SectionHeight))
+        sectionHeader.backgroundColor = UIColor.clearColor()
+
+        let label: UILabel = UILabel(frame: CGRectMake(8, 12, ScreenWidth, SectionHeight))
+        label.text = sectionTitles[section]
+        label.textColor = UIColor.whiteColor()
+        label.textAlignment = NSTextAlignment.Left
+        sectionHeader.addSubview(label)
+        
+        return sectionHeader
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
