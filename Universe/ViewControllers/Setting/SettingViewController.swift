@@ -8,11 +8,18 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
 //    var height: CGFloat = 44.0
+//    CGColorCreateGenericRGB(0, 0.02, 0.03, 1)
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        commonSetup()
+        
+    }
     
     private let settingAnnotations:[[String: String]] = [
         [
@@ -25,6 +32,27 @@ class SettingViewController: UIViewController {
         ]
     ]
 }
+
+//MARK: IBAction
+
+extension SettingViewController {
+    
+    @IBAction private func disAction(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+//MARK: Private
+
+extension SettingViewController {
+    private func commonSetup() {
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.tableFooterView = UIView()
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0.02, blue: 0.03, alpha: 1)
+    }
+}
+
+//MARK: UITableViewDelegate, UITableViewDataSource
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

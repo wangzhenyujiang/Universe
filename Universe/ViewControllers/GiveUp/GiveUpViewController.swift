@@ -23,6 +23,12 @@ class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
     }
 }
 
+//MARK: Private
+
+extension GiveUpViewController {
+    
+}
+
 //MARK: IBAction
 
 extension GiveUpViewController {

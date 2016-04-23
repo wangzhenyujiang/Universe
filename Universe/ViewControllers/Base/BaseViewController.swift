@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         view.layer.contents = UIImage.backgroundImage().CGImage
+        automaticallyAdjustsScrollViewInsets = false
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

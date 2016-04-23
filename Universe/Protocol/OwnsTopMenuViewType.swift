@@ -15,8 +15,11 @@ protocol OwnsTopMenuViewType: class {
 extension OwnsTopMenuViewType  where Self: UIViewController {
     func setupTopMenuView() {
         topMenuView.update()
-        topMenuView.menuAction = {
-            print("does nothing")
+        topMenuView.menuAction = { [weak self] in
+            guard let strongSelf = self else { return }
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let navigation: UINavigationController = sb.instantiateViewControllerWithIdentifier("SettingNavigationController") as! UINavigationController
+            strongSelf.presentViewController(navigation, animated: true, completion: nil)
         }
     }
 }

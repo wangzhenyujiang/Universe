@@ -13,5 +13,10 @@ class SettingCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = UIColor.clearColor()
+        contentView.backgroundColor = UIColor.clearColor()
+    }
     
 }
