@@ -8,7 +8,6 @@
 
 import UIKit
 
-let Half_Hour: NSTimeInterval = 5
 
 class StartViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var timerLabel: MZTimerLabel!

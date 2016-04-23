@@ -27,12 +27,15 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setupTimerLabel()
-        startTiming()
-        setupTopMenuView()
         backImageView.image = UIImage(named: timmingType.backImageName)
-        
         tipsLabel.hidden = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTimerLabel()
+        setupTopMenuView()
+        startTiming()
     }
     
 }
@@ -62,6 +65,11 @@ extension TimmingViewController {
     private func startTiming() {
         timmingView = ConstellationTimmingView(timmingType: timmingType)
         view.addSubview(timmingView)
+        
+        topMenuView.menuAction = { [weak self] in         // 开始计时后 topMenu 点击事件变为询问用户是否放弃
+            guard let stongSelf = self else { return }
+            stongSelf.showAlter()
+        }
         
         dispatch_after(1, dispatch_get_main_queue()) { [weak self] in
             guard let strongSelf = self else { return }
