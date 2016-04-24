@@ -9,4 +9,5 @@ pod 'Masonry'
 pod 'LxThroughPointsBezier', '~> 1.0.0'
 pod 'Charts'
 pod 'Cache'
+pod "Popover"
 end

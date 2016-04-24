@@ -5,19 +5,20 @@ PODS:
   - Charts/Core (2.2.3)
   - LxThroughPointsBezier (1.0.0)
   - Masonry (0.6.4)
+  - Popover (0.9.0)
 
 DEPENDENCIES:
   - Cache
   - Charts
   - LxThroughPointsBezier (~> 1.0.0)
   - Masonry
+  - Popover
 
 SPEC CHECKSUMS:
   Cache: 78f58bc008313c7a1182967a2ebcb3de9fddecd4
   Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
   LxThroughPointsBezier: fdebe18dd4ddab9406d9827db77a078b4738b00f
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  Popover: e5a2cbfa29bb982c95cff0d7eb94f47173dbfbcc
 
-PODFILE CHECKSUM: 652138d06bd64d0f64b2e1aca5aa11e14b48f340
-
-COCOAPODS: 1.0.0.beta.2
+COCOAPODS: 0.39.0
