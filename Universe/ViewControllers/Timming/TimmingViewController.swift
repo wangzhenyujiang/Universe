@@ -25,6 +25,8 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     private var timerCountLabel: MZTimerLabel!
     private var timmingView: ConstellationTimmingView!
     
+    private let enterBackHelpers: EnterBackHelpers = EnterBackHelpers()
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         backImageView.image = UIImage(named: timmingType.backImageName)
@@ -37,13 +39,12 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
         setupTopMenuView()
         startTiming()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(enterIntoBackground), name: UIApplicationWillResignActiveNotification, object: nil)
+        enterBackHelpers.helperCallback = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.enterIntoBackground()
+        }
     }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
+
 }
 
 //MARK: IBAction
@@ -89,7 +90,7 @@ extension TimmingViewController {
         alter.addAction(UIAlertAction.self.init(title: "No", style: UIAlertActionStyle.Cancel, handler: nil))
         alter.addAction(UIAlertAction.self.init(title: "Yes", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
             guard let strongSelf = self else { return }
-            strongSelf.timerCountLabel.pause()
+            strongSelf.stopCountTimming()
             strongSelf.jumpIntoFailController()
         }))
         presentViewController(alter, animated: true, completion: nil)
@@ -101,12 +102,17 @@ extension TimmingViewController {
         controller.timming = timmingType
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    private func stopCountTimming() {
+        timerCountLabel.pause()
+    }
 }
 
 //MARK: Notification
 
 extension TimmingViewController {
-    @objc private func enterIntoBackground() {
+    private func enterIntoBackground() {
+        stopCountTimming()
         jumpIntoFailController()
     }
 }

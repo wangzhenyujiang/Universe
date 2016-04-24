@@ -28,6 +28,7 @@
 		F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */; };
 		F02B50981CCB93A000C51CF2 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50971CCB93A000C51CF2 /* LabelCell.swift */; };
 		F02B509A1CCC7B5800C51CF2 /* StadiedWeekTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50991CCC7B5800C51CF2 /* StadiedWeekTimeManager.swift */; };
+		F02B509F1CCCD0D000C51CF2 /* TimmingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */; };
 		F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0379FB51CAAD2630082584E /* TimmingViewController.swift */; };
 		F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05930231CCB4FBB007DE66A /* SettingCellType.swift */; };
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
@@ -105,6 +106,7 @@
 		F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellModel.swift; path = Model/ViewModel/SettingCellModel/SettingCellModel.swift; sourceTree = "<group>"; };
 		F02B50971CCB93A000C51CF2 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = Views/Cells/SettingCell/LabelCell.swift; sourceTree = "<group>"; };
 		F02B50991CCC7B5800C51CF2 /* StadiedWeekTimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StadiedWeekTimeManager.swift; path = Helpers/StadiedWeekTimeManager.swift; sourceTree = "<group>"; };
+		F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingHelpers.swift; path = Helpers/TimmingHelpers/TimmingHelpers.swift; sourceTree = "<group>"; };
 		F0379FB51CAAD2630082584E /* TimmingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingViewController.swift; path = ViewControllers/Timming/TimmingViewController.swift; sourceTree = "<group>"; };
 		F05930231CCB4FBB007DE66A /* SettingCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellType.swift; path = Protocol/SettingCellType.swift; sourceTree = "<group>"; };
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		F02AA71D1CA78DE4008ED176 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F02B509B1CCCD09D00C51CF2 /* TimmingHelpers */,
 				F02AA71E1CA78EBE008ED176 /* StarViewsControllerHelpers.swift */,
 				F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */,
 				F06436741CB0DB3C005720AB /* Global.swift */,
@@ -383,6 +386,14 @@
 				F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */,
 			);
 			name = SettingCellModel;
+			sourceTree = "<group>";
+		};
+		F02B509B1CCCD09D00C51CF2 /* TimmingHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */,
+			);
+			name = TimmingHelpers;
 			sourceTree = "<group>";
 		};
 		F0379FB41CAAD2420082584E /* Timming */ = {
@@ -771,6 +782,7 @@
 				F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */,
 				F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
+				F02B509F1CCCD0D000C51CF2 /* TimmingHelpers.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
