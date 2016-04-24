@@ -8,7 +8,6 @@
 
 import UIKit
 
-let perHalfHourGold: Int = 10
 
 class GoldNumMemoryManager: NSObject {
     static let shareInstance: GoldNumMemoryManager = GoldNumMemoryManager()
