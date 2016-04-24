@@ -36,6 +36,12 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
         setupTimerLabel()
         setupTopMenuView()
         startTiming()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(enterIntoBackground), name: UIApplicationWillResignActiveNotification, object: nil)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
 }
@@ -84,13 +90,24 @@ extension TimmingViewController {
         alter.addAction(UIAlertAction.self.init(title: "Yes", style: UIAlertActionStyle.Default, handler: { [weak self] (alterAction) in
             guard let strongSelf = self else { return }
             strongSelf.timerCountLabel.pause()
-
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
-            controller.timming = strongSelf.timmingType
-            strongSelf.navigationController?.pushViewController(controller, animated: true)
+            strongSelf.jumpIntoFailController()
         }))
         presentViewController(alter, animated: true, completion: nil)
+    }
+    
+    private func jumpIntoFailController() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let controller: GiveUpViewController = sb.instantiateViewControllerWithIdentifier(String(GiveUpViewController)) as! GiveUpViewController
+        controller.timming = timmingType
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+//MARK: Notification
+
+extension TimmingViewController {
+    @objc private func enterIntoBackground() {
+        jumpIntoFailController()
     }
 }
 
