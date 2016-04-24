@@ -97,6 +97,7 @@ extension StartViewController {
             guard let strongSelf = self else { return }
             strongSelf.starIndex = index
         }
+        timeSelectedView.center = CGPointMake(view.center.x, view.center.y - 30)
         view.addSubview(timeSelectedView)
     }
     

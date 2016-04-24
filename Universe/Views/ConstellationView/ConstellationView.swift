@@ -117,8 +117,8 @@ extension ConstellationView {
 //MARK: Super
 
 extension ConstellationView {
-    override func willMoveToSuperview(newSuperview: UIView?) {
-        guard let superView = newSuperview else { return }
-        center = superView.center
-    }
+//    override func willMoveToSuperview(newSuperview: UIView?) {
+//        guard let superView = newSuperview else { return }
+//        center = superView.center
+//    }
 }

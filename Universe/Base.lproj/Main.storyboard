@@ -98,16 +98,29 @@
                                     <constraint firstItem="vQI-gN-DgV" firstAttribute="top" secondItem="F2N-RD-PgO" secondAttribute="top" id="vER-hi-mBn"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sib-7X-f4C" customClass="TopMenuView" customModule="Universe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="T2l-Mk-4CN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sib-7X-f4C" secondAttribute="trailing" id="9rP-mg-xyU"/>
+                            <constraint firstItem="sib-7X-f4C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HAU-05-kNB"/>
                             <constraint firstItem="F2N-RD-PgO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="Inf-nu-ddr"/>
                             <constraint firstItem="F2N-RD-PgO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kh8-0V-hTO"/>
                             <constraint firstItem="F2N-RD-PgO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xgy-cy-Gpx"/>
                             <constraint firstItem="F2N-RD-PgO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="by0-lz-5kg"/>
+                            <constraint firstItem="sib-7X-f4C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wS9-aX-KCe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kZ3-A0-PHj"/>
+                    <connections>
+                        <outlet property="topMenuView" destination="sib-7X-f4C" id="UIA-Kp-FET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,7 +246,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time_selecte_back" translatesAutoresizingMaskIntoConstraints="NO" id="him-Ee-tJb">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="150" y="120" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="him-Ee-tJb" secondAttribute="height" multiplier="1:1" id="aNu-W5-IcL"/>
@@ -241,7 +254,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour_half_fill_back" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-sH-CFb">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="150" y="120" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pf7-sH-CFb" secondAttribute="height" multiplier="1:1" id="MDN-U0-1Ri"/>
@@ -249,7 +262,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-Lc-pIO" customClass="MZTimerLabel">
-                                <rect key="frame" x="250" y="450" width="101" height="48"/>
+                                <rect key="frame" x="250" y="420" width="101" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -273,7 +286,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CaC-wv-6El" secondAttribute="trailing" constant="20" id="5Ek-CM-1aX"/>
                             <constraint firstItem="Ad7-uE-4WA" firstAttribute="top" secondItem="Hdw-SP-7a9" secondAttribute="bottom" id="Eek-i3-Imv"/>
-                            <constraint firstItem="pf7-sH-CFb" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" id="Gjo-LN-AAE"/>
+                            <constraint firstItem="pf7-sH-CFb" firstAttribute="centerY" secondItem="ShN-FZ-FGn" secondAttribute="centerY" constant="-30" id="Gjo-LN-AAE"/>
                             <constraint firstItem="NVZ-QM-IaT" firstAttribute="centerX" secondItem="ShN-FZ-FGn" secondAttribute="centerX" id="Hhi-k3-Ztc"/>
                             <constraint firstItem="him-Ee-tJb" firstAttribute="centerX" secondItem="pf7-sH-CFb" secondAttribute="centerX" id="VJb-eT-K5f"/>
                             <constraint firstItem="him-Ee-tJb" firstAttribute="width" secondItem="him-Ee-tJb" secondAttribute="height" multiplier="1:1" id="XHo-qP-rpb"/>

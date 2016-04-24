@@ -9,6 +9,7 @@
 import UIKit
 
 class MainViewController: BaseViewController {
+    @IBOutlet weak var topMenuView: TopMenuView!
     
     struct Static {
         static var onceToken: dispatch_once_t = 0
@@ -22,6 +23,11 @@ class MainViewController: BaseViewController {
             guard let strongSelf = self else { return }
             strongSelf.showLaunchFrameWithAnimation()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTopMenuView()
     }
     
     func showLaunchFrameWithAnimation() {
@@ -39,5 +45,9 @@ class MainViewController: BaseViewController {
             imageView.removeFromSuperview()
         }
     }
+}
+
+extension MainViewController: OwnsTopMenuViewType {
+    
 }
 
