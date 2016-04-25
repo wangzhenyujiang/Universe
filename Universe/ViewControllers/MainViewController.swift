@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 class MainViewController: BaseViewController {
     @IBOutlet weak var topMenuView: TopMenuView!
@@ -28,6 +29,8 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTopMenuView()
+        
+        print("\(NSDate.tomorrow().weekday)")
     }
     
     func showLaunchFrameWithAnimation() {

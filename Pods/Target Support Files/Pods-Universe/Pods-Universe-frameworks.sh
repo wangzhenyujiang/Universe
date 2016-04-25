@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
   install_framework "Pods-Universe/Popover.framework"
+  install_framework "Pods-Universe/SwiftDate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Universe/Cache.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
   install_framework "Pods-Universe/Popover.framework"
+  install_framework "Pods-Universe/SwiftDate.framework"
 fi

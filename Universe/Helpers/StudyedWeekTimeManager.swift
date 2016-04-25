@@ -8,6 +8,6 @@
 
 import UIKit
 
-class StadiedWeekTimeManager: NSObject {
-
+class StudyedWeekTimeManager: NSObject {
+    
 }
