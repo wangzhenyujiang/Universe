@@ -14,6 +14,8 @@ class StartViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet private weak var tipsLabel: UILabel!
+    
     @IBOutlet weak var topMenuView: TopMenuView!
     
     let timeSelectedView = ConstellationView()
