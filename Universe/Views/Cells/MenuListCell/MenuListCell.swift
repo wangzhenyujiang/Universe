@@ -11,10 +11,12 @@ import UIKit
 class MenuListCell: UITableViewCell {
 
     @IBOutlet weak var logoImageView: UIImageView!
-    
     override func awakeFromNib() {
+        super.awakeFromNib()
         backgroundColor = UIColor.clearColor()
-        contentView.backgroundColor = UIColor.redColor()
+        contentView.backgroundColor = UIColor.clearColor()
+        selectionStyle = UITableViewCellSelectionStyle.None
+        
     }
     
     func setData(data: MenuListItemType) {

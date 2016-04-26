@@ -9,8 +9,7 @@
 import UIKit
 
 class MenuListView: UIView {
-    private var tableView: UITableView
-    
+    var tableView: UITableView
     var menuItemsList: [MenuListItemType] = [] {
         didSet {
             tableView.reloadData()
@@ -18,19 +17,18 @@ class MenuListView: UIView {
     }
     
     override init(frame: CGRect) {
-        tableView = UITableView(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
+        tableView = UITableView.init(frame: CGRectMake(0, 0, frame.size.width, frame.size.height), style: UITableViewStyle.Plain)
         super.init(frame: frame)
         
         tableView.registerNib(UINib.init(nibName: String(MenuListCell), bundle: nil), forCellReuseIdentifier: String(MenuListCell))
-        tableView.tableFooterView = UIView()
         
         tableView.delegate = self
         tableView.dataSource = self
+                
+        tableView.scrollEnabled = false
         
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableView.backgroundColor = UIColor.clearColor()
-        tableView.backgroundView?.backgroundColor = UIColor.clearColor()
-        backgroundColor = UIColor.clearColor()
+        tableView.backgroundView = nil
         
         addSubview(tableView)
     }
@@ -62,7 +60,6 @@ extension MenuListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
         guard let action = menuItemsList[indexPath.row].clickAction else { return }
         action()
     }

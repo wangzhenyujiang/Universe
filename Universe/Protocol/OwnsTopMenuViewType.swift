@@ -52,13 +52,13 @@ extension ShowPopoverAble {
 //MARK: OwnMenuListType
 
 protocol ShowMenuListAble: ShowPopoverAble {
-    var menuListView: MenuListView { get set }
+    var menuListView: MenuListView! { get set }
     var menuListItems: [MenuListItemType] { get set }
 }
 
 extension ShowMenuListAble where Self: TopMenuView {
     func setupMenuListView() {
-        menuListView = MenuListView(frame: CGRectMake(0, 0, 30, CGFloat(menuListItems.count * 30)))
+        menuListView = MenuListView(frame: CGRectMake(0, 0, 30, CGFloat(CGFloat(menuListItems.count) * menuItemCellHeight)))
         menuListView.menuItemsList = menuListItems
     }
 }

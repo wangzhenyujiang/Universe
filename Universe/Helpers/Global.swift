@@ -15,7 +15,7 @@ let Half_Hour: NSTimeInterval = 60
 
 let perHalfHourGold: Int = 10  // 每个番茄始终赚取多少金币
 
-let menuItemCellHeight: CGFloat = 30
+let menuItemCellHeight: CGFloat = 50
 
 let time_selected_arr: [(CGFloat, CGFloat)] = [(123.5, 58.0), (70.5, 109.5), (64.0, 177.0), (101.5, 224.0), (165.0, 244.5), (233.5, 222.5), (265.5, 145.0)]
 

@@ -19,7 +19,7 @@ class TopMenuView: UIView {
     var popover: Popover!
     
     //ShowMenuListAble
-    var menuListView: MenuListView = MenuListView()
+    var menuListView: MenuListView!
     var menuListItems: [MenuListItemType] = []
     
     override init(frame: CGRect) {
@@ -40,6 +40,8 @@ class TopMenuView: UIView {
         self.menuAction = { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.showMenuPopoverAtPoint(CGPointMake(30, 70), view: strongSelf.menuListView)
+            strongSelf.menuListView.tableView.backgroundColor = UIColor.clearColor()
+            strongSelf.menuListView.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         }
         
         view =  NSBundle.mainBundle().loadNibNamed(String(TopMenuView), owner: self, options: nil).first as? UIView
