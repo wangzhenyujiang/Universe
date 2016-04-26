@@ -30,31 +30,41 @@ extension OwnsTopMenuViewType  where Self: UIViewController {
 //MARK: ShowPopoverAble
 
 protocol ShowPopoverAble: class {
-    func showMenuPopoverAtPoint(point: CGPoint)
+    var popover: Popover { get set }
 }
 
-extension ShowPopoverAble  where Self: OwnsTopMenuViewType{
-    func showMenuPopoverAtPoint(point: CGPoint) {
-        topMenuView.menuAction = { [weak self] in
-            guard let _ = self else { return }
-            let options = [
-                .Type(.Down),
-                .AnimationIn(0.3),
-                .BlackOverlayColor(UIColor.redColor()),
-                .ArrowSize(CGSizeZero),
-                .Color(UIColor.whiteColor())
-                ] as [PopoverOption]
-            
-            let popover = Popover.init(options: options, showHandler: nil, dismissHandler: nil)
-            popover.show(UIView(frame: popover.bounds), point: CGPointMake(30, 70))
-        }
+extension ShowPopoverAble {
+    func showMenuPopoverAtPoint(point: CGPoint, view: UIView) {
+        let options = [
+            .Type(.Down),
+            .AnimationIn(0.3),
+            .BlackOverlayColor(UIColor.redColor()),
+            .ArrowSize(CGSizeZero),
+            .Color(UIColor.whiteColor())
+            ] as [PopoverOption]
+        
+        popover = Popover.init(options: options, showHandler: nil, dismissHandler: nil)
+        popover.show(view, point: point)
     }
 }
 
 //MARK: OwnMenuListType
 
-protocol OwnMenuListType {
-    
+protocol ShowMenuListAble: ShowPopoverAble {
+    var menuListView: MenuListView { get set }
+    var menuListItems: [MenuListItemType] { get set }
+    func showMenuList()
+}
+
+extension ShowMenuListAble where Self: TopMenuView {
+    func showMenuList() {
+        menuListView = MenuListView(frame: CGRectMake(0, 0, 30, CGFloat(menuListItems.count * 30)))
+        menuListView.menuItemsList = menuListItems
+        self.menuAction = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.showMenuPopoverAtPoint(CGPointMake(30, 70), view: strongSelf.menuListView)
+        }
+    }
 }
 
 //MARK: MenuListItemType
