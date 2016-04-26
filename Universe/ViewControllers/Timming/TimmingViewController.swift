@@ -8,13 +8,18 @@
 
 import UIKit
 
-class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
+class TimmingViewController: BaseViewController, OwnsTopMenuViewType, SetMenuListItemsAble {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var backImageView: UIImageView!
     
     @IBOutlet weak var tipsLabel: UILabel!
     @IBOutlet weak var giveUpButton: UIButton!
     @IBOutlet weak var topMenuView: TopMenuView!
+    
+    var  menuListItems: [MenuListItemType] {
+        return []
+    }
+    
     
     var timmingType: TimeType!
     
@@ -37,6 +42,7 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
         super.viewDidLoad()
         setupTimerLabel()
         setupTopMenuView()
+        setTopMenuItemList()
         startTiming()
         
         enterBackHelpers.helperCallback = { [weak self] in

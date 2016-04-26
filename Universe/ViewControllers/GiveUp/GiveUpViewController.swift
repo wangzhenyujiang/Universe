@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
+class GiveUpViewController: BaseViewController, OwnsTopMenuViewType, SetMenuListItemsAble {
     var timming: TimeType?
     
     @IBOutlet weak var topMenuView: TopMenuView!
@@ -17,6 +17,7 @@ class GiveUpViewController: BaseViewController, OwnsTopMenuViewType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTopMenuView()
+        setTopMenuItemList()
         
         guard let time = timming else { return }
         failImageView.image = UIImage(named: time.failImageName)

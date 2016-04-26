@@ -58,21 +58,17 @@ extension TopMenuView {
     func update() {
         goldLabel.text = "\(GoldNumMemoryManager.shareInstance.gold)"
     }
+    
+    func setMenuListItems(items: [MenuListItemType]) {
+        menuListView.menuItemsList = items
+    }
 }
 
 //MARK: Private
 
 extension TopMenuView {
     private func setupMenuItemList() {
-        let item1: MenuListItem = MenuListItem.init(image: UIImage(named: "statistics_menu_key")!) {
-            //show 统计 view controller
-            print("show 统计 view controller")
-        }
-        let item2: MenuListItem = MenuListItem.init(image: UIImage(named: "setting_menu_key")!) {
-            //show 设置 view controller
-            print("show 设置 view controller")
-        }
-        menuListItems = [item1, item2]
+        menuListItems = [statisticsMenuItem, settingMenuItem]
     }
 }
 

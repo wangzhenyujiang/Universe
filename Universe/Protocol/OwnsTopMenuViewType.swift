@@ -15,7 +15,7 @@ protocol OwnsTopMenuViewType: class {
     var topMenuView: TopMenuView! { get set }
 }
 
-extension OwnsTopMenuViewType  where Self: UIViewController {
+extension OwnsTopMenuViewType {
     func setupTopMenuView() {
         topMenuView.update()
     }
@@ -60,6 +60,22 @@ extension ShowMenuListAble where Self: TopMenuView {
     func setupMenuListView() {
         menuListView = MenuListView(frame: CGRectMake(0, 0, 30, CGFloat(CGFloat(menuListItems.count) * menuItemCellHeight)))
         menuListView.menuItemsList = menuListItems
+    }
+}
+
+//MARK: SetMenuListAble
+
+protocol SetMenuListItemsAble  {
+    
+}
+
+extension SetMenuListItemsAble where Self: OwnsTopMenuViewType {
+    var menuListItems: [MenuListItemType] {
+        return [statisticsMenuItem, settingMenuItem]
+    }
+    
+    func setTopMenuItemList() {
+        topMenuView.setMenuListItems(menuListItems)
     }
 }
 

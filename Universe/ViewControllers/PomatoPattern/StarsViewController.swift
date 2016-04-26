@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarsViewController: BaseViewController, OwnsTopMenuViewType {
+class StarsViewController: BaseViewController, OwnsTopMenuViewType, SetMenuListItemsAble {
     @IBOutlet var starViews: [StarView]!
     
     @IBOutlet weak var topMenuView: TopMenuView!
@@ -24,6 +24,7 @@ class StarsViewController: BaseViewController, OwnsTopMenuViewType {
         
         setupStarViews()
         setupTopMenuView()
+        setTopMenuItemList()
     }
     
     override func viewDidLoad() {
