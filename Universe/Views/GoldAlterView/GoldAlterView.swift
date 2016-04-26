@@ -21,6 +21,8 @@ class GoldAlterView: UIView {
         }
     }
     
+    var okClickAction: (()->())?
+    
     private var view: UIView!
     private var alphaView: UIView!
     private var showing: Bool = false
@@ -63,7 +65,7 @@ class GoldAlterView: UIView {
 //MARK : Public
 
 extension GoldAlterView {
-    static func show(glod: Int = 0) {
+    static func show(glod: Int = 0, okAction:(()->())? = nil) {
         if shareInstance.showing {
             return
         }
@@ -72,6 +74,7 @@ extension GoldAlterView {
         UIApplication.sharedApplication().windows.first?.addSubview(shareInstance)
         
         shareInstance.showing = true
+        shareInstance.okClickAction = okAction
     }
     
     static func hide() {
@@ -89,6 +92,9 @@ extension GoldAlterView {
 extension GoldAlterView {
     @IBAction func okClickAction(sender: AnyObject) {
         GoldAlterView.hide()
+        
+        guard let action = okClickAction else { return }
+        action()
     }
 }
 

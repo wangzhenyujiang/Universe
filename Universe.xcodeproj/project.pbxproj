@@ -50,6 +50,7 @@
 		F0E2F4E31CCF2F5400CC1B39 /* MenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4E21CCF2F5400CC1B39 /* MenuListCell.swift */; };
 		F0E2F4E51CCF2F6B00CC1B39 /* MenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */; };
 		F0E2F4E71CCFAAED00CC1B39 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4E61CCFAAED00CC1B39 /* UIView+Extension.swift */; };
+		F0E2F4EA1CCFB2B400CC1B39 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4E91CCFB2B400CC1B39 /* NoteViewController.swift */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */; };
 		F0E8B0EE1CB4097F001C702F /* UIColor+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */; };
@@ -133,6 +134,7 @@
 		F0E2F4E21CCF2F5400CC1B39 /* MenuListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuListCell.swift; path = Views/Cells/MenuListCell/MenuListCell.swift; sourceTree = "<group>"; };
 		F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuListCell.xib; path = Views/Cells/MenuListCell/MenuListCell.xib; sourceTree = "<group>"; };
 		F0E2F4E61CCFAAED00CC1B39 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Extensions/UIView+Extension.swift"; sourceTree = "<group>"; };
+		F0E2F4E91CCFB2B400CC1B39 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteViewController.swift; path = ViewControllers/NoteViewController/NoteViewController.swift; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationView.swift; path = Views/ConstellationView/ConstellationView.swift; sourceTree = "<group>"; };
 		F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Universe.swift"; path = "Extensions/UIColor+Universe.swift"; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				F024742A1CA61A040049DB21 /* MainViewController.swift */,
+				F0E2F4E81CCFB29A00CC1B39 /* NoteViewController */,
 				F0A342C51CBBAD1900F9091C /* Statistics */,
 				F0CE5ABA1CBB62F2000E5A64 /* GiveUp */,
 				F0379FB41CAAD2420082584E /* Timming */,
@@ -502,6 +505,14 @@
 				F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */,
 			);
 			name = MenuListCell;
+			sourceTree = "<group>";
+		};
+		F0E2F4E81CCFB29A00CC1B39 /* NoteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F0E2F4E91CCFB2B400CC1B39 /* NoteViewController.swift */,
+			);
+			name = NoteViewController;
 			sourceTree = "<group>";
 		};
 		F0E4F0471CA9701200DA6A28 /* Start */ = {
@@ -831,6 +842,7 @@
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
+				F0E2F4EA1CCFB2B400CC1B39 /* NoteViewController.swift in Sources */,
 				F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */,
 				F02B50981CCB93A000C51CF2 /* LabelCell.swift in Sources */,
 				F00FB89A1CC7AC9400CF5D85 /* OwnsTopMenuViewType.swift in Sources */,

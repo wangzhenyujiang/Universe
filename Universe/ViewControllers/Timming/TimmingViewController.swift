@@ -108,6 +108,12 @@ extension TimmingViewController {
     private func stopCountTimming() {
         timerCountLabel.pause()
     }
+    
+    private func jumpIntoNoteViewController() {
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller: NoteViewController = sb.instantiateViewControllerWithIdentifier(String(NoteViewController)) as! NoteViewController
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 //MARK: Notification
@@ -125,7 +131,10 @@ extension TimmingViewController: MZTimerLabelDelegate {
     
     func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
         let goldNum: Int = Int(timmingType.time) / Int(Half_Hour) * perHalfHourGold
-        GoldAlterView.show(goldNum)
+        GoldAlterView.show(goldNum, okAction: { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.jumpIntoNoteViewController()
+        })
         User.shareInstance.addNum(goldNum)
         topMenuView.update()
         giveUpButton.enabled = false
