@@ -68,6 +68,19 @@ extension TopMenuView {
 
 extension TopMenuView {
     private func setupMenuItemList() {
+        
+        let statisticsMenuItem: MenuListItem = MenuListItem.init(image: UIImage(named: "statistics_menu_key")!) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.popover.dismiss()
+        }
+        let settingMenuItem: MenuListItem = MenuListItem.init(image: UIImage(named: "setting_menu_key")!) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.popover.dismiss()
+            let sb = UIStoryboard.init(name: "Main", bundle: nil)
+            let navigation: UniverseNavigationController = sb.instantiateViewControllerWithIdentifier("SettingNavigationController") as! UniverseNavigationController
+            strongSelf.viewController()?.presentViewController(navigation, animated: true, completion: nil)
+        }
+
         menuListItems = [statisticsMenuItem, settingMenuItem]
     }
 }

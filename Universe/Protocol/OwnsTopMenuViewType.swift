@@ -21,12 +21,7 @@ extension OwnsTopMenuViewType {
     }
 }
 
-//        topMenuView.menuAction = { [weak self] in
-//            guard let strongSelf = self else { return }
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            let navigation: UniverseNavigationController = sb.instantiateViewControllerWithIdentifier("SettingNavigationController") as! UniverseNavigationController
-//            strongSelf.presentViewController(navigation, animated: true, completion: nil)
-//        }
+
 
 //MARK: ShowPopoverAble
 
@@ -60,22 +55,6 @@ extension ShowMenuListAble where Self: TopMenuView {
     func setupMenuListView() {
         menuListView = MenuListView(frame: CGRectMake(0, 0, 30, CGFloat(CGFloat(menuListItems.count) * menuItemCellHeight)))
         menuListView.menuItemsList = menuListItems
-    }
-}
-
-//MARK: SetMenuListAble
-
-protocol SetMenuListItemsAble  {
-    
-}
-
-extension SetMenuListItemsAble where Self: OwnsTopMenuViewType {
-    var menuListItems: [MenuListItemType] {
-        return [statisticsMenuItem, settingMenuItem]
-    }
-    
-    func setTopMenuItemList() {
-        topMenuView.setMenuListItems(menuListItems)
     }
 }
 

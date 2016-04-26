@@ -9,7 +9,7 @@
 import UIKit
 
 
-class StartViewController: BaseViewController, OwnsTopMenuViewType, SetMenuListItemsAble {
+class StartViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var timerLabel: MZTimerLabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
@@ -54,7 +54,6 @@ class StartViewController: BaseViewController, OwnsTopMenuViewType, SetMenuListI
         super.viewWillAppear(animated)
         resetUI()
         setupTopMenuView()
-        setTopMenuItemList()
     }
     
     override func viewDidLoad() {

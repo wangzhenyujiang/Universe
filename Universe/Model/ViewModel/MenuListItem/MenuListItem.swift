@@ -12,7 +12,7 @@ class MenuListItem: NSObject {
     var image: UIImage
     var clickAction: (() -> ())?
     
-    init(image: UIImage, action: (()->())? = nil) {
+    init(image: UIImage ,action: (()->())? = nil) {
         self.image = image
         self.clickAction = action
         super.init()
