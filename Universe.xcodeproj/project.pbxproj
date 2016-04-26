@@ -47,6 +47,8 @@
 		F0D790951CC853C10065FF1C /* GoldNumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D790941CC853C10065FF1C /* GoldNumManager.swift */; };
 		F0E2F4DD1CCEF58100CC1B39 /* MenuListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4DC1CCEF58100CC1B39 /* MenuListItem.swift */; };
 		F0E2F4E01CCEF74E00CC1B39 /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4DF1CCEF74E00CC1B39 /* MenuListView.swift */; };
+		F0E2F4E31CCF2F5400CC1B39 /* MenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2F4E21CCF2F5400CC1B39 /* MenuListCell.swift */; };
+		F0E2F4E51CCF2F6B00CC1B39 /* MenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */; };
 		F0E4F0491CA9704A00DA6A28 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */; };
 		F0E8B0EC1CB3FCB3001C702F /* ConstellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */; };
 		F0E8B0EE1CB4097F001C702F /* UIColor+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */; };
@@ -127,6 +129,8 @@
 		F0D790941CC853C10065FF1C /* GoldNumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldNumManager.swift; path = Helpers/GoldNumManager.swift; sourceTree = "<group>"; };
 		F0E2F4DC1CCEF58100CC1B39 /* MenuListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuListItem.swift; path = Model/ViewModel/MenuListItem/MenuListItem.swift; sourceTree = "<group>"; };
 		F0E2F4DF1CCEF74E00CC1B39 /* MenuListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuListView.swift; path = Views/MenuListView/MenuListView.swift; sourceTree = "<group>"; };
+		F0E2F4E21CCF2F5400CC1B39 /* MenuListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuListCell.swift; path = Views/Cells/MenuListCell/MenuListCell.swift; sourceTree = "<group>"; };
+		F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuListCell.xib; path = Views/Cells/MenuListCell/MenuListCell.xib; sourceTree = "<group>"; };
 		F0E4F0481CA9704A00DA6A28 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/Start/StartViewController.swift; sourceTree = "<group>"; };
 		F0E8B0EB1CB3FCB3001C702F /* ConstellationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationView.swift; path = Views/ConstellationView/ConstellationView.swift; sourceTree = "<group>"; };
 		F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Universe.swift"; path = "Extensions/UIColor+Universe.swift"; sourceTree = "<group>"; };
@@ -363,6 +367,7 @@
 		F02AA7261CA7ECA5008ED176 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F0E2F4E11CCF2F3C00CC1B39 /* MenuListCell */,
 				F02AA7271CA7ECAD008ED176 /* SettingCell */,
 			);
 			name = Cells;
@@ -486,6 +491,15 @@
 				F0E2F4DF1CCEF74E00CC1B39 /* MenuListView.swift */,
 			);
 			name = MenuListView;
+			sourceTree = "<group>";
+		};
+		F0E2F4E11CCF2F3C00CC1B39 /* MenuListCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E2F4E21CCF2F5400CC1B39 /* MenuListCell.swift */,
+				F0E2F4E41CCF2F6B00CC1B39 /* MenuListCell.xib */,
+			);
+			name = MenuListCell;
 			sourceTree = "<group>";
 		};
 		F0E4F0471CA9701200DA6A28 /* Start */ = {
@@ -702,6 +716,7 @@
 				F0CE5AC11CBB6F31000E5A64 /* LockAlterView.xib in Resources */,
 				F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */,
 				F024743A1CA6224E0049DB21 /* StarView.xib in Resources */,
+				F0E2F4E51CCF2F6B00CC1B39 /* MenuListCell.xib in Resources */,
 				F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */,
 				F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */,
 				F02474011CA57E7A0049DB21 /* Main.storyboard in Resources */,
@@ -785,6 +800,7 @@
 				F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */,
 				F0D790951CC853C10065FF1C /* GoldNumManager.swift in Sources */,
 				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
+				F0E2F4E31CCF2F5400CC1B39 /* MenuListCell.swift in Sources */,
 				F024742B1CA61A040049DB21 /* MainViewController.swift in Sources */,
 				F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */,
 				F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */,
