@@ -3,6 +3,7 @@ PODS:
   - Charts (2.2.3):
     - Charts/Core (= 2.2.3)
   - Charts/Core (2.2.3)
+  - KeyboardMan (0.6.0)
   - LxThroughPointsBezier (1.0.0)
   - Masonry (0.6.4)
   - Popover (0.9.0)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Cache
   - Charts
+  - KeyboardMan (~> 0.6.0)
   - LxThroughPointsBezier (~> 1.0.0)
   - Masonry
   - Popover
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Cache: 78f58bc008313c7a1182967a2ebcb3de9fddecd4
   Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
+  KeyboardMan: 665211f180093f5bb3c6ff7e8b7f858c432c6ccf
   LxThroughPointsBezier: fdebe18dd4ddab9406d9827db77a078b4738b00f
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   Popover: e5a2cbfa29bb982c95cff0d7eb94f47173dbfbcc

@@ -11,4 +11,5 @@ pod 'Charts'
 pod 'Cache'
 pod "Popover"
 pod "SwiftDate"
+pod 'KeyboardMan', '~> 0.6.0'
 end

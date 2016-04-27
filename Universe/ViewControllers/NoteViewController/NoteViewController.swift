@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import KeyboardMan
 
-class NoteViewController: UIViewController {
+class NoteViewController: BaseViewController {
+    
+    @IBOutlet weak var topMenuView: TopMenuView!
+    @IBOutlet weak var textView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTopMenuView()
+        
+    }
+}
+
+extension NoteViewController: OwnsTopMenuViewType {
     
 }
 

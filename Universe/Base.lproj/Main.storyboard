@@ -767,7 +767,8 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="topMenuView" destination="hLv-8h-xDE" id="iJJ-uV-gNY"/>
+                        <outlet property="textView" destination="2Rf-8T-ELB" id="vID-lW-ExV"/>
+                        <outlet property="topMenuView" destination="hLv-8h-xDE" id="wzc-ag-8Xa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAU-lI-7Bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
