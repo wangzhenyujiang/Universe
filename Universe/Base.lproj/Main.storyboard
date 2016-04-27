@@ -65,6 +65,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="353" height="67"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="25"/>
                                                 <state key="normal" title="FREE MODEL"/>
+                                                <connections>
+                                                    <action selector="freeModelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gg-5h-bez"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free_model" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-zy-xMh">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
