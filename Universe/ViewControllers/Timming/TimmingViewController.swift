@@ -61,9 +61,7 @@ extension TimmingViewController {
     }
     
     @IBAction func openYoudaoAppAction(sender: AnyObject) {
-        if UIApplication.sharedApplication().canOpenURL(Scheme.YouDaoDict.url) {
-            UIApplication.sharedApplication().openURL(Scheme.YouDaoDict.url)
-        }
+        enterBackHelpers.jumpToAppByScheme(Scheme.YouDaoDict)
     }
 }
 
@@ -81,7 +79,7 @@ extension TimmingViewController {
         timmingView = ConstellationTimmingView(timmingType: timmingType)
         view.addSubview(timmingView)
         
-        topMenuView.menuAction = { [weak self] in         // 开始计时后 topMenu 点击事件变为询问用户是否放弃
+        topMenuView.menuAction = { [weak self] in       // 开始计时后 topMenu 点击事件变为询问用户是否放弃
             guard let stongSelf = self else { return }
             stongSelf.showAlter()
         }
