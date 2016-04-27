@@ -59,6 +59,12 @@ extension TimmingViewController {
     @IBAction func giveupActixon(sender: AnyObject) {
         showAlter()
     }
+    
+    @IBAction func openYoudaoAppAction(sender: AnyObject) {
+        if UIApplication.sharedApplication().canOpenURL(Scheme.YouDaoDict.url) {
+            UIApplication.sharedApplication().openURL(Scheme.YouDaoDict.url)
+        }
+    }
 }
 
 //MARK: Private Method

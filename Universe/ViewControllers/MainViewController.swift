@@ -59,9 +59,7 @@ extension MainViewController: OwnsTopMenuViewType {
 extension MainViewController {
     
     @IBAction func freeModelAction(sender: AnyObject) {
-        if UIApplication.sharedApplication().canOpenURL(Scheme.YouDaoDict.url) {
-            UIApplication.sharedApplication().openURL(Scheme.YouDaoDict.url)
-        }
+        
     }
 }
 

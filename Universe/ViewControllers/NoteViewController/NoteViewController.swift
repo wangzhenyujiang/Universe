@@ -9,15 +9,20 @@
 import UIKit
 import KeyboardMan
 
+let keyboardMan = KeyboardMan()
+
 class NoteViewController: BaseViewController {
     
     @IBOutlet weak var topMenuView: TopMenuView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textViewContainter: UIView!
+    
+    @IBOutlet weak var centerYConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTopMenuView()
-        
+        setupKeyBoardMan()
     }
 }
 
@@ -29,5 +34,23 @@ extension NoteViewController {
     
     @IBAction func backAction(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
+    }
+}
+
+extension NoteViewController {
+    private func setupKeyBoardMan() {
+        keyboardMan.animateWhenKeyboardAppear = { [weak self] appearPostIndex, keyboardHeight, keyboardHeightIncrement in
+            guard let strongSelf = self  else { return }
+            if appearPostIndex == 2 {
+                strongSelf.centerYConstraint.constant = ScreenHeight - strongSelf.textViewContainter.frame.origin.y - strongSelf.textViewContainter.frame.height - keyboardHeight
+            }
+            strongSelf.view.layoutIfNeeded()
+        }
+        
+        keyboardMan.animateWhenKeyboardDisappear = { [weak self] keyboardHeight in
+            guard let strongSelf = self else { return }
+            strongSelf.centerYConstraint.constant = 0
+            strongSelf.view.layoutIfNeeded()
+        }
     }
 }
