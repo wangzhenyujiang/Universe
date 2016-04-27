@@ -42,7 +42,7 @@ extension NoteViewController {
         keyboardMan.animateWhenKeyboardAppear = { [weak self] appearPostIndex, keyboardHeight, keyboardHeightIncrement in
             guard let strongSelf = self  else { return }
             if appearPostIndex == 2 {
-                strongSelf.centerYConstraint.constant = ScreenHeight - strongSelf.textViewContainter.frame.origin.y - strongSelf.textViewContainter.frame.height - keyboardHeight
+                strongSelf.centerYConstraint.constant = ScreenHeight - strongSelf.textViewContainter.frame.origin.y - strongSelf.textViewContainter.frame.height - keyboardHeight - 4
             }
             strongSelf.view.layoutIfNeeded()
         }
