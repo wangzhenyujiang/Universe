@@ -23,6 +23,10 @@ class NoteViewController: BaseViewController {
         super.viewDidLoad()
         setupTopMenuView()
         setupKeyBoardMan()
+        
+        textViewContainter.layer.cornerRadius = 10.0
+        textViewContainter.clipsToBounds = true
+        
     }
 }
 
@@ -42,9 +46,8 @@ extension NoteViewController {
     private func setupKeyBoardMan() {
         keyboardMan.animateWhenKeyboardAppear = { [weak self] appearPostIndex, keyboardHeight, keyboardHeightIncrement in
             guard let strongSelf = self  else { return }
-            if appearPostIndex == 2 {
-                strongSelf.centerYConstraint.constant = ScreenHeight - strongSelf.textViewContainter.frame.origin.y - strongSelf.textViewContainter.frame.height - keyboardHeight - 4
-            }
+            print("\(appearPostIndex)")
+            strongSelf.centerYConstraint.constant = ScreenHeight - strongSelf.textViewContainter.frame.origin.y - strongSelf.textViewContainter.frame.height - keyboardHeight - 4
             strongSelf.view.layoutIfNeeded()
         }
         
