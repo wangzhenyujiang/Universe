@@ -24,6 +24,15 @@ enum Scheme: String {
     var url: NSURL {
         return NSURL(string: self.rawValue)!
     }
+    
+    var appName: String {
+        switch self {
+        case .YouDaoDict:
+            return "有道词典"
+        case .ShanBayDict:
+            return "扇贝打卡"
+        }
+    }
 }
 
 let time_selected_arr: [(CGFloat, CGFloat)] = [(123.5, 58.0), (70.5, 109.5), (64.0, 177.0), (101.5, 224.0), (165.0, 244.5), (233.5, 222.5), (265.5, 145.0)]

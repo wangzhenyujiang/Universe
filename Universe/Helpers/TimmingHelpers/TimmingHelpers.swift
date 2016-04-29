@@ -31,6 +31,8 @@ extension EnterBackHelpers {
         if UIApplication.sharedApplication().canOpenURL(app.url) {
             UIApplication.sharedApplication().openURL(app.url)
             shouldExcauteAction = false
+        }else {
+            print("你还没有安装 \(app.appName)，请前往安装")
         }
     }
 }
