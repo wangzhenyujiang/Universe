@@ -61,6 +61,15 @@ extension StatisticsViewController {
 
 }
 
+//MARK: IBAction
+
+extension StatisticsViewController {
+    
+    @IBAction func dismissAction(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
 //MARK: ChartViewDelegate
 
 extension StatisticsViewController: ChartViewDelegate {

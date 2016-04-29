@@ -53,6 +53,9 @@ class StudyedWeekTimeManager: NSObject {
     static let shareInstance: StudyedWeekTimeManager = StudyedWeekTimeManager()
     private var weekStudyData: Dictionary<Day, Int> = [.Sunday: 10, .Monday: 5, .Tuesday: 4, .Wednesday: 2, .Thursday: 4, .Friday: 2, .Saturday: 6]
     
+    private struct WeekStudyData {
+        static let key = "WeekStudyData"
+    }
 }
 
 //MARK: Public

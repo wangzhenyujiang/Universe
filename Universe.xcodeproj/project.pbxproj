@@ -59,6 +59,7 @@
 		F0F57E161CB6945D00A10DC3 /* TimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F57E151CB6945D00A10DC3 /* TimeType.swift */; };
 		F86587B51CA8EFF000000063 /* UIImage+Univserse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */; };
 		F86587B81CA9079500000063 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F86587B71CA9079500000063 /* OpenSans-Light.ttf */; };
+		F886A0B11CD379D900DEF1C0 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886A0B01CD379D900DEF1C0 /* Dictionary+Extension.swift */; };
 		F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C04941CAA554100308952 /* MZTimerLabel.m */; };
 		F89C04971CAA572F00308952 /* UIFont+Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89C04961CAA572F00308952 /* UIFont+Universe.swift */; };
 		F89C049B1CAA66A400308952 /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F89C049A1CAA66A400308952 /* HelveticaNeue.ttf */; };
@@ -145,6 +146,7 @@
 		F84E7FE123ED8EEBCAEB0E06 /* Pods_Universe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Univserse.swift"; path = "Extensions/UIImage+Univserse.swift"; sourceTree = "<group>"; };
 		F86587B71CA9079500000063 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F886A0B01CD379D900DEF1C0 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extension.swift"; path = "Extensions/Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		F89C04931CAA554100308952 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = Vender/MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
 		F89C04941CAA554100308952 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = Vender/MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
 		F89C04961CAA572F00308952 /* UIFont+Universe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Universe.swift"; path = "Extensions/UIFont+Universe.swift"; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 				F89C04961CAA572F00308952 /* UIFont+Universe.swift */,
 				F0E8B0ED1CB4097F001C702F /* UIColor+Universe.swift */,
 				F0E2F4E61CCFAAED00CC1B39 /* UIView+Extension.swift */,
+				F886A0B01CD379D900DEF1C0 /* Dictionary+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F0E2F4DD1CCEF58100CC1B39 /* MenuListItem.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
+				F886A0B11CD379D900DEF1C0 /* Dictionary+Extension.swift in Sources */,
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,
 				F0E2F4EA1CCFB2B400CC1B39 /* NoteViewController.swift in Sources */,
