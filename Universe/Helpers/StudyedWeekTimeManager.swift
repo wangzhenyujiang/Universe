@@ -22,6 +22,27 @@ enum Day: Int {
         }
         return false
     }
+    
+    var name: String {
+        switch self {
+        case .Sunday:
+            return "Sun"
+        case .Monday:
+            return "Mon"
+        case .Tuesday:
+            return "Tue"
+        case .Wednesday:
+            return "Wed"
+        case .Thursday:
+            return "Thu"
+        case .Friday:
+            return "Fri"
+        case .Saturday:
+            return "Sat"
+        default:
+            return "Invalid"
+        }
+    }
 }
 
 import UIKit
@@ -30,7 +51,7 @@ import SwiftDate
 class StudyedWeekTimeManager: NSObject {
     
     static let shareInstance: StudyedWeekTimeManager = StudyedWeekTimeManager()
-    private var weekStudyData: Dictionary<Day, Int> = [.Sunday: 0, .Monday: 0, .Tuesday: 0, .Wednesday: 0, .Thursday: 0, .Friday: 0, .Saturday: 0]
+    private var weekStudyData: Dictionary<Day, Int> = [.Sunday: 10, .Monday: 5, .Tuesday: 4, .Wednesday: 2, .Thursday: 4, .Friday: 2, .Saturday: 6]
     
 }
 
@@ -51,6 +72,12 @@ extension StudyedWeekTimeManager {
     
     func weekEveryDayTimeArr() -> [Int] {
         return Array(weekStudyData.values)
+    }
+    
+    func weekDays() -> [String] {
+        return weekStudyData.keys.map() { key in
+            return key.name
+        }
     }
     
     func clear(afterDay day: Day) {

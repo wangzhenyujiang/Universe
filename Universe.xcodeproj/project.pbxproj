@@ -40,6 +40,7 @@
 		F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */; };
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
+		F0B29A8E1CD36F9C00624AF5 /* BlackNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B29A8D1CD36F9C00624AF5 /* BlackNavigationBarViewController.swift */; };
 		F0CE5AB91CBB5FB4000E5A64 /* UniverseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5AB81CBB5FB4000E5A64 /* UniverseNavigationController.swift */; };
 		F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5ABB1CBB630B000E5A64 /* GiveUpViewController.swift */; };
 		F0CE5ABF1CBB6F14000E5A64 /* LockAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5ABE1CBB6F14000E5A64 /* LockAlterView.swift */; };
@@ -124,6 +125,7 @@
 		F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = ViewControllers/Statistics/StatisticsViewController.swift; sourceTree = "<group>"; };
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
+		F0B29A8D1CD36F9C00624AF5 /* BlackNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackNavigationBarViewController.swift; path = ViewControllers/Base/BlackNavigationBarViewController.swift; sourceTree = "<group>"; };
 		F0CE5AB81CBB5FB4000E5A64 /* UniverseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniverseNavigationController.swift; path = ViewControllers/Base/UniverseNavigationController.swift; sourceTree = "<group>"; };
 		F0CE5ABB1CBB630B000E5A64 /* GiveUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GiveUpViewController.swift; path = ViewControllers/GiveUp/GiveUpViewController.swift; sourceTree = "<group>"; };
 		F0CE5ABE1CBB6F14000E5A64 /* LockAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockAlterView.swift; path = Views/LockAlterView/LockAlterView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				F02474331CA621D10049DB21 /* BaseViewController.swift */,
 				F0CE5AB81CBB5FB4000E5A64 /* UniverseNavigationController.swift */,
+				F0B29A8D1CD36F9C00624AF5 /* BlackNavigationBarViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				F8F0B95B1CB625EF001EFC59 /* ViewPoint.swift in Sources */,
 				F02B509A1CCC7B5800C51CF2 /* StudyedWeekTimeManager.swift in Sources */,
 				F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */,
+				F0B29A8E1CD36F9C00624AF5 /* BlackNavigationBarViewController.swift in Sources */,
 				F0D790951CC853C10065FF1C /* GoldNumManager.swift in Sources */,
 				F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */,
 				F0E2F4E71CCFAAED00CC1B39 /* UIView+Extension.swift in Sources */,

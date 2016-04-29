@@ -13,10 +13,6 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         view.layer.contents = UIImage.backgroundImage().CGImage
         automaticallyAdjustsScrollViewInsets = false
-        
-        let titleView = UIView(frame: CGRectMake(0, 0, 100, 64))
-        titleView.backgroundColor = UIColor.clearColor()
-        navigationItem.titleView = titleView
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
