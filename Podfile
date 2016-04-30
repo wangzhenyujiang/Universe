@@ -7,9 +7,9 @@ use_frameworks!
 target 'Universe' do
 pod 'Masonry'
 pod 'LxThroughPointsBezier', '~> 1.0.0'
-pod 'Charts'
 pod 'Cache'
 pod "Popover"
 pod "SwiftDate"
 pod 'KeyboardMan', '~> 0.6.0'
+pod 'PNChart'
 end

@@ -1,30 +1,31 @@
 PODS:
   - Cache (1.0.0)
-  - Charts (2.2.3):
-    - Charts/Core (= 2.2.3)
-  - Charts/Core (2.2.3)
   - KeyboardMan (0.6.0)
   - LxThroughPointsBezier (1.0.0)
   - Masonry (0.6.4)
+  - PNChart (0.8.8):
+    - UICountingLabel (~> 1.2.0)
   - Popover (0.9.0)
   - SwiftDate (3.0.8)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - Cache
-  - Charts
   - KeyboardMan (~> 0.6.0)
   - LxThroughPointsBezier (~> 1.0.0)
   - Masonry
+  - PNChart
   - Popover
   - SwiftDate
 
 SPEC CHECKSUMS:
   Cache: 78f58bc008313c7a1182967a2ebcb3de9fddecd4
-  Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
   KeyboardMan: 665211f180093f5bb3c6ff7e8b7f858c432c6ccf
   LxThroughPointsBezier: fdebe18dd4ddab9406d9827db77a078b4738b00f
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  PNChart: 25f91e9c4688af49c3647489760624d037f5383f
   Popover: e5a2cbfa29bb982c95cff0d7eb94f47173dbfbcc
   SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
 COCOAPODS: 0.39.0

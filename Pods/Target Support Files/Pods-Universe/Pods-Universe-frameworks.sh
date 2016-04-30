@@ -85,19 +85,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Universe/Cache.framework"
-  install_framework "Pods-Universe/Charts.framework"
   install_framework "Pods-Universe/KeyboardMan.framework"
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
+  install_framework "Pods-Universe/PNChart.framework"
   install_framework "Pods-Universe/Popover.framework"
   install_framework "Pods-Universe/SwiftDate.framework"
+  install_framework "Pods-Universe/UICountingLabel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Universe/Cache.framework"
-  install_framework "Pods-Universe/Charts.framework"
   install_framework "Pods-Universe/KeyboardMan.framework"
   install_framework "Pods-Universe/LxThroughPointsBezier.framework"
   install_framework "Pods-Universe/Masonry.framework"
+  install_framework "Pods-Universe/PNChart.framework"
   install_framework "Pods-Universe/Popover.framework"
   install_framework "Pods-Universe/SwiftDate.framework"
+  install_framework "Pods-Universe/UICountingLabel.framework"
 fi
