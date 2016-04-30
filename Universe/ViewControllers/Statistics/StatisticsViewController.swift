@@ -30,11 +30,7 @@ class StatisticsViewController: BlackNavigationBarViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChartView()
-        
         commonSetup()
-        
-        
-        print(NSDate().monthPrefixName)
     }
 }
 
@@ -69,9 +65,9 @@ extension StatisticsViewController {
     }
     
     private func commonSetup() {
-        todayDateLabel.text = "Today \(NSDate().monthPrefixName) \(NSDate().day)"
-        durationTimeLabel.text = "\(NSDate().year) \(NSDate().monthPrefixName) \(NSDate().firstDayOfWeek()!) - \(NSDate().monthPrefixName) \(NSDate().lastDayOfWeek()!)"
-    }
+        todayDateLabel.text = "Today \(NSDate().monthEnglishPrefixName) \(NSDate().day)"
+        durationTimeLabel.text = "\(NSDate().year) \(NSDate().startOf(NSCalendarUnit.Weekday).monthEnglishPrefixName) \(NSDate().firstDayOfWeek()!) - \(NSDate().endOf(NSCalendarUnit.Weekday).monthEnglishPrefixName) \(NSDate().lastDayOfWeek()!)"
+        }
 }
 
 //MARK: IBAction
