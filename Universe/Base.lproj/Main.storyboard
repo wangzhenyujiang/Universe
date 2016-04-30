@@ -357,9 +357,29 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-gs-O21">
                                 <rect key="frame" x="0.0" y="64" width="600" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today Apr 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-6j-9wP">
+                                        <rect key="frame" x="20" y="0.0" width="101" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-Hg-etS">
+                                        <rect key="frame" x="541" y="0.0" width="51" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LCl-Hg-etS" secondAttribute="bottom" id="AoI-vA-1Sp"/>
+                                    <constraint firstItem="fYh-6j-9wP" firstAttribute="leading" secondItem="qgs-gs-O21" secondAttribute="leading" constant="20" id="DBe-ZN-UBZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LCl-Hg-etS" secondAttribute="trailing" constant="8" id="I2o-7d-tZT"/>
+                                    <constraint firstAttribute="bottom" secondItem="fYh-6j-9wP" secondAttribute="bottom" id="JP5-cL-ceb"/>
                                     <constraint firstAttribute="height" constant="47" id="MxE-Ny-Xzi"/>
+                                    <constraint firstItem="fYh-6j-9wP" firstAttribute="top" secondItem="qgs-gs-O21" secondAttribute="top" id="WC4-jh-bN0"/>
+                                    <constraint firstItem="LCl-Hg-etS" firstAttribute="top" secondItem="qgs-gs-O21" secondAttribute="top" id="vNh-eL-STA"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-Gd-sJw">
@@ -369,18 +389,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGi-mY-ub1">
                                 <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MpA-Oe-CDR">
-                                        <rect key="frame" x="246" y="-20" width="109" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MpA-Oe-CDR">
+                                        <rect key="frame" x="165" y="-20" width="92" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 day 0 hour 0 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO7-Og-EM4">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 day 0 hour 0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO7-Og-EM4">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-Apr-10 -Apr 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ok-43-g6m">
-                                                <rect key="frame" x="0.0" y="20" width="109" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016 Apr 10 - Apr 16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ok-43-g6m">
+                                                <rect key="frame" x="0.0" y="20" width="92" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -447,6 +467,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barChartContainter" destination="sHX-J4-hVv" id="GUc-Xe-lmr"/>
+                        <outlet property="durationTimeLabel" destination="6ok-43-g6m" id="RpP-30-jN4"/>
+                        <outlet property="minsTimeLabel" destination="LCl-Hg-etS" id="x0U-Gs-L2z"/>
+                        <outlet property="studyTimeLabel" destination="gO7-Og-EM4" id="hud-yZ-AqU"/>
+                        <outlet property="todayDateLabel" destination="fYh-6j-9wP" id="e3y-fB-jUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znF-ml-AZc" userLabel="First Responder" sceneMemberID="firstResponder"/>

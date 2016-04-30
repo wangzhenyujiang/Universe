@@ -14,6 +14,11 @@ class StatisticsViewController: BlackNavigationBarViewController  {
     
     @IBOutlet weak var barChartContainter: UIView!
     
+    @IBOutlet weak var todayDateLabel: UILabel!
+    @IBOutlet weak var studyTimeLabel: UILabel!
+    @IBOutlet weak var durationTimeLabel: UILabel!
+    @IBOutlet weak var minsTimeLabel: UILabel!
+    
     var barChart: PNBarChart!
     private let chartViewModel: BarChartViewModel = BarChartViewModel()
     
@@ -25,6 +30,11 @@ class StatisticsViewController: BlackNavigationBarViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChartView()
+        
+        commonSetup()
+        
+        
+        print(NSDate().monthPrefixName)
     }
 }
 
@@ -56,6 +66,11 @@ extension StatisticsViewController {
         
         barChart.strokeChart()
         barChartContainter.addSubview(barChart)
+    }
+    
+    private func commonSetup() {
+        todayDateLabel.text = "Today \(NSDate().monthPrefixName) \(NSDate().day)"
+        durationTimeLabel.text = "\(NSDate().year) \(NSDate().monthPrefixName) \(NSDate().firstDayOfWeek()!) - \(NSDate().monthPrefixName) \(NSDate().lastDayOfWeek()!)"
     }
 }
 
