@@ -78,7 +78,9 @@ extension StudyedWeekTimeManager {
     }
     
     func weekDays() -> [String] {
-        return weekStudyData.keys.map() { key in
+        return weekStudyData.keys.sort({ (day1, day2) -> Bool in
+            return day1.rawValue < day2.rawValue
+        }).map() { key in
             return key.name
         }
     }

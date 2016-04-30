@@ -37,6 +37,7 @@
 		F07A4FFA1CB8ED3B00EB8563 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */; };
 		F07A4FFC1CB8ED5D00EB8563 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */; };
 		F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08093111CB77691004958BB /* ConstellationMaskBackView.swift */; };
+		F0948D361CD499130048A869 /* BarChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0948D351CD499130048A869 /* BarChartViewModel.swift */; };
 		F0A342C71CBBAD4400F9091C /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */; };
 		F0B1B65D1CAF8CF300286EE7 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */; };
 		F0B1B65F1CAFD6FC00286EE7 /* TouchDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */; };
@@ -123,6 +124,7 @@
 		F07A4FF91CB8ED3B00EB8563 /* TopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopMenuView.swift; path = Views/TopMenuView/TopMenuView.swift; sourceTree = "<group>"; };
 		F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopMenuView.xib; path = Views/TopMenuView/TopMenuView.xib; sourceTree = "<group>"; };
 		F08093111CB77691004958BB /* ConstellationMaskBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstellationMaskBackView.swift; path = Views/ConstellationView/ConstellationMaskBackView.swift; sourceTree = "<group>"; };
+		F0948D351CD499130048A869 /* BarChartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarChartViewModel.swift; path = Model/ViewModel/BarChartViewModel/BarChartViewModel.swift; sourceTree = "<group>"; };
 		F0A342C61CBBAD4400F9091C /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = ViewControllers/Statistics/StatisticsViewController.swift; sourceTree = "<group>"; };
 		F0B1B65C1CAF8CF300286EE7 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = Views/RoundView/RoundView.swift; sourceTree = "<group>"; };
 		F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchDebugView.swift; path = Helpers/TouchDebugView.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 		F02B50931CCB843400C51CF2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F0948D341CD498F10048A869 /* BarChartViewModel */,
 				F0E2F4DB1CCEF56600CC1B39 /* MenuListItem */,
 				F02B50941CCB846E00C51CF2 /* SettingCellModel */,
 			);
@@ -441,6 +444,14 @@
 				F07A4FFB1CB8ED5C00EB8563 /* TopMenuView.xib */,
 			);
 			name = TopMenuView;
+			sourceTree = "<group>";
+		};
+		F0948D341CD498F10048A869 /* BarChartViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0948D351CD499130048A869 /* BarChartViewModel.swift */,
+			);
+			name = BarChartViewModel;
 			sourceTree = "<group>";
 		};
 		F0A342C51CBBAD1900F9091C /* Statistics */ = {
@@ -828,6 +839,7 @@
 				F08093121CB77691004958BB /* ConstellationMaskBackView.swift in Sources */,
 				F02474341CA621D10049DB21 /* BaseViewController.swift in Sources */,
 				F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */,
+				F0948D361CD499130048A869 /* BarChartViewModel.swift in Sources */,
 				F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,

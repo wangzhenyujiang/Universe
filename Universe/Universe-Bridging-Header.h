@@ -6,3 +6,4 @@
 #import "Masonry.h"
 #import "UIBezierPath+LxThroughPointsBezier.h"
 #import "LCStarView.h"
+#import "PNChart.h"
