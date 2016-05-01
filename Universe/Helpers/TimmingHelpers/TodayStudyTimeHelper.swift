@@ -16,14 +16,20 @@ class TodayStudyTimeHelper: NSObject {
     
     static let shareInstance: TodayStudyTimeHelper = TodayStudyTimeHelper()
     
-    private var resultTime: Double = 0
     var todaySudyTime: Double {
         get {
-            cache.object(todayTimeKey, completion: { [weak self] (string: String?) in
-                guard let strongSelf = self,  str = string, let result = Double(str) else { return }
-                strongSelf.resultTime = result
+            var result: Double = 0
+            let lock: dispatch_semaphore_t = dispatch_semaphore_create(0)
+            cache.object(todayTimeKey, completion: { (string: String?) in
+                print("todaySudyTime: \(string)")
+                guard let str = string, let tempTime = Double(str) else { return }
+                result = tempTime
+                //发送信号量，信号量 +1
+                dispatch_semaphore_signal(lock)
             })
-            return resultTime
+            //如果总信号为 0， 则进入等待状态，信号量大于 0 时，继续执行代码并将信号量 -1
+            dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER)
+            return result
         }
     }
 }
@@ -33,7 +39,6 @@ class TodayStudyTimeHelper: NSObject {
 extension TodayStudyTimeHelper {
     func updateStudyTime(addTime time: Double) {
         let todayTotalTime = todaySudyTime + time
-        print("updateStudyTime: \(todayTotalTime)")
         cache.add(todayTimeKey, object: "\(todayTotalTime)")
     }
 }
