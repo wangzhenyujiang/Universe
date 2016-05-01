@@ -25,6 +25,7 @@ class StatisticsViewController: BlackNavigationBarViewController  {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setCustomTitle("Starry Sky")
+        minsTimeLabel.text = "\(Int(DayStudyTimeHelper.shareInstance.todaySudyTime)) mins"
     }
 
     override func viewDidLoad() {

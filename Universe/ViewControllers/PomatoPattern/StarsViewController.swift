@@ -49,10 +49,6 @@ class StarsViewController: BaseViewController, OwnsTopMenuViewType {
         guard let star = star else {
             return
         }
-        if !canUnLock(Star(star: star)) {
-            
-            return
-        }
         
         switch star {
         case .SunStar:

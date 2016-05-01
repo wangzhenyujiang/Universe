@@ -7,33 +7,33 @@
 //
 
 import UIKit
+import Cache
 
 
 class GoldNumMemoryManager: NSObject {
     static let shareInstance: GoldNumMemoryManager = GoldNumMemoryManager()
     var gold: Int {
-        didSet {
-            NSUserDefaults.standardUserDefaults().setInteger(gold, forKey: GoldNumKey.key)
-            NSUserDefaults.standardUserDefaults().synchronize()
+        get {
+            var result: Int = 0
+            let lock: dispatch_semaphore_t = dispatch_semaphore_create(0)
+            cache.object(GoldNumKey.key) { (str: String?) in
+                guard let glodStr = str, let num = Int(glodStr) else {
+                    dispatch_semaphore_signal(lock)
+                    return
+                }
+                result = num
+                dispatch_semaphore_signal(lock)
+            }
+            dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER)
+            return result
+        }
+        set {
+            cache.add(GoldNumKey.key, object: "\(gold)")
         }
     }
     
     private struct GoldNumKey {
         static let key = "GoldNumKey"
     }
-    
-    override init() {
-        self.gold = NSUserDefaults.standardUserDefaults().integerForKey(GoldNumKey.key)
-        if self.gold == 0 {
-            self.gold = 500
-        }
-        super.init()
-    }
-    
 }
 
-//MARK: Public 
-
-extension GoldNumMemoryManager {
-    
-}
