@@ -99,6 +99,7 @@ extension ConstellationView {
         shapeLayer.lineWidth = LineWidth
         shapeLayer.path = curve.CGPath
         shapeLayer.lineCap = kCALineCapRound
+
         
         layer.insertSublayer(shapeLayer, atIndex: 0)
     }
