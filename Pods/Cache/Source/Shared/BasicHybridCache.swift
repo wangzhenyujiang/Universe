@@ -50,7 +50,6 @@ public class BasicHybridCache: NSObject {
       }
 
       weakSelf.backStorage.object(key) { (object: T?) in
-        print("Cache : \(object)")
         completion(object: object)
       }
     }

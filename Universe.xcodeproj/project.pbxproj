@@ -31,7 +31,7 @@
 		F02B509F1CCCD0D000C51CF2 /* EnterBackHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */; };
 		F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0379FB51CAAD2630082584E /* TimmingViewController.swift */; };
 		F038F5F41CD5B806009C26D1 /* CachaGobalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F31CD5B806009C26D1 /* CachaGobalKey.swift */; };
-		F038F5F61CD5BA34009C26D1 /* TodayStudyTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */; };
+		F038F5F61CD5BA34009C26D1 /* DayStudyTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F51CD5BA34009C26D1 /* DayStudyTimeHelper.swift */; };
 		F038F5F81CD5BB8A009C26D1 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F71CD5BB8A009C26D1 /* String+MD5.swift */; };
 		F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05930231CCB4FBB007DE66A /* SettingCellType.swift */; };
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
@@ -123,7 +123,7 @@
 		F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterBackHelpers.swift; path = Helpers/TimmingHelpers/EnterBackHelpers.swift; sourceTree = "<group>"; };
 		F0379FB51CAAD2630082584E /* TimmingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingViewController.swift; path = ViewControllers/Timming/TimmingViewController.swift; sourceTree = "<group>"; };
 		F038F5F31CD5B806009C26D1 /* CachaGobalKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CachaGobalKey.swift; path = Helpers/CachaGobalKey/CachaGobalKey.swift; sourceTree = "<group>"; };
-		F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayStudyTimeHelper.swift; path = Helpers/TimmingHelpers/TodayStudyTimeHelper.swift; sourceTree = "<group>"; };
+		F038F5F51CD5BA34009C26D1 /* DayStudyTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayStudyTimeHelper.swift; path = Helpers/TimmingHelpers/DayStudyTimeHelper.swift; sourceTree = "<group>"; };
 		F038F5F71CD5BB8A009C26D1 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Extensions/String+MD5.swift"; sourceTree = "<group>"; };
 		F05930231CCB4FBB007DE66A /* SettingCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellType.swift; path = Protocol/SettingCellType.swift; sourceTree = "<group>"; };
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
@@ -427,7 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */,
-				F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */,
+				F038F5F51CD5BA34009C26D1 /* DayStudyTimeHelper.swift */,
 			);
 			name = TimmingHelpers;
 			sourceTree = "<group>";
@@ -867,7 +867,7 @@
 				F0948D361CD499130048A869 /* BarChartViewModel.swift in Sources */,
 				F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
-				F038F5F61CD5BA34009C26D1 /* TodayStudyTimeHelper.swift in Sources */,
+				F038F5F61CD5BA34009C26D1 /* DayStudyTimeHelper.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
 				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,

@@ -12,7 +12,7 @@ import Cache
 let ScreenWidth = UIScreen.mainScreen().bounds.width
 let ScreenHeight = UIScreen.mainScreen().bounds.height
 
-let Half_Hour: NSTimeInterval = 5
+let Half_Hour: NSTimeInterval = 30
 
 let perHalfHourGold: Int = 10  // 每个番茄始终赚取多少金币
 

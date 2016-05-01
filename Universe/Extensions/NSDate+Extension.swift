@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftDate
 
 extension NSDate {
     
@@ -39,5 +40,14 @@ extension NSDate {
         default:
             return ""
         }
+    }
+    
+    static public var thisWeekDays: [NSDate] {
+        let startDate: NSDate = NSDate().startOf(NSCalendarUnit.Weekday)
+        var result: [NSDate] = [startDate]
+        for i: Int in 1...6 {
+            result.append(startDate + i.days)
+        }
+        return result
     }
 }

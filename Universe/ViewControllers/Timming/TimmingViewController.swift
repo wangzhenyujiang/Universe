@@ -18,6 +18,8 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     
     var timmingType: TimeType!
     
+    var tipsLabelShowing: Bool = true
+    
     private var time: NSTimeInterval {
         return timmingType.time
     }
@@ -30,7 +32,9 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         backImageView.image = UIImage(named: timmingType.backImageName)
-        tipsLabel.hidden = true
+        showTipsLabel(false, animated: false)
+        
+        updateTipsLabel(0)
     }
     
     override func viewDidLoad() {
@@ -63,6 +67,49 @@ extension TimmingViewController {
     }
 }
 
+
+//MARK: Notification
+
+extension TimmingViewController {
+    private func enterIntoBackground() {
+        stopCountTimming()
+        jumpIntoFailController()
+    }
+}
+
+//MARK: MZTimerLabelDelegate
+
+extension TimmingViewController: MZTimerLabelDelegate {
+    
+    func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
+        let goldNum: Int = Int(timmingType.time) / Int(Half_Hour) * perHalfHourGold
+        GoldAlterView.show(goldNum, okAction: { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.jumpIntoNoteViewController()
+        })
+        User.shareInstance.addNum(goldNum)
+        topMenuView.update()
+        giveUpButton.enabled = false
+        
+        DayStudyTimeHelper.shareInstance.updateTodayStudyTime(addTime: timmingType.time)
+    }
+    
+    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
+        
+        updateTipsLabel(((Int(timmingType.time) - Int(time)) / 25) * 25)
+        
+        if timerLabel.isEqual(self.timerCountLabel) {
+            if Int(Int(time) / 5 ) % 6 == 0 {
+                self.timerLabel.textColor = UIColor.redColor()
+                showTipsLabel(true)
+            }else {
+                self.timerLabel.textColor = UIColor.whiteColor()
+                showTipsLabel(false)
+            }
+        }
+    }
+}
+
 //MARK: Private Method
 
 extension TimmingViewController {
@@ -71,6 +118,10 @@ extension TimmingViewController {
         timerCountLabel.setCountDownTime(time)
         timerCountLabel.delegate = self
         timerLabel.textColor = UIColor.whiteColor()
+    }
+    
+    private func updateTipsLabel(time: Int) {
+        tipsLabel.text = "You have studyed focused for \(time) minutes Let's take a break!"
     }
     
     private func startTiming() {
@@ -96,7 +147,7 @@ extension TimmingViewController {
             guard let strongSelf = self else { return }
             strongSelf.stopCountTimming()
             strongSelf.jumpIntoFailController()
-        }))
+            }))
         presentViewController(alter, animated: true, completion: nil)
     }
     
@@ -116,43 +167,18 @@ extension TimmingViewController {
         let controller: NoteViewController = sb.instantiateViewControllerWithIdentifier(String(NoteViewController)) as! NoteViewController
         navigationController?.pushViewController(controller, animated: true)
     }
-}
-
-//MARK: Notification
-
-extension TimmingViewController {
-    private func enterIntoBackground() {
-        stopCountTimming()
-        jumpIntoFailController()
-    }
-}
-
-//MARK: MZTimerLabelDelegate
-
-extension TimmingViewController: MZTimerLabelDelegate {
     
-    func timerLabel(timerLabel: MZTimerLabel!, finshedCountDownTimerWithTime countTime: NSTimeInterval) {
-        let goldNum: Int = Int(timmingType.time) / Int(Half_Hour) * perHalfHourGold
-        GoldAlterView.show(goldNum, okAction: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.jumpIntoNoteViewController()
-        })
-        User.shareInstance.addNum(goldNum)
-        topMenuView.update()
-        giveUpButton.enabled = false
-        
-        TodayStudyTimeHelper.shareInstance.updateStudyTime(addTime: timmingType.time)
-    }
-    
-    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        if timerLabel.isEqual(self.timerCountLabel) {
-            if Int(Int(time) / 300 ) % 6 == 0 {
-                self.timerLabel.textColor = UIColor.redColor()
-                tipsLabel.hidden = false
-            }else {
-                self.timerLabel.textColor = UIColor.whiteColor()
-                tipsLabel.hidden = true
-            }
+    private func showTipsLabel(show: Bool, animated: Bool = true) {
+        if tipsLabelShowing == show {
+            return
+        }
+        tipsLabelShowing = show
+        if !animated {
+            tipsLabel.alpha = show ? 1 : 0
+        }else {
+            UIView.animateWithDuration(0.3, animations: {
+                self.tipsLabel.alpha = show ? 1 : 0
+            })
         }
     }
 }

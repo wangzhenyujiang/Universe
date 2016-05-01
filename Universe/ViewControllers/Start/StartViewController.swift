@@ -112,6 +112,6 @@ extension StartViewController {
         timerLabel.setCountDownTime(0)
         starIndex = 0
         timeSelectedView.reset()
-        tipsLabel.text = "Today you have studyed focused for \(Int(TodayStudyTimeHelper.shareInstance.todaySudyTime)) mintues"
+        tipsLabel.text = "Today you have studyed focused for \(Int(DayStudyTimeHelper.shareInstance.todaySudyTime)) mintues"
     }
 }

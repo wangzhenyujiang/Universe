@@ -22,7 +22,7 @@ class BarChartViewModel: NSObject {
     }()
     
     var yValues: [Int] = {
-        return StudyedWeekTimeManager.shareInstance.weekEveryDayTimeArr()
+        return StudyedWeekTimeManager.shareInstance.thisWeekTimeArry()
     }()
     
     let barColors: [UIColor] = [SunDayBarColor, MondayBarColor, TuesDayBarColor, WedBarColor, ThudayBarColor, FridayBarColor, SatdayBarColor]

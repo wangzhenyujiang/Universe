@@ -93,3 +93,11 @@ extension StudyedWeekTimeManager {
         }
     }
 }
+
+extension StudyedWeekTimeManager {
+    func thisWeekTimeArry() -> [Int] {
+        return NSDate.thisWeekDays.map() { date in
+            return Int(DayStudyTimeHelper.shareInstance.timeForSomeDay(date)) / Int(Half_Hour)
+        }
+    }
+}
