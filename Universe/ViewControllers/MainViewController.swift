@@ -19,16 +19,15 @@ class MainViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
         dispatch_once(&Static.onceToken) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.showLaunchFrameWithAnimation()
         }
+        setupTopMenuView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTopMenuView()
         
         print("\(NSDate.tomorrow().weekday)")
     }

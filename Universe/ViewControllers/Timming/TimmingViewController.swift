@@ -16,8 +16,6 @@ class TimmingViewController: BaseViewController, OwnsTopMenuViewType {
     @IBOutlet weak var giveUpButton: UIButton!
     @IBOutlet weak var topMenuView: TopMenuView!
     
-    
-    
     var timmingType: TimeType!
     
     private var time: NSTimeInterval {
@@ -142,6 +140,8 @@ extension TimmingViewController: MZTimerLabelDelegate {
         User.shareInstance.addNum(goldNum)
         topMenuView.update()
         giveUpButton.enabled = false
+        
+        TodayStudyTimeHelper.shareInstance.updateStudyTime(addTime: timmingType.time)
     }
     
     func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {

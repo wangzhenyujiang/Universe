@@ -28,8 +28,11 @@
 		F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */; };
 		F02B50981CCB93A000C51CF2 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50971CCB93A000C51CF2 /* LabelCell.swift */; };
 		F02B509A1CCC7B5800C51CF2 /* StudyedWeekTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B50991CCC7B5800C51CF2 /* StudyedWeekTimeManager.swift */; };
-		F02B509F1CCCD0D000C51CF2 /* TimmingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */; };
+		F02B509F1CCCD0D000C51CF2 /* EnterBackHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */; };
 		F0379FB61CAAD2630082584E /* TimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0379FB51CAAD2630082584E /* TimmingViewController.swift */; };
+		F038F5F41CD5B806009C26D1 /* CachaGobalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F31CD5B806009C26D1 /* CachaGobalKey.swift */; };
+		F038F5F61CD5BA34009C26D1 /* TodayStudyTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */; };
+		F038F5F81CD5BB8A009C26D1 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038F5F71CD5BB8A009C26D1 /* String+MD5.swift */; };
 		F05930241CCB4FBB007DE66A /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05930231CCB4FBB007DE66A /* SettingCellType.swift */; };
 		F06436711CB0D53F005720AB /* GoldAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06436701CB0D53F005720AB /* GoldAlterView.swift */; };
 		F06436731CB0D574005720AB /* GoldAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06436721CB0D574005720AB /* GoldAlterView.xib */; };
@@ -117,8 +120,11 @@
 		F02B50951CCB848D00C51CF2 /* SettingCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellModel.swift; path = Model/ViewModel/SettingCellModel/SettingCellModel.swift; sourceTree = "<group>"; };
 		F02B50971CCB93A000C51CF2 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = Views/Cells/SettingCell/LabelCell.swift; sourceTree = "<group>"; };
 		F02B50991CCC7B5800C51CF2 /* StudyedWeekTimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudyedWeekTimeManager.swift; path = Helpers/StudyedWeekTimeManager.swift; sourceTree = "<group>"; };
-		F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingHelpers.swift; path = Helpers/TimmingHelpers/TimmingHelpers.swift; sourceTree = "<group>"; };
+		F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterBackHelpers.swift; path = Helpers/TimmingHelpers/EnterBackHelpers.swift; sourceTree = "<group>"; };
 		F0379FB51CAAD2630082584E /* TimmingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimmingViewController.swift; path = ViewControllers/Timming/TimmingViewController.swift; sourceTree = "<group>"; };
+		F038F5F31CD5B806009C26D1 /* CachaGobalKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CachaGobalKey.swift; path = Helpers/CachaGobalKey/CachaGobalKey.swift; sourceTree = "<group>"; };
+		F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayStudyTimeHelper.swift; path = Helpers/TimmingHelpers/TodayStudyTimeHelper.swift; sourceTree = "<group>"; };
+		F038F5F71CD5BB8A009C26D1 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Extensions/String+MD5.swift"; sourceTree = "<group>"; };
 		F05930231CCB4FBB007DE66A /* SettingCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellType.swift; path = Protocol/SettingCellType.swift; sourceTree = "<group>"; };
 		F06436701CB0D53F005720AB /* GoldAlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoldAlterView.swift; path = Views/GoldAlterView/GoldAlterView.swift; sourceTree = "<group>"; };
 		F06436721CB0D574005720AB /* GoldAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoldAlterView.xib; path = Views/GoldAlterView/GoldAlterView.xib; sourceTree = "<group>"; };
@@ -354,6 +360,7 @@
 		F02AA71D1CA78DE4008ED176 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F0948D3D1CD5B7CF0048A869 /* CachaGobalKey */,
 				F02B509B1CCCD09D00C51CF2 /* TimmingHelpers */,
 				F02AA71E1CA78EBE008ED176 /* StarViewsControllerHelpers.swift */,
 				F0B1B65E1CAFD6FC00286EE7 /* TouchDebugView.swift */,
@@ -419,7 +426,8 @@
 		F02B509B1CCCD09D00C51CF2 /* TimmingHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				F02B509E1CCCD0D000C51CF2 /* TimmingHelpers.swift */,
+				F02B509E1CCCD0D000C51CF2 /* EnterBackHelpers.swift */,
+				F038F5F51CD5BA34009C26D1 /* TodayStudyTimeHelper.swift */,
 			);
 			name = TimmingHelpers;
 			sourceTree = "<group>";
@@ -456,6 +464,14 @@
 				F0948D351CD499130048A869 /* BarChartViewModel.swift */,
 			);
 			name = BarChartViewModel;
+			sourceTree = "<group>";
+		};
+		F0948D3D1CD5B7CF0048A869 /* CachaGobalKey */ = {
+			isa = PBXGroup;
+			children = (
+				F038F5F31CD5B806009C26D1 /* CachaGobalKey.swift */,
+			);
+			name = CachaGobalKey;
 			sourceTree = "<group>";
 		};
 		F0A342C51CBBAD1900F9091C /* Statistics */ = {
@@ -572,6 +588,7 @@
 		F86587B11CA8EFB500000063 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F038F5F71CD5BB8A009C26D1 /* String+MD5.swift */,
 				F0948D3B1CD4B26E0048A869 /* NSDate+Extension.swift */,
 				F86587B41CA8EFF000000063 /* UIImage+Univserse.swift */,
 				F89C04961CAA572F00308952 /* UIFont+Universe.swift */,
@@ -850,6 +867,7 @@
 				F0948D361CD499130048A869 /* BarChartViewModel.swift in Sources */,
 				F0CE5ABC1CBB630B000E5A64 /* GiveUpViewController.swift in Sources */,
 				F06436751CB0DB3C005720AB /* Global.swift in Sources */,
+				F038F5F61CD5BA34009C26D1 /* TodayStudyTimeHelper.swift in Sources */,
 				F02473FC1CA57E7A0049DB21 /* AppDelegate.swift in Sources */,
 				F02AA71C1CA7784D008ED176 /* Star.swift in Sources */,
 				F02AA7221CA79361008ED176 /* User.swift in Sources */,
@@ -863,10 +881,12 @@
 				F89C04951CAA554100308952 /* MZTimerLabel.m in Sources */,
 				F02B50961CCB848D00C51CF2 /* SettingCellModel.swift in Sources */,
 				F02AA7251CA7EBE6008ED176 /* SettingViewController.swift in Sources */,
-				F02B509F1CCCD0D000C51CF2 /* TimmingHelpers.swift in Sources */,
+				F02B509F1CCCD0D000C51CF2 /* EnterBackHelpers.swift in Sources */,
 				F02AA71F1CA78EBE008ED176 /* StarViewsControllerHelpers.swift in Sources */,
 				F0E2F4DD1CCEF58100CC1B39 /* MenuListItem.swift in Sources */,
 				F02474381CA6222D0049DB21 /* StarView.swift in Sources */,
+				F038F5F81CD5BB8A009C26D1 /* String+MD5.swift in Sources */,
+				F038F5F41CD5B806009C26D1 /* CachaGobalKey.swift in Sources */,
 				F886A0B11CD379D900DEF1C0 /* Dictionary+Extension.swift in Sources */,
 				F8F0B9621CB64CB1001EFC59 /* LCStarView.m in Sources */,
 				F02AA7291CA7ECD5008ED176 /* SettingCell.swift in Sources */,

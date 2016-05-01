@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import Cache
 
-
-extension Dictionary {
-    
-}
+//extension Dictionary: Cachable{
+//    public typealias CacheType = Dictionary
+//    
+//    public static func decode(data: NSData) -> CacheType? {
+//        let dictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? CacheType
+//        return dictionary
+//    }
+//    
+//    public func encode() -> NSData? {
+//        return NSKeyedArchiver.archivedDataWithRootObject(self)
+//    }
+//}

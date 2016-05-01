@@ -240,7 +240,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-wv-6El">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-wv-6El" userLabel="backButton">
                                 <rect key="frame" x="540" y="552" width="40" height="40"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -359,7 +359,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today Apr 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-6j-9wP">
-                                        <rect key="frame" x="20" y="0.0" width="101" height="47"/>
+                                        <rect key="frame" x="10" y="0.0" width="101" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -374,7 +374,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="LCl-Hg-etS" secondAttribute="bottom" id="AoI-vA-1Sp"/>
-                                    <constraint firstItem="fYh-6j-9wP" firstAttribute="leading" secondItem="qgs-gs-O21" secondAttribute="leading" constant="20" id="DBe-ZN-UBZ"/>
+                                    <constraint firstItem="fYh-6j-9wP" firstAttribute="leading" secondItem="qgs-gs-O21" secondAttribute="leading" constant="10" id="DBe-ZN-UBZ"/>
                                     <constraint firstAttribute="trailing" secondItem="LCl-Hg-etS" secondAttribute="trailing" constant="8" id="I2o-7d-tZT"/>
                                     <constraint firstAttribute="bottom" secondItem="fYh-6j-9wP" secondAttribute="bottom" id="JP5-cL-ceb"/>
                                     <constraint firstAttribute="height" constant="47" id="MxE-Ny-Xzi"/>

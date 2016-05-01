@@ -55,6 +55,7 @@ extension StatisticsViewController {
         barChart.chartMarginBottom = 25
         barChart.chartMarginTop = 0
         
+        
         barChart.barBackgroundColor = UIColor.clearColor()
         barChart.backgroundColor = UIColor.clearColor()
         barChart.strokeColors = chartViewModel.barColors
