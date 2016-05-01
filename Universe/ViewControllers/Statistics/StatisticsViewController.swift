@@ -47,7 +47,7 @@ extension StatisticsViewController {
         
         barChart.hasLegend = false
         barChart.isShowNumbers = false
-        barChart.showLabel = true
+        barChart.showLabel = false
         barChart.isGradientShow = false
         barChart.showChartBorder = false
         barChart.showLevelLine = false
