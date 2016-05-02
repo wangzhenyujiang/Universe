@@ -382,7 +382,7 @@
                                     <constraint firstItem="LCl-Hg-etS" firstAttribute="top" secondItem="qgs-gs-O21" secondAttribute="top" id="vNh-eL-STA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-Gd-sJw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-Gd-sJw" customClass="ImageLayerView" customModule="Universe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="111" width="600" height="249"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>

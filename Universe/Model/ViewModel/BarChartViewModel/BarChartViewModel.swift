@@ -25,7 +25,7 @@ class BarChartViewModel: NSObject {
         get {
             let values: [CGFloat] = StudyedWeekTimeManager.shareInstance.thisWeekTimeArry().map() { (value: Int) in
                 if value == 0 {
-                    return 0.1
+                    return StatisticsBarMinHeightValue
                 }
                 return CGFloat(value)
             }
