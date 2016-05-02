@@ -18,6 +18,8 @@ let perHalfHourGold: Int = 10  // 每个番茄始终赚取多少金币
 
 let menuItemCellHeight: CGFloat = 50
 
+//MARK: Statistics
+let BarHeight = 0.4
 
 //TimmingViewController
 enum Scheme: String {

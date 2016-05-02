@@ -21,10 +21,17 @@ class BarChartViewModel: NSObject {
         return StudyedWeekTimeManager.shareInstance.weekDays()
     }()
     
-    var yValues: [Int] = {
-        print("\(StudyedWeekTimeManager.shareInstance.thisWeekTimeArry())")
-        return StudyedWeekTimeManager.shareInstance.thisWeekTimeArry()
-    }()
+    var yValues: [CGFloat] {
+        get {
+            let values: [CGFloat] = StudyedWeekTimeManager.shareInstance.thisWeekTimeArry().map() { (value: Int) in
+                if value == 0 {
+                    return 0.1
+                }
+                return CGFloat(value)
+            }
+            return values
+        }
+    }
     
     let barColors: [UIColor] = [SunDayBarColor, MondayBarColor, TuesDayBarColor, WedBarColor, ThudayBarColor, FridayBarColor, SatdayBarColor]
 }

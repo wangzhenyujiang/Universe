@@ -40,6 +40,7 @@ class StatisticsViewController: BlackNavigationBarViewController  {
 extension StatisticsViewController {
     private func setupChartView() {
         barChart = PNBarChart.init(frame: CGRectMake(0, 0, ScreenWidth, 200))
+        
         barChart.xLabels = chartViewModel.xLbales
         barChart.yValues = chartViewModel.yValues
         barChart.yLabels = chartViewModel.xLbales.map() { _ in
@@ -55,6 +56,7 @@ extension StatisticsViewController {
         
         barChart.chartMarginBottom = 25
         barChart.chartMarginTop = 0
+        barChart.barRadius = 0
         
         
         barChart.barBackgroundColor = UIColor.clearColor()
