@@ -13,6 +13,8 @@ let ScreenWidth = UIScreen.mainScreen().bounds.width
 let ScreenHeight = UIScreen.mainScreen().bounds.height
 
 let Half_Hour: NSTimeInterval = 30
+let One_Hour: NSTimeInterval = Half_Hour * 2
+let One_Day: NSTimeInterval = One_Hour * 24
 
 let perHalfHourGold: Int = 10  // 每个番茄始终赚取多少金币
 

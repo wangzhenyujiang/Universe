@@ -100,4 +100,10 @@ extension StudyedWeekTimeManager {
             return Int(Int(DayStudyTimeHelper.shareInstance.timeForSomeDay(date)) / Int(Half_Hour))
         }
     }
+    
+    func thisWeekStudyTotalTime() -> Double {
+        return thisWeekTimeArry().reduce(0) { (initial: Double, count: Int) in
+            return initial + Double(count) * Half_Hour
+        }
+    }
 }

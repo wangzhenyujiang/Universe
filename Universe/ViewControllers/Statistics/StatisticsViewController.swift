@@ -71,6 +71,11 @@ extension StatisticsViewController {
     private func commonSetup() {
         todayDateLabel.text = "Today \(NSDate().monthEnglishPrefixName) \(NSDate().day)"
         durationTimeLabel.text = "\(NSDate().year) \(NSDate().startOf(NSCalendarUnit.Weekday).monthEnglishPrefixName) \(NSDate().firstDayOfWeek()!) - \(NSDate().endOf(NSCalendarUnit.Weekday).monthEnglishPrefixName) \(NSDate().lastDayOfWeek()!)"
+        let totalStudyTime: Double = StudyedWeekTimeManager.shareInstance.thisWeekStudyTotalTime()
+        let day: Double = totalStudyTime / One_Day
+        let hour: Double = (totalStudyTime % One_Day)/One_Hour
+        let mins: Double = ((totalStudyTime % One_Day)%One_Hour)
+        studyTimeLabel.text = "\(Int(day)) day \(Int(hour)) hour \(Int(mins)) mins"
         }
 }
 
