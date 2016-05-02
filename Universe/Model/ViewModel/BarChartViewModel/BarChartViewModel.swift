@@ -22,6 +22,7 @@ class BarChartViewModel: NSObject {
     }()
     
     var yValues: [Int] = {
+        print("\(StudyedWeekTimeManager.shareInstance.thisWeekTimeArry())")
         return StudyedWeekTimeManager.shareInstance.thisWeekTimeArry()
     }()
     

@@ -43,7 +43,8 @@ extension NSDate {
     }
     
     static public var thisWeekDays: [NSDate] {
-        let startDate: NSDate = NSDate().startOf(NSCalendarUnit.Weekday)
+        let weekFirstDay = NSDate().firstDayOfWeek()!
+        let startDate: NSDate = NSDate.init(year: NSDate().year, month: NSDate().month, day: weekFirstDay)
         var result: [NSDate] = [startDate]
         for i: Int in 1...6 {
             result.append(startDate + i.days)
